@@ -1,0 +1,181 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://tilesets/ruins/Plants_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://tilesets/ruins/Props_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://tilesets/ruins/Structures_tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/ruins/Ground_tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://tilesets/ruins/Stone_floor_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://tilesets/ruins/Texture/TX Tileset Wall.png" type="Texture" id=6]
+
+[sub_resource type="TileSet" id=1]
+0/name = "TX Tileset Wall.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 32, 96, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "TX Tileset Wall.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 32, 160, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "TX Tileset Wall.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 288, 32, 32, 96 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "TX Tileset Wall.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 320, 32, 32, 96 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "TX Tileset Wall.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 384, 32, 96, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "TX Tileset Wall.png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 384, 64, 64, 96 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "TX Tileset Wall.png 6"
+6/texture = ExtResource( 6 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 32, 192, 128, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "TX Tileset Wall.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 192, 192, 32, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "TX Tileset Wall.png 8"
+8/texture = ExtResource( 6 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 288, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "TX Tileset Wall.png 9"
+9/texture = ExtResource( 6 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 128, 288, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="plants" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 262150, 9, 1, 262152, 9, 3 )
+
+[node name="props" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 196614, 0, 0, 196615, 0, 0, 196617, 3, 0, 196618, 3, 0, 262153, 3, 0, 262154, 3, 0, 393221, 10, 0, 393223, 10, 0, 393225, 10, 0 )
+
+[node name="strucures" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 65540, 0, 0, 65542, 6, 0, 65543, 7, 0, 65544, 7, 0, 65545, 7, 0, 131076, 4, 0, 196612, 4, 0 )
+
+[node name="ground" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( 262145, 2, 131079, 262146, 2, 7, 262147, 2, 131078, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 327681, 2, 131074, 327682, 2, 65537, 327683, 2, 3, 327684, 2, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 458750, 2, 131079, 458751, 2, 4, 393216, 2, 5, 393217, 2, 196612, 393218, 2, 65536, 393219, 2, 131075, 393227, 2, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 1, 0, 524286, 2, 131077, 524287, 2, 196609, 458752, 2, 196608, 458753, 2, 65540, 458754, 2, 196609, 458755, 2, 3, 458763, 2, 0, 458764, 1, 0, 458765, 0, 0, 458767, 1, 0, 589823, 2, 131074, 524288, 2, 196611, 524289, 3, 0, 524290, 2, 196610, 524291, 2, 0, 524292, 2, 5, 524293, 2, 5, 524294, 2, 7, 524295, 2, 131078, 655359, 2, 131077, 589824, 2, 131076, 589825, 3, 4, 589826, 3, 5, 589827, 2, 131077, 589828, 2, 196609, 589829, 2, 65536, 589830, 2, 131072, 589831, 2, 131075, 655362, 3, 0, 655363, 3, 0, 655364, 2, 2, 655365, 2, 131072, 655366, 2, 0, 655367, 2, 196611, 720900, 2, 2, 720901, 2, 131072, 720902, 2, 196608, 720903, 2, 131076, 720904, 2, 0, 786435, 2, 0, 786436, 2, 131077, 786437, 2, 65542, 786438, 2, 131076 )
+
+[node name="stones" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+format = 1
+tile_data = PoolIntArray( 851965, 0, 0, 851966, 0, 2, 917501, 0, 393218, 917502, 0, 65538, 983037, 0, 131072, 983038, 0, 0, 1048572, 0, 3, 1048574, 0, 65539, 1114107, 0, 0, 1114108, 0, 0, 1114109, 0, 458753, 1114110, 0, 0, 1114111, 0, 2, 1179643, 0, 131072, 1179644, 0, 327681, 1179645, 0, 327681, 1179646, 0, 327681, 1179647, 0, 131074 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
