@@ -13,6 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\MainMenu">
+      <UniqueIdentifier>{c13479b6-f197-460d-a8ad-7c594a3b4669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{3a77b886-5591-4832-bdbe-b1dbc673e332}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PauseMenu">
+      <UniqueIdentifier>{ab868921-10ba-4942-874e-9d0de43cba1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainMenu\Buttons">
+      <UniqueIdentifier>{f191a65b-05ea-4f8b-b880-6cb77ea21424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Buttons">
+      <UniqueIdentifier>{aa8c4439-8024-4cb9-bd39-b63c713a3cf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{e6c06c9b-f36c-4487-900a-66e10d0e5057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainMenu">
+      <UniqueIdentifier>{e0753d1e-6265-4980-a9a2-cbaabe23357f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PauseMenu">
+      <UniqueIdentifier>{d9d63492-bbb8-4933-a581-28fb8110b40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainMenu\Buttons">
+      <UniqueIdentifier>{b2b18351-f5c8-4e65-8c1d-5d9bf41b7d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Root">
+      <UniqueIdentifier>{55560956-f019-4b5a-9ef7-829b128e39d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Root">
+      <UniqueIdentifier>{7b4f63d3-9230-4c78-a636-173877bd4f46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -24,13 +57,28 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>Source Files\MainMenu\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Root.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower1.h">
+      <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="Root.h">
+      <Filter>Header Files\Root</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
