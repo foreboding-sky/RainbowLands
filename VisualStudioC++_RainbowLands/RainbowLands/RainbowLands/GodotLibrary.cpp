@@ -1,5 +1,6 @@
 #include "Godot.hpp"
 #include "Player.h"
+#include "LevelManager.h"
 
 using namespace godot;
 
@@ -15,4 +16,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	Godot::nativescript_init(handle);
 	
 	register_class<Player>();
+	register_class<LevelManager>();
 }
