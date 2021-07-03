@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fatal.mp3-ecdc521275eb36493e910645029c0dcc.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/fatal.mp3"
+dest_files=[ "res://.import/fatal.mp3-ecdc521275eb36493e910645029c0dcc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

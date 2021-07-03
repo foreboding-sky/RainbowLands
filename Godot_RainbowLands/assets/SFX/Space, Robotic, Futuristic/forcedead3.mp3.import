@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/forcedead3.mp3-2406b296e65ca42efdb73a788e84d1d9.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/forcedead3.mp3"
+dest_files=[ "res://.import/forcedead3.mp3-2406b296e65ca42efdb73a788e84d1d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

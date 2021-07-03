@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laserdot.mp3-334589196c7aaa6c7f569692a191b552.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/laserdot.mp3"
+dest_files=[ "res://.import/laserdot.mp3-334589196c7aaa6c7f569692a191b552.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/specialinterference.mp3-f7aa72e6864e3f076b3bf51e91857b4f.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/specialinterference.mp3"
+dest_files=[ "res://.import/specialinterference.mp3-f7aa72e6864e3f076b3bf51e91857b4f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

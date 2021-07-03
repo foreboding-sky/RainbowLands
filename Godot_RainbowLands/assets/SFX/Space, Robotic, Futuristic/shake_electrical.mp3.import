@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/shake_electrical.mp3-bc6019a5e6054f278e5f4380d2888d06.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/shake_electrical.mp3"
+dest_files=[ "res://.import/shake_electrical.mp3-bc6019a5e6054f278e5f4380d2888d06.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

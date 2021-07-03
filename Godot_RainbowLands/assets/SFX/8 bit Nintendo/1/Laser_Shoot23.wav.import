@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Laser_Shoot23.wav-e0d82faf811fb4892254aad7ba092f74.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/1/Laser_Shoot23.wav"
+dest_files=[ "res://.import/Laser_Shoot23.wav-e0d82faf811fb4892254aad7ba092f74.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/timeisright.mp3-e5914f2e1309a94d10bd1e2154e6151c.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/timeisright.mp3"
+dest_files=[ "res://.import/timeisright.mp3-e5914f2e1309a94d10bd1e2154e6151c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

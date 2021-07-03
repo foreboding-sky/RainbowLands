@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/poisongas.mp3-29f72cb455ad9e2f4298a9478d80e930.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/poisongas.mp3"
+dest_files=[ "res://.import/poisongas.mp3-29f72cb455ad9e2f4298a9478d80e930.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

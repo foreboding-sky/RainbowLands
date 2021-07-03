@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/whyamiarobot5.mp3-65454222f4b437625f795ca061b68173.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/whyamiarobot5.mp3"
+dest_files=[ "res://.import/whyamiarobot5.mp3-65454222f4b437625f795ca061b68173.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

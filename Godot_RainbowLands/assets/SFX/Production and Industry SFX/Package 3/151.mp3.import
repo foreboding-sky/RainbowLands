@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/151.mp3-e9e36c00375d4d5dec7fe8bda554e623.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Production and Industry SFX/Package 3/151.mp3"
+dest_files=[ "res://.import/151.mp3-e9e36c00375d4d5dec7fe8bda554e623.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

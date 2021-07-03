@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/moment2.mp3-220052965958e159c150d3e7b7ae23fd.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/moment2.mp3"
+dest_files=[ "res://.import/moment2.mp3-220052965958e159c150d3e7b7ae23fd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

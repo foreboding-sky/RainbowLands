@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/evil_robot.mp3-eb5f4b2d164bd567a153bb900f10a894.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/evil_robot.mp3"
+dest_files=[ "res://.import/evil_robot.mp3-eb5f4b2d164bd567a153bb900f10a894.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

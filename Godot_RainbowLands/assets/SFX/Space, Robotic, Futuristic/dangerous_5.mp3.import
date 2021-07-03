@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dangerous_5.mp3-c61714d1184f1909907db9ee5f2ada3b.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/dangerous_5.mp3"
+dest_files=[ "res://.import/dangerous_5.mp3-c61714d1184f1909907db9ee5f2ada3b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

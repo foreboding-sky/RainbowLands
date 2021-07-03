@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/comfusedrobot6.mp3-8a71658f2b3e03a24637b0697a5224a3.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/comfusedrobot6.mp3"
+dest_files=[ "res://.import/comfusedrobot6.mp3-8a71658f2b3e03a24637b0697a5224a3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

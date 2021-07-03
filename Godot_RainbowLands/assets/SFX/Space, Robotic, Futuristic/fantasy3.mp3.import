@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fantasy3.mp3-ba36229408d036efddc69e7f1f3bba1a.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/fantasy3.mp3"
+dest_files=[ "res://.import/fantasy3.mp3-ba36229408d036efddc69e7f1f3bba1a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

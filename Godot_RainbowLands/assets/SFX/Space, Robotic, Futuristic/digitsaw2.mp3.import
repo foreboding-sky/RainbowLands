@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/digitsaw2.mp3-1a72d1d6f137b6776fc7b7750df5e56c.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/digitsaw2.mp3"
+dest_files=[ "res://.import/digitsaw2.mp3-1a72d1d6f137b6776fc7b7750df5e56c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

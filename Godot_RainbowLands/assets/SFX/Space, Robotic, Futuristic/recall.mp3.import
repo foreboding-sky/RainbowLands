@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/recall.mp3-b330d6249c75e72d8297a4b34f25cb20.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/recall.mp3"
+dest_files=[ "res://.import/recall.mp3-b330d6249c75e72d8297a4b34f25cb20.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

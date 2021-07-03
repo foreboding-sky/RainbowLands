@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pickup_Coin8.wav-bb1e75b81aad5c93183e1a0cfd18d76d.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/2/Pickup_Coin8.wav"
+dest_files=[ "res://.import/Pickup_Coin8.wav-bb1e75b81aad5c93183e1a0cfd18d76d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

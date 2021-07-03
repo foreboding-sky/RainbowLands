@@ -63,6 +63,18 @@
     <ClCompile Include="Play.cpp">
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Source Files\MainMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Exit.cpp">
+      <Filter>Source Files\MainMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Return.cpp">
+      <Filter>Source Files\MainMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseManager.cpp">
+      <Filter>Source Files\PauseMenu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UI.h">
@@ -79,6 +91,18 @@
     </ClInclude>
     <ClInclude Include="Root.h">
       <Filter>Header Files\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Exit.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Return.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseManager.h">
+      <Filter>Header Files\PauseMenu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

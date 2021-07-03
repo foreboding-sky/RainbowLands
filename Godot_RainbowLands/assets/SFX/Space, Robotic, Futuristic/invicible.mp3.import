@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/invicible.mp3-becb55bc514f77849e86ea50c1466cf8.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/invicible.mp3"
+dest_files=[ "res://.import/invicible.mp3-becb55bc514f77849e86ea50c1466cf8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

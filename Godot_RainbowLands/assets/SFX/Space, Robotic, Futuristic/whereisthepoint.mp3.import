@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/whereisthepoint.mp3-dc922bd76c4cffc17ca35aec6e3cd557.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/whereisthepoint.mp3"
+dest_files=[ "res://.import/whereisthepoint.mp3-dc922bd76c4cffc17ca35aec6e3cd557.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

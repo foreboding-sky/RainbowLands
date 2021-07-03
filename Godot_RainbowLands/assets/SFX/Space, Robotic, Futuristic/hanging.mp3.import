@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hanging.mp3-a2ab82987eb0208d3091c29f83e0fb6e.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/hanging.mp3"
+dest_files=[ "res://.import/hanging.mp3-a2ab82987eb0208d3091c29f83e0fb6e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

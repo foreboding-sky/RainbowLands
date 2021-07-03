@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dark2.mp3-cd6b873d7cf1c6f7a96954c0d12b5bcf.mp3str"
+
+[deps]
+
+source_file="res://assets/Infinite Loops (Background Music)/dark2.mp3"
+dest_files=[ "res://.import/dark2.mp3-cd6b873d7cf1c6f7a96954c0d12b5bcf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

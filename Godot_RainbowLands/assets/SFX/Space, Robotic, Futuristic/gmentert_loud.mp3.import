@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gmentert_loud.mp3-e7abaedf370ce2a1dfdda1fe4d3118dc.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/gmentert_loud.mp3"
+dest_files=[ "res://.import/gmentert_loud.mp3-e7abaedf370ce2a1dfdda1fe4d3118dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

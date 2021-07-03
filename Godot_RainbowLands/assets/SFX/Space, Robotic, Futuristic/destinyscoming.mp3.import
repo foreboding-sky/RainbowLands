@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/destinyscoming.mp3-dcf4b15b2d6e907de6f276f19bfd3463.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/destinyscoming.mp3"
+dest_files=[ "res://.import/destinyscoming.mp3-dcf4b15b2d6e907de6f276f19bfd3463.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

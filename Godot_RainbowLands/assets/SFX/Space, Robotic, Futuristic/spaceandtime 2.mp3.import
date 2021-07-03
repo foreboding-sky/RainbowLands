@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spaceandtime 2.mp3-60dcb7b212691d17ea5358375983c6cf.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/spaceandtime 2.mp3"
+dest_files=[ "res://.import/spaceandtime 2.mp3-60dcb7b212691d17ea5358375983c6cf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

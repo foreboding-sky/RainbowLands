@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/destroyed_stones.mp3-86474e5c0c52a08c03884382e3a065e2.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/destroyed_stones.mp3"
+dest_files=[ "res://.import/destroyed_stones.mp3-86474e5c0c52a08c03884382e3a065e2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

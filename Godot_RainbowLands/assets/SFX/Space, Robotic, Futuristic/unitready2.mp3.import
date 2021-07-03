@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/unitready2.mp3-ce25662995e68b686b9f48193f0fd8b9.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/unitready2.mp3"
+dest_files=[ "res://.import/unitready2.mp3-ce25662995e68b686b9f48193f0fd8b9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

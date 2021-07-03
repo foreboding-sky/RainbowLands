@@ -12,7 +12,7 @@ Player::~Player()
 {
 }
 
-void Player::_process(float delta)
+void Player::_update(float delta)
 {
     _motion = Vector2(0, 0);
 
@@ -42,7 +42,7 @@ void Player::_ready()
 
 void Player::_register_methods()
 {
-	register_method((char*)"_process", &Player::_process);
+	register_method((char*)"_update", &Player::_update);
 	register_method((char*)"_init", &Player::_init);
 	register_method((char*)"_ready", &Player::_ready);
 }

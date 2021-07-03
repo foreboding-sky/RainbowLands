@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Jump3.wav-8298d62d81afdf28f82fd3fae9704c07.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/1/Jump3.wav"
+dest_files=[ "res://.import/Jump3.wav-8298d62d81afdf28f82fd3fae9704c07.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

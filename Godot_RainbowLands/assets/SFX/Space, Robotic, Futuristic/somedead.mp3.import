@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/somedead.mp3-baac5a7560a18dc318083bc578e50198.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/somedead.mp3"
+dest_files=[ "res://.import/somedead.mp3-baac5a7560a18dc318083bc578e50198.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

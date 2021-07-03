@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/proton.mp3-8a1bcd97b8af58a0b5909e4c704c9997.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/proton.mp3"
+dest_files=[ "res://.import/proton.mp3-8a1bcd97b8af58a0b5909e4c704c9997.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

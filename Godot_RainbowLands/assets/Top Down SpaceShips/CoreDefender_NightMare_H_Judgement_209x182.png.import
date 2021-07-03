@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/CoreDefender_NightMare_H_Judgement_209x182.png-2fd138115f4b1da9236c8d3c622e54af.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/Top Down SpaceShips/CoreDefender_NightMare_H_Judgement_209x182.png"
+dest_files=[ "res://.import/CoreDefender_NightMare_H_Judgement_209x182.png-2fd138115f4b1da9236c8d3c622e54af.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

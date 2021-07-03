@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lowR3.mp3-8d789dd46a2083c4810b13b4d2984c66.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/lowR3.mp3"
+dest_files=[ "res://.import/lowR3.mp3-8d789dd46a2083c4810b13b4d2984c66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

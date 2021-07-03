@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion4.wav-76bf7f85bd7fc4e540da84e8c3b87e7a.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/2/Explosion4.wav"
+dest_files=[ "res://.import/Explosion4.wav-76bf7f85bd7fc4e540da84e8c3b87e7a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

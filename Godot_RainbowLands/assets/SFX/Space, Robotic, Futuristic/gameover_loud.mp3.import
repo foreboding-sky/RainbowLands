@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gameover_loud.mp3-66bd0e6079fb1107a7478580f77af09d.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/gameover_loud.mp3"
+dest_files=[ "res://.import/gameover_loud.mp3-66bd0e6079fb1107a7478580f77af09d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

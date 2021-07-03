@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Powerup16.wav-f29538a0de13cba99060b4eac2c69845.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/1/Powerup16.wav"
+dest_files=[ "res://.import/Powerup16.wav-f29538a0de13cba99060b4eac2c69845.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

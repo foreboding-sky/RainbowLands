@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/buildsp6.mp3-a2dd5114b3d6478b12886f717fe10629.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/buildsp6.mp3"
+dest_files=[ "res://.import/buildsp6.mp3-a2dd5114b3d6478b12886f717fe10629.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

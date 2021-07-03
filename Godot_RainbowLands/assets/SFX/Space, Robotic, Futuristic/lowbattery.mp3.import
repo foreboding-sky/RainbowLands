@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lowbattery.mp3-c81dbc85197d9df0e97fa88ed452c88e.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/lowbattery.mp3"
+dest_files=[ "res://.import/lowbattery.mp3-c81dbc85197d9df0e97fa88ed452c88e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

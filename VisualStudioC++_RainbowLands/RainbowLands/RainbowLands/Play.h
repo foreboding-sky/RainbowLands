@@ -3,10 +3,11 @@
 #include <Godot.hpp>
 #include <ResourceLoader.hpp>
 #include <PackedScene.hpp>
+#include <SceneTree.hpp>
 
 namespace godot
 {
-	class Play :  Button
+	class Play : public Button
 	{
 		GODOT_CLASS(Play, Button);
 
@@ -15,7 +16,8 @@ namespace godot
 		void _init();
 		void _ready();
 
-		void on_button_pressed();
+		void _on_button_pressed();
+		
 
 	private:
 		ResourceLoader* _resource_loader = nullptr;

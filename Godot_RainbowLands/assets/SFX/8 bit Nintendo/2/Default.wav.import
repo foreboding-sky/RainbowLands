@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Default.wav-4d1a8eaa661f3ca978f93a700abe4d53.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/2/Default.wav"
+dest_files=[ "res://.import/Default.wav-4d1a8eaa661f3ca978f93a700abe4d53.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

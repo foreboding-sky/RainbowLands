@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spike_8.mp3-e340f6c4a40506081cade16b0af4f27f.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/spike_8.mp3"
+dest_files=[ "res://.import/spike_8.mp3-e340f6c4a40506081cade16b0af4f27f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

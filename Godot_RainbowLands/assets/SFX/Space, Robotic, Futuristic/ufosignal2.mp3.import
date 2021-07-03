@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ufosignal2.mp3-c2c1029f8312567df92dd9017ad4cecf.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/ufosignal2.mp3"
+dest_files=[ "res://.import/ufosignal2.mp3-c2c1029f8312567df92dd9017ad4cecf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

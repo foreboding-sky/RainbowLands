@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Randomize27.wav-9e5c228f35062b4a4856820a558c494e.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/2/Randomize27.wav"
+dest_files=[ "res://.import/Randomize27.wav-9e5c228f35062b4a4856820a558c494e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

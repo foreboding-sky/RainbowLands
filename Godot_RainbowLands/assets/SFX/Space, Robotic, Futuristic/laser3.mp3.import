@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laser3.mp3-9c49895af7ad291f7ba06861098bca4d.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/laser3.mp3"
+dest_files=[ "res://.import/laser3.mp3-9c49895af7ad291f7ba06861098bca4d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

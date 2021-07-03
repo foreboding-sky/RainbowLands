@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mystic3.mp3-1107cddb1e7c6200e06f75d2577308ab.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/mystic3.mp3"
+dest_files=[ "res://.import/mystic3.mp3-1107cddb1e7c6200e06f75d2577308ab.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

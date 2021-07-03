@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/message2.mp3-d5923f5ef201c11fa339f2f171f92930.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/message2.mp3"
+dest_files=[ "res://.import/message2.mp3-d5923f5ef201c11fa339f2f171f92930.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

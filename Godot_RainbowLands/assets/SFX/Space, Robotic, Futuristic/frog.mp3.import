@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/frog.mp3-7524a2c34a2b9fb547727efe193291cb.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/frog.mp3"
+dest_files=[ "res://.import/frog.mp3-7524a2c34a2b9fb547727efe193291cb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

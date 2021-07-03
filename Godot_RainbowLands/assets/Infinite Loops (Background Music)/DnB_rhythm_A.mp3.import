@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DnB_rhythm_A.mp3-48321c05714c674e003d9eca1ccc0808.mp3str"
+
+[deps]
+
+source_file="res://assets/Infinite Loops (Background Music)/DnB_rhythm_A.mp3"
+dest_files=[ "res://.import/DnB_rhythm_A.mp3-48321c05714c674e003d9eca1ccc0808.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

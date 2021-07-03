@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gum.mp3-401a498e8e0f98b3b9530fd581ab79cc.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/gum.mp3"
+dest_files=[ "res://.import/gum.mp3-401a498e8e0f98b3b9530fd581ab79cc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

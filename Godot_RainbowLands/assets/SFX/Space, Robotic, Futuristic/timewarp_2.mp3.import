@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/timewarp_2.mp3-1fdc96452f7e034e33e908297fd45073.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/timewarp_2.mp3"
+dest_files=[ "res://.import/timewarp_2.mp3-1fdc96452f7e034e33e908297fd45073.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

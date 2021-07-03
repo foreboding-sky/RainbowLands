@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ufodead3.mp3-4fbc5656445807c541f0f0ec6a49a713.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/ufodead3.mp3"
+dest_files=[ "res://.import/ufodead3.mp3-4fbc5656445807c541f0f0ec6a49a713.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

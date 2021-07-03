@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flame.mp3-7ca37ad3e117d2a59847fdb57386f07e.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/flame.mp3"
+dest_files=[ "res://.import/flame.mp3-7ca37ad3e117d2a59847fdb57386f07e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

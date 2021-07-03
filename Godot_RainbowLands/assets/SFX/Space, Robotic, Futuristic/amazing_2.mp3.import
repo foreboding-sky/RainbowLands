@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/amazing_2.mp3-95a17775dd5a723d5806e15d58d090d5.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/amazing_2.mp3"
+dest_files=[ "res://.import/amazing_2.mp3-95a17775dd5a723d5806e15d58d090d5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

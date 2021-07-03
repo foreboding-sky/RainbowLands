@@ -12,9 +12,10 @@ namespace godot {
 	public:
 		Player();
 		~Player();
-		void _process(float delta);
+		void _update(float delta);
 		void _init();
 		void _ready();
+		
 		static void _register_methods();
 	};
 }

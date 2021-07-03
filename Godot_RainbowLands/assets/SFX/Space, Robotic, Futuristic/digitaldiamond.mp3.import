@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/digitaldiamond.mp3-281809c6e9b86b53c6d79b89165acc8e.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/digitaldiamond.mp3"
+dest_files=[ "res://.import/digitaldiamond.mp3-281809c6e9b86b53c6d79b89165acc8e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

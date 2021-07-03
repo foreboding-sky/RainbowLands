@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nightmare.mp3-5b00226ae1b66c8086b8ab755e891cb9.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/nightmare.mp3"
+dest_files=[ "res://.import/nightmare.mp3-5b00226ae1b66c8086b8ab755e891cb9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

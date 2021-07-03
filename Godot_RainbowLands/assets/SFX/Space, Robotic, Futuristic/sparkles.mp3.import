@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sparkles.mp3-ea9dbb3f461476b8ff2cc5af83dfb9eb.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/sparkles.mp3"
+dest_files=[ "res://.import/sparkles.mp3-ea9dbb3f461476b8ff2cc5af83dfb9eb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

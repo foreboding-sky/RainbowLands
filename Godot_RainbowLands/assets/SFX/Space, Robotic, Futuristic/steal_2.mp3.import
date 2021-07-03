@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/steal_2.mp3-e70ecf0523460621e1ae78d5cc17da03.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/steal_2.mp3"
+dest_files=[ "res://.import/steal_2.mp3-e70ecf0523460621e1ae78d5cc17da03.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

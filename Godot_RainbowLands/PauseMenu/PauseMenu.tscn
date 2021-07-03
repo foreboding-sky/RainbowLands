@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://MainMenu/fonts/LogoFont.tres" type="DynamicFont" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="LogoContainer" type="VBoxContainer" parent="."]
+margin_left = 408.0
+margin_top = 24.0
+margin_right = 618.0
+margin_bottom = 202.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LogoContainer"]
+margin_top = 58.0
+margin_right = 210.0
+margin_bottom = 119.0
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[rainbow 
+freq=0.1 sat =1 val=2]Paused[/rainbow]"
+text = "Paused"
+fit_content_height = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 296.0
+margin_top = 221.0
+margin_right = 722.0
+margin_bottom = 368.0
+size_flags_vertical = 3
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="VBoxContainer2"]
+margin_right = 426.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 2 )
+text = "Resume"
+
+[node name="Options" type="Button" parent="VBoxContainer2"]
+margin_top = 59.0
+margin_right = 426.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 2 )
+text = "Options"
+
+[node name="MainMenu" type="Button" parent="VBoxContainer2"]
+margin_top = 118.0
+margin_right = 426.0
+margin_bottom = 147.0
+custom_fonts/font = ExtResource( 2 )
+text = "Main Menu"

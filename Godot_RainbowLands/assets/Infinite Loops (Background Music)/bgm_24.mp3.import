@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bgm_24.mp3-05f1f7560fe7fa02938238295ff3c182.mp3str"
+
+[deps]
+
+source_file="res://assets/Infinite Loops (Background Music)/bgm_24.mp3"
+dest_files=[ "res://.import/bgm_24.mp3-05f1f7560fe7fa02938238295ff3c182.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

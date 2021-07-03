@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Blip_Select15.wav-e81b1037f2d5a8f3139f559d3ed10a67.sample"
+
+[deps]
+
+source_file="res://assets/SFX/8 bit Nintendo/1/Blip_Select15.wav"
+dest_files=[ "res://.import/Blip_Select15.wav-e81b1037f2d5a8f3139f559d3ed10a67.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

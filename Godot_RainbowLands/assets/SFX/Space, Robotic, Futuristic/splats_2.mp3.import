@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/splats_2.mp3-ef3750d5c249d4239df159c55ae65ce3.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/splats_2.mp3"
+dest_files=[ "res://.import/splats_2.mp3-ef3750d5c249d4239df159c55ae65ce3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

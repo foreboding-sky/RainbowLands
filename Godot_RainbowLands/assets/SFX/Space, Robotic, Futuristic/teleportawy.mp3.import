@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/teleportawy.mp3-dea8298a89500aef926296d6113bd510.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/teleportawy.mp3"
+dest_files=[ "res://.import/teleportawy.mp3-dea8298a89500aef926296d6113bd510.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

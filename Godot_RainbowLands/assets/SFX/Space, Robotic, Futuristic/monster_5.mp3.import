@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/monster_5.mp3-23211bc6ad4a43132a4b9bced6a4be6a.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/monster_5.mp3"
+dest_files=[ "res://.import/monster_5.mp3-23211bc6ad4a43132a4b9bced6a4be6a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

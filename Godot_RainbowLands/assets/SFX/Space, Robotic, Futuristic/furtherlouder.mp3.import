@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/furtherlouder.mp3-7650ec6ea7777f1cd041dfa7fbddd84d.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/furtherlouder.mp3"
+dest_files=[ "res://.import/furtherlouder.mp3-7650ec6ea7777f1cd041dfa7fbddd84d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

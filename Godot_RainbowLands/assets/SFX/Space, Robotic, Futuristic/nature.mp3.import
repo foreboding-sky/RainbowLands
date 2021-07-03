@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nature.mp3-bba59c9579e1c312ec64b5e873997fe1.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/nature.mp3"
+dest_files=[ "res://.import/nature.mp3-bba59c9579e1c312ec64b5e873997fe1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

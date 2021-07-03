@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boingmachine.mp3-59edc89e4c3a27bb95287f087b724148.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space, Robotic, Futuristic/boingmachine.mp3"
+dest_files=[ "res://.import/boingmachine.mp3-59edc89e4c3a27bb95287f087b724148.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
