@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://PathFollow2D.gdns" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0.242844, -0.928497, 0, 0, 0, 0, 95.6846, -1.76939, 0, 0, 0, 0, 98.2073, 50.3662, 0, 0, 0, 0, 191.547, 52.048, 0, 0, 0, 0, 192.388, 97.8768, 0, 0, 0, 0, 362.111, 103.919, 0, 0, 0, 0, 471.642, 235.673, 0, 0, 0, 0, 763.724, 270.596, 0, 0, 0, 0, 746.262, 421.399, 0, 0, 0, 0, 958.974, 459.497, 0, 0, 0, 0, 922.464, 548.391 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 0.242844, -0.928497 )
+rotation = -0.00881037
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )

@@ -9,6 +9,7 @@
 #include <Position2D.hpp>
 #include <Array.hpp>
 #include <YSort.hpp>
+#include <Viewport.hpp>
 
 namespace godot {
 	class LevelManager : public Node
@@ -19,12 +20,13 @@ namespace godot {
 	public:
 		LevelManager();
 		~LevelManager();
-		void _process(float delta);
+		void _physics_process(float delta);
 		void _init();
 		void _ready();
+		void _follow_mouse();
 		void _mob_got_through();
 		void _level_over();
-		void _unhandled_input(InputEvent event);
+		//void _unhandled_input(InputEvent event);
 		static void _register_methods();
 
 		// <- _mob_defeated here (!)
@@ -44,8 +46,6 @@ namespace godot {
 		int _current_health;
 		int _placement_currency;
 
-		// tower management
-		bool _can_place_tower;
 		// tiles that you can't place tower on
 		Array _invalid_tiles;
 		TileMap* _tower_placement;
