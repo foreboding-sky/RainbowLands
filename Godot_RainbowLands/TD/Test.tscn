@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://TD/main.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://tilesets/ruins/Structures_tileset.tres" type="TileSet" id=9]
 [ext_resource path="res://tilesets/ruins/Plants_tileset.tres" type="TileSet" id=10]
 [ext_resource path="res://TD/sprites/tower_placement_tileset.png" type="Texture" id=11]
+[ext_resource path="res://PauseMenu/PauseMenu.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tower_placement_tileset.png 0"
@@ -225,6 +226,8 @@ text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PauseMenu" parent="user_interface" instance=ExtResource( 12 )]
 
 [connection signal="timeout" from="mob_spawn_timer" to="." method="_on_mob_spawn_timer_timeout"]
 [connection signal="pressed" from="user_interface/tower" to="." method="_on_tower_pressed"]

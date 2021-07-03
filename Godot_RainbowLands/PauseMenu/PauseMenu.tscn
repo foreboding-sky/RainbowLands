@@ -1,59 +1,55 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://MainMenu/fonts/LogoFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://PauseMenu/PauseMenu.gdns" type="Script" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="LogoContainer" type="VBoxContainer" parent="."]
-margin_left = 408.0
-margin_top = 24.0
-margin_right = 618.0
-margin_bottom = 202.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 384.0
+margin_top = 176.0
+margin_right = 640.0
+margin_bottom = 325.0
+custom_constants/separation = 11
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="LogoContainer"]
-margin_top = 58.0
-margin_right = 210.0
-margin_bottom = 119.0
-custom_fonts/normal_font = ExtResource( 6 )
-bbcode_enabled = true
-bbcode_text = "[rainbow 
-freq=0.1 sat =1 val=2]Paused[/rainbow]"
-text = "Paused"
-fit_content_height = true
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_left = 296.0
-margin_top = 221.0
-margin_right = 722.0
-margin_bottom = 368.0
-size_flags_vertical = 3
-custom_constants/separation = 30
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Resume" type="Button" parent="VBoxContainer2"]
-margin_right = 426.0
-margin_bottom = 29.0
-custom_fonts/font = ExtResource( 2 )
+[node name="Resume" type="Button" parent="VBoxContainer"]
+margin_top = 20.0
+margin_right = 256.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
 text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Options" type="Button" parent="VBoxContainer2"]
-margin_top = 59.0
-margin_right = 426.0
-margin_bottom = 88.0
-custom_fonts/font = ExtResource( 2 )
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 256.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 1 )
 text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="MainMenu" type="Button" parent="VBoxContainer2"]
-margin_top = 118.0
-margin_right = 426.0
-margin_bottom = 147.0
-custom_fonts/font = ExtResource( 2 )
-text = "Main Menu"
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 100.0
+margin_right = 256.0
+margin_bottom = 129.0
+custom_fonts/font = ExtResource( 1 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}

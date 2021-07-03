@@ -4,6 +4,7 @@
 #include "Options.h"
 #include "Exit.h"
 #include "Return.h"
+#include "PauseMenu.h"
 
 using namespace godot;
 
@@ -23,4 +24,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Options>();
 	register_class<Exit>();
 	register_class<Return>();
+	register_class<PauseMenu>();
 }
