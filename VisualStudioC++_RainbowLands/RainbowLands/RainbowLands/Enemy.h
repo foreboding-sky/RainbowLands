@@ -29,10 +29,6 @@ namespace godot {
 
 		//animations
 		
-		//AnimationPlayer _animator;
-		//float _animation_speed;
-		//RandomNumberGenerator rng;
-		
 		//collision
 	};
 }

@@ -21,11 +21,6 @@ void Enemy::_init()
 }
 void Enemy::_ready()
 {
-	// set animation
-	
-	//rng.randomize();
-	//_animation_speed = rng.randf_range(0.9, 1.1);
-	//_animator.play(_sprite_direction);
 }
 void Enemy::_register_methods()
 {

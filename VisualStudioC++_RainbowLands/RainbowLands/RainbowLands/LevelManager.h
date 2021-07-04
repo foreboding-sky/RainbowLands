@@ -23,7 +23,6 @@ namespace godot {
 		void _physics_process(float delta);
 		void _init();
 		void _ready();
-		void _follow_mouse();
 		void _mob_got_through();
 		void _level_over();
 		//void _unhandled_input(InputEvent event);
@@ -31,7 +30,7 @@ namespace godot {
 
 		// <- _mob_defeated here (!)
 
-		// <- UI things here (!)
+		// <- UI things here (!) 
 
 		// variables
 	private:
