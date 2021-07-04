@@ -32,12 +32,12 @@ void Tower::_init()
 
 void Tower::_ready()
 {
-    //get sprites (!)
     _gun = cast_to<Sprite>(get_node("Gun"));
     _base = cast_to<Sprite>(get_node("Base"));
 
-    //get tilemap (!)
-    _tile_map = cast_to<TileMap>(get_node("/root/main/tilemap"));
+    //set collider radius (!)
+
+    _tile_map = cast_to<TileMap>(get_node("/root/main/tower_placement"));
     _can_build = false;
     _building_mode = true;
     _is_colliding = false;
@@ -106,7 +106,6 @@ void Tower::_on_aggro_area_exited(Area2D* _other_area)
         if (_other_area->get_parent() == _current_target)
             _current_target = nullptr;
     }
-        
 }
 
 //trying to build tower on top of another tower
@@ -119,7 +118,6 @@ void Tower::_on_tower_area_entered(Area2D* _other_area)
 void Tower::_on_tower_area_exited(Area2D* _other_area)
 {
     if (_other_area->is_in_group("Tower"))
-        //if(_enemy_array.has(_other_area->get_parent()))
         _is_colliding = false;
 }
 

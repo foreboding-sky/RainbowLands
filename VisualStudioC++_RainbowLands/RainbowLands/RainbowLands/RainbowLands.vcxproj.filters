@@ -90,6 +90,9 @@
     <ClCompile Include="SpawnTower.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -127,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="SpawnTower.h">
       <Filter>Header Files\UI\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

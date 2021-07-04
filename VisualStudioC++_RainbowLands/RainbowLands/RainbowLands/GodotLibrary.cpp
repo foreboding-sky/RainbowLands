@@ -1,5 +1,4 @@
 #include "Godot.hpp"
-#include "Player.h"
 #include "Play.h"
 #include "Options.h"
 #include "Exit.h"
@@ -9,6 +8,7 @@
 #include "Enemy.h"
 #include "Tower.h"
 #include "SpawnTower.h"
+#include "UI.h"
 
 using namespace godot;
 
@@ -23,7 +23,6 @@ extern "C" void GDN_EXPORT godot_gdnative_terminate(godot_gdnative_terminate_opt
 extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	Godot::nativescript_init(handle);
 	
-	register_class<Player>();
 	register_class<Play>();
 	register_class<Options>();
 	register_class<Exit>();
@@ -31,6 +30,7 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<PauseMenu>();
 	register_class<Enemy>();
 	register_class<LevelManager>();
+	register_class<UI>();
 	register_class<Tower>();
 	register_class<SpawnTower>();
 }
