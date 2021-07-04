@@ -5,6 +5,10 @@
 #include "Exit.h"
 #include "Return.h"
 #include "PauseMenu.h"
+#include "LevelManager.h"
+#include "Enemy.h"
+#include "Tower.h"
+#include "SpawnTower.h"
 
 using namespace godot;
 
@@ -25,4 +29,8 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Exit>();
 	register_class<Return>();
 	register_class<PauseMenu>();
+	register_class<Enemy>();
+	register_class<LevelManager>();
+	register_class<Tower>();
+	register_class<SpawnTower>();
 }

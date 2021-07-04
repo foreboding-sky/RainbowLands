@@ -57,7 +57,7 @@ func _unhandled_input(event):
 			
 			# place the tower
 			var tower_instance = tower.instance()
-			tower_instance.connect("shoot_projectile", self, "shoot_projectile")
+			# tower_instance.connect("shoot_projectile", self, "shoot_projectile")
 			tower_instance.position = tile * Vector2(64, 64)
 			$entities.add_child(tower_instance)
 

@@ -46,6 +46,9 @@
     <Filter Include="Source Files\Root">
       <UniqueIdentifier>{7b4f63d3-9230-4c78-a636-173877bd4f46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\UI\Buttons">
+      <UniqueIdentifier>{ba1f0a27-78d7-4030-8841-4b33064df518}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -57,16 +60,22 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>Source Files\UI</Filter>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Play.cpp">
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exit.cpp">
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="Options.cpp">
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="Exit.cpp">
+    <ClCompile Include="Play.cpp">
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="Return.cpp">
@@ -75,27 +84,36 @@
     <ClCompile Include="PauseMenu.cpp">
       <Filter>Source Files\PauseMenu</Filter>
     </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower.cpp">
+      <Filter>Source Files\UI\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UI.h">
-      <Filter>Header Files\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="Play.h">
-      <Filter>Header Files\MainMenu\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="Tower1.h">
-      <Filter>Header Files\UI\Buttons</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files\Root</Filter>
     </ClInclude>
     <ClInclude Include="Root.h">
       <Filter>Header Files\Root</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exit.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
     <ClInclude Include="Options.h">
       <Filter>Header Files\MainMenu\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="Exit.h">
+    <ClInclude Include="Play.h">
       <Filter>Header Files\MainMenu\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="Return.h">
@@ -103,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="PauseMenu.h">
       <Filter>Header Files\PauseMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower.h">
+      <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

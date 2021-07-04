@@ -8,6 +8,9 @@ Tower::Tower()
 
 Tower::~Tower()
 {
+    _tile_map = nullptr;
+    _gun = nullptr;
+    _base = nullptr;
 }
 
 void Tower::_register_methods()
@@ -34,7 +37,7 @@ void Tower::_ready()
     _base = cast_to<Sprite>(get_node("Base"));
 
     //get tilemap (!)
-    _tile_map = cast_to<TileMap>(get_node("TileMap"));
+    _tile_map = cast_to<TileMap>(get_node("/root/main/tilemap"));
     _can_build = false;
     _building_mode = true;
     _is_colliding = false;
@@ -59,12 +62,16 @@ void Tower::_physics_process(float delta)
             _base->set_modulate(Color{ 1.0, 0.0, 0.0, 0.6 });
             _gun->set_modulate(Color{ 1.0, 0.0, 0.0, 0.6 });
         }
-        if (i->is_action_just_pressed("set_tower") && _can_build)
+        if (i->is_action_just_pressed("tower_build") && _can_build)
         {
             _building_mode = false;
             _base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             _gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             //subtract money from the wallet (!)
+        }
+        if (i->is_action_just_pressed("cancel_tower_build"))
+        {
+            queue_free();
         }
     }
     else
