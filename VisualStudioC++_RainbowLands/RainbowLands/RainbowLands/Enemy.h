@@ -7,6 +7,7 @@
 #include <Array.hpp>
 #include <RandomNumberGenerator.hpp>
 #include <PathFollow2D.hpp>
+#include "LevelManager.h"
 
 namespace godot {
 	class Enemy : public PathFollow2D
@@ -24,9 +25,11 @@ namespace godot {
 
 		// variables
 	private:
+		
 		int _speed;
 		int _health;
-
+		int _damage;
+		LevelManager* _level_manager = nullptr;
 		//animations
 		
 		//collision
