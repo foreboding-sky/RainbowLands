@@ -4,6 +4,7 @@ using namespace godot;
 
 LevelManager::LevelManager()
 {
+	//_instance = this;
 }
 
 LevelManager::~LevelManager()
@@ -20,10 +21,10 @@ void LevelManager::_register_methods()
 	register_method((char*)"_level_over", &LevelManager::_level_over);
 }
 
-LevelManager* LevelManager::get_singleton()
-{
-	return _instance;
-}
+//LevelManager* LevelManager::get_singleton()
+//{
+//	return _instance;
+//}
 
 void LevelManager::_ready()
 {

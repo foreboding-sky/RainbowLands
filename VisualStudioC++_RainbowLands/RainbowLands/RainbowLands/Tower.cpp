@@ -8,6 +8,7 @@ Tower::Tower()
 
 Tower::~Tower()
 {
+    _current_target = nullptr;
     _tile_map = nullptr;
     _gun = nullptr;
     _base = nullptr;
@@ -48,6 +49,10 @@ void Tower::_ready()
 
 void Tower::_physics_process(float delta)
 {
+    //debug
+    //std::string str = std::to_string(_enemy_array.size());
+    //Godot::print(str.c_str());
+
     Input* i = Input::get_singleton();
     if (_building_mode)
     {
@@ -132,6 +137,7 @@ void Tower::_follow_mouse()
         _current_tile = _tile_map->get_tileset().ptr()->tile_get_name(_cell_id);
         if (_current_tile == "tower_base")
         {
+            //snap tower to cell center
             set_position(Vector2{ (_cell_position.x * _cell_size.x + _cell_size.x / 2),
                                   (_cell_position.y * _cell_size.y + _cell_size.y / 2) });
             _can_build = true;

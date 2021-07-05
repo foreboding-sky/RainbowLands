@@ -15,7 +15,7 @@ namespace godot
 
 	void UI::_init()
 	{
-		_instance = this;
+		//_instance = this;
 	}
 	void UI::_ready()
 	{
@@ -25,10 +25,10 @@ namespace godot
 	{
 
 	}
-	UI* UI::get_singleon()
-	{
-		return _instance;
-	}
+	//UI* UI::get_singleon()
+	//{
+	//	return _instance;
+	//}
 	void UI::on_coins_changed()
 	{
 		

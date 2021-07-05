@@ -19,9 +19,9 @@ namespace godot
 		void on_health_changed();
 		void on_wave_changed();
 
-		static UI* get_singleon();
+		//static UI* get_singleon();
 
 	private:
-		static UI* _instance;
+		//static UI* _instance;
 	};
 }

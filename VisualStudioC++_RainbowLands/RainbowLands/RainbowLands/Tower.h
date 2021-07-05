@@ -1,5 +1,6 @@
 #pragma once
 #include <Godot.hpp>
+#include <string>
 #include <Area2D.hpp>
 #include <Vector2.hpp>
 #include <TileMap.hpp>

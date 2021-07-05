@@ -21,14 +21,14 @@ namespace godot {
 
 		void _mob_got_through();
 		void _level_over();
-		static LevelManager* get_singleton();
+		//static LevelManager* get_singleton();
 
 		// <- UI things here (!) 
 
 		// variables
 	private:
 		// singleton
-		static LevelManager* _instance;
+		//static LevelManager* _instance;
 
 		// wave of mobs management
 		int _wave_counter;
