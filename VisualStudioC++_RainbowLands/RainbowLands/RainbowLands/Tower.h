@@ -11,6 +11,11 @@
 #include <Array.hpp>
 #include <PathFollow2D.hpp>
 #include <SceneTree.hpp>
+#include <Timer.hpp>
+#include <PackedScene.hpp>
+#include <ResourceLoader.hpp>
+#include <SceneTree.hpp>
+#include "Projectile.h"
 
 namespace godot {
 	class Tower : public Area2D
@@ -32,9 +37,13 @@ namespace godot {
 		String _current_tile;
 
 		//shooting enemies logic
+		Timer* _attack_timer;
 		Array _enemy_array;
 		PathFollow2D* _current_target;
 		Vector2 _target_position;
+		ResourceLoader* _loader; // for spawning bullets
+		Area2D* _projectile;
+		Vector2 _projectile_spawn_position;
 
 		//tower sprites
 		Sprite* _base;
@@ -50,6 +59,7 @@ namespace godot {
 		static void _register_methods();
 
 		void _follow_mouse();
+		void _on_AttackSpeedTimer_timeout();
 		void _on_aggro_area_entered(Area2D* _other_area);
 		void _on_aggro_area_exited(Area2D* _other_area);
 		void _on_tower_area_entered(Area2D* _other_area);
