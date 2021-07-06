@@ -1,12 +1,15 @@
 #pragma once
 #include <CanvasLayer.hpp>
 #include <Godot.hpp>
+#include <Control.hpp>
+#include <String.hpp>
+#include <string>
 
 namespace godot
 {
-	class UI : public  CanvasLayer
+	class UI : public  Control
 	{
-		GODOT_CLASS(UI, CanvasLayer);
+		GODOT_CLASS(UI, Control);
 
 	public:
 		static void _register_methods();
@@ -14,14 +17,15 @@ namespace godot
 		void _ready();
 		void _process(float delta);
 
-		void on_coins_changed();
-		void on_emeralds_changed();
-		void on_health_changed();
-		void on_wave_changed();
+		void on_coins_changed(int value);
+		void on_emeralds_changed(int value);
+		void on_health_changed(int value);
+		void on_wave_changed(int value);
 
-		//static UI* get_singleon();
+		static UI* get_singleon();
 
 	private:
-		//static UI* _instance;
+		static UI* _instance;
+
 	};
 }

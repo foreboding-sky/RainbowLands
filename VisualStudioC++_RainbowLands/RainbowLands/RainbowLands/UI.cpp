@@ -2,6 +2,7 @@
 
 namespace godot
 {
+	UI* UI::_instance;
 	void UI::_register_methods()
 	{
 		register_method("_init", &UI::_init);
@@ -15,33 +16,42 @@ namespace godot
 
 	void UI::_init()
 	{
+		_instance = this;
 	}
 	void UI::_ready()
 	{
-		
+
 	}
 	void UI::_process(float delta)
 	{
 
 	}
-	//UI* UI::get_singleon()
-	//{
-	//	return _instance;
-	//}
-	void UI::on_coins_changed()
+	UI* UI::get_singleon()
 	{
-		
+		return _instance;
 	}
-	void UI::on_emeralds_changed()
+	void UI::on_coins_changed(int value)
 	{
-
+		std::string converter = std::to_string(value);
+		String text = String(converter.c_str());
+		this->get_node("/root/main/user_interface/gold")->set("text", text);
 	}
-	void UI::on_health_changed()
+	void UI::on_emeralds_changed(int value)
 	{
-
+		std::string converter = std::to_string(value);
+		String text = String(converter.c_str());
+		this->get_node("/root/main/user_interface/points")->set("text", text);
 	}
-	void UI::on_wave_changed()
+	void UI::on_health_changed(int value)
 	{
-
+		std::string converter = std::to_string(value);
+		String text = String(converter.c_str());
+		this->get_node("/root/main/user_interface/lives")->set("text", text);
+	}
+	void UI::on_wave_changed(int value)
+	{
+		std::string converter = std::to_string(value);
+		String text = String(converter.c_str());
+		this->get_node("/root/main/user_interface/level")->set("text", text);
 	}
 }

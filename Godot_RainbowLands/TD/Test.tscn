@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://TD/LevelManager.gdns" type="Script" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
@@ -13,6 +13,13 @@
 [ext_resource path="res://TD/Towers/TestTileSet.tres" type="TileSet" id=11]
 [ext_resource path="res://PauseMenu/PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://TD/tower.gdns" type="Script" id=13]
+[ext_resource path="res://RainbowLands.gdnlib" type="GDNativeLibrary" id=14]
+[ext_resource path="res://MainMenu/fonts/Counter.tres" type="DynamicFont" id=15]
+
+[sub_resource type="NativeScript" id=1]
+resource_name = "UI"
+class_name = "UI"
+library = ExtResource( 14 )
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -88,6 +95,7 @@ one_shot = true
 [node name="user_interface" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,12 +105,6 @@ margin_left = 1.11009
 margin_top = 545.0
 margin_right = 501.11
 margin_bottom = 598.0
-
-[node name="Emerald" parent="user_interface" instance=ExtResource( 4 )]
-margin_left = 3.16295
-margin_top = -16.2296
-margin_right = 103.163
-margin_bottom = 63.7704
 
 [node name="level" type="Label" parent="user_interface"]
 margin_left = 47.9453
@@ -131,7 +133,6 @@ __meta__ = {
 }
 
 [node name="lives" type="Label" parent="user_interface"]
-visible = false
 margin_top = 192.0
 margin_right = 96.0
 margin_bottom = 208.0
@@ -143,13 +144,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="EmeraldCounter" parent="user_interface" instance=ExtResource( 4 )]
+margin_left = 1.02713
+margin_top = -19.2379
+margin_right = 101.027
+margin_bottom = 60.7621
+
 [node name="gold" type="Label" parent="user_interface"]
-visible = false
-margin_top = 256.0
-margin_right = 96.0
-margin_bottom = 272.0
-rect_scale = Vector2( 2, 2 )
-text = "Gold: 0"
+margin_left = 16.5969
+margin_top = 27.2456
+margin_right = 112.597
+margin_bottom = 59.2456
+custom_fonts/font = ExtResource( 15 )
+text = "123"
 align = 1
 valign = 1
 __meta__ = {
