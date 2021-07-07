@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://TD/LevelManager.gdns" type="Script" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
@@ -13,13 +13,8 @@
 [ext_resource path="res://TD/Towers/TestTileSet.tres" type="TileSet" id=11]
 [ext_resource path="res://PauseMenu/PauseMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://TD/tower.gdns" type="Script" id=13]
-[ext_resource path="res://RainbowLands.gdnlib" type="GDNativeLibrary" id=14]
+[ext_resource path="res://TD/UI.gdns" type="Script" id=14]
 [ext_resource path="res://MainMenu/fonts/Counter.tres" type="DynamicFont" id=15]
-
-[sub_resource type="NativeScript" id=1]
-resource_name = "UI"
-class_name = "UI"
-library = ExtResource( 14 )
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -95,7 +90,7 @@ one_shot = true
 [node name="user_interface" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-script = SubResource( 1 )
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

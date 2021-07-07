@@ -9,6 +9,8 @@
 #include "Tower.h"
 #include "SpawnTower.h"
 #include "UI.h"
+#include "Resume.h"
+#include "ToMain.h"
 
 using namespace godot;
 
@@ -33,4 +35,6 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<UI>();
 	register_class<Tower>();
 	register_class<SpawnTower>();
+	register_class<Resume>();
+	register_class<ToMain>();
 }
