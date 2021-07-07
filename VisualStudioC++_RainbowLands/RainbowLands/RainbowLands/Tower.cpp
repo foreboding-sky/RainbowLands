@@ -14,6 +14,16 @@ Tower::~Tower()
     _gun = nullptr;
     _base = nullptr;
     _projectile = nullptr;
+
+    _can_build = false;
+    _building_mode = true;
+    _is_colliding = false;
+    _cell_id = -1;
+
+    _attack_speed = 1.0;
+    _projectile_prefab_path = "res://TD/Projectiles/Projectile_1.tscn";
+    _base_sprite_path = "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png";
+    _gun_sprite_path = "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png";
 }
 
 void Tower::_register_methods()
@@ -36,25 +46,34 @@ void Tower::_init()
 
 void Tower::_ready()
 {
-    _gun = cast_to<Sprite>(get_node("Gun"));
-    _base = cast_to<Sprite>(get_node("Base"));
     _loader = ResourceLoader::get_singleton();
+
+    //set gun texture
+    _gun = cast_to<Sprite>(get_node("Gun"));
+    Ref<Texture> _gun_texture = _loader->load(_gun_sprite_path);
+    _gun->set_texture(_gun_texture);
+
+    //set tower base texture
+    _base = cast_to<Sprite>(get_node("Base"));
+    Ref<Texture> _base_texture = _loader->load(_base_sprite_path);
+    _base->set_texture(_base_texture);
+
+    //set tower attack speed
     _attack_timer = cast_to<Timer>(get_node("AttackSpeedTimer"));
+    _attack_timer->set_wait_time(_attack_speed);
 
     //set collider radius (!)
 
+    //get tilemap
     _tile_map = cast_to<TileMap>(get_node("/root/main/tower_placement"));
 
-    _can_build = false;
-    _building_mode = true;
-    _is_colliding = false;
-
+    //set tile size
     _cell_size = _tile_map->get_cell_size();
-    _cell_id = -1;
-
+    
     _enemy_array.clear();
-
-    Ref<PackedScene> prefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
+   
+    //set projectile
+    Ref<PackedScene> prefab = _loader->load(_projectile_prefab_path);
     _projectile = cast_to<Area2D>(prefab->instance());
     _projectile_spawn_position = Vector2{ 0, 0 };
 }
@@ -172,4 +191,20 @@ void Tower::_follow_mouse()
     {
         _can_build = false;
     }
+}
+
+//set sprites in TowerBuilder
+void Tower::_set_projectile_path(String _scene_path)
+{
+    _projectile_prefab_path = _scene_path;
+}
+
+void Tower::_set_gun_path(String _iamge_path)
+{
+    _gun_sprite_path = _iamge_path;
+}
+
+void Tower::_set_base_path(String _iamge_path)
+{
+    _base_sprite_path = _iamge_path;
 }

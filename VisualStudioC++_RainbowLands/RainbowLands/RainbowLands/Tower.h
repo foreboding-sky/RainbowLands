@@ -16,6 +16,7 @@
 #include <ResourceLoader.hpp>
 #include <SceneTree.hpp>
 #include "Projectile.h"
+#include <Texture.hpp>
 
 namespace godot {
 	class Tower : public Area2D
@@ -36,17 +37,25 @@ namespace godot {
 		int _cell_id;
 		String _current_tile;
 
-		//shooting enemies logic
+		//attack speed
+		float _attack_speed;
 		Timer* _attack_timer;
+
+		//enemies
 		Array _enemy_array;
 		PathFollow2D* _current_target;
 		Vector2 _target_position;
-		ResourceLoader* _loader; // for spawning bullets
+
+		//spawning projectiles
+		ResourceLoader* _loader; 
+		String _projectile_prefab_path;
 		Area2D* _projectile;
 		Vector2 _projectile_spawn_position;
 
 		//tower sprites
+		String _base_sprite_path;
 		Sprite* _base;
+		String _gun_sprite_path;
 		Sprite* _gun;
 
 		// methods
@@ -64,6 +73,10 @@ namespace godot {
 		void _on_aggro_area_exited(Area2D* _other_area);
 		void _on_tower_area_entered(Area2D* _other_area);
 		void _on_tower_area_exited(Area2D* _other_area);
+
+		void _set_projectile_path(String _scene_path);
+		void _set_gun_path(String _iamge_path);
+		void _set_base_path(String _iamge_path);
 	};
 }
 
