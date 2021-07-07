@@ -19,27 +19,25 @@ namespace godot {
 		void _ready();
 		static void _register_methods();
 
-		void _mob_got_through();
+		void _mob_got_through(int damage);
 		void _level_over();
-		//static LevelManager* get_singleton();
+		static LevelManager* get_singleton();
 
-		// <- UI things here (!) 
-
-		// variables
-	private:
-		// singleton
-		//static LevelManager* _instance;
-
-		// wave of mobs management
 		int _wave_counter;
 		int _remaining_mobs_counter;
 		int _max_waves;
 		Timer* _mob_spawn_timer;
-		// <- mob here (!)
-
-
 		int _current_health;
+		int _max_health;
 		int _placement_currency;
+
+	private:
+		// singleton
+	 static	LevelManager* _instance;
+
+		// wave of mobs management
+
+		// <- mob here (!)
 
 		// <- UI here (!)
 		

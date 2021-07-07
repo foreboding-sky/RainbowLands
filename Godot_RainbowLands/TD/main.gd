@@ -4,7 +4,6 @@ onready var mob = preload("res://TD//mob.tscn")
 onready var tower = preload("res://TD//tower.tscn")
 onready var projectile = preload("res://TD//projectile.tscn")
 
-
 var mobs_remaining = 0
 var level = 0
 var lives = 100

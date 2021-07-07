@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://PauseMenu/PauseMenu.gdns" type="Script" id=2]
+[ext_resource path="res://PauseMenu/Resume.gdns" type="Script" id=3]
+[ext_resource path="res://PauseMenu/ToMain.gdns" type="Script" id=4]
 
 [node name="PauseMenu" type="Control"]
 pause_mode = 2
@@ -30,6 +32,7 @@ margin_right = 256.0
 margin_bottom = 49.0
 custom_fonts/font = ExtResource( 1 )
 text = "Resume"
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -44,12 +47,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="ToMain" type="Button" parent="VBoxContainer"]
 margin_top = 100.0
 margin_right = 256.0
 margin_bottom = 129.0
 custom_fonts/font = ExtResource( 1 )
 text = "Exit"
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

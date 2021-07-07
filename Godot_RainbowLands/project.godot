@@ -14,6 +14,10 @@ config/name="RainbowLands"
 run/main_scene="res://TD/Test.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+LevelManager="*res://TD/LevelManager.gdns"
+
 [input]
 
 pause={

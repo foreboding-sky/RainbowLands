@@ -2,9 +2,10 @@
 
 using namespace godot;
 
+LevelManager* LevelManager::_instance;
+
 LevelManager::LevelManager()
 {
-	//_instance = this;
 }
 
 LevelManager::~LevelManager()
@@ -21,10 +22,11 @@ void LevelManager::_register_methods()
 	register_method((char*)"_level_over", &LevelManager::_level_over);
 }
 
-//LevelManager* LevelManager::get_singleton()
-//{
-//	return _instance;
-//}
+LevelManager* LevelManager::get_singleton()
+{
+	return _instance;
+	//return nullptr;
+}
 
 void LevelManager::_ready()
 {
@@ -32,6 +34,7 @@ void LevelManager::_ready()
 	_remaining_mobs_counter = 0;
 	_max_waves = 10;
 	_current_health = 10;
+	_max_health = 10;
 	_placement_currency = 10;
 }
 
@@ -40,12 +43,12 @@ void LevelManager::_level_over()
 	//level over logic
 }
 
-void LevelManager::_mob_got_through()
+void LevelManager::_mob_got_through(int damage)
 {
 	if (_current_health <= 0)
 		_level_over();
 	else
-		_current_health -= 1;
+		_current_health -= damage;
 }
 
 void LevelManager::_physics_process(float delta)
@@ -54,4 +57,5 @@ void LevelManager::_physics_process(float delta)
 
 void LevelManager::_init()
 {
+	_instance = this;
 }
