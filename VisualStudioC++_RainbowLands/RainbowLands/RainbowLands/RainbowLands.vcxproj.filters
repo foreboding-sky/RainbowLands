@@ -55,6 +55,9 @@
     <Filter Include="Header Files\PauseMenu\Buttons">
       <UniqueIdentifier>{6366dc17-16b6-47d1-80b9-4fc67579c796}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{aaf2ef38-48d8-4642-b875-49e336b7730e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -151,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="ToMain.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="IObserver.h">
+      <Filter>Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
