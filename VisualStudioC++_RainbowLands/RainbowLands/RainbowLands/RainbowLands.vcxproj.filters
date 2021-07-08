@@ -49,6 +49,12 @@
     <Filter Include="Source Files\UI\Buttons">
       <UniqueIdentifier>{ba1f0a27-78d7-4030-8841-4b33064df518}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PauseMenu\Buttons">
+      <UniqueIdentifier>{3e06733d-841c-4e0e-9d9c-60c7ff4ad58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PauseMenu\Buttons">
+      <UniqueIdentifier>{6366dc17-16b6-47d1-80b9-4fc67579c796}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -90,6 +96,15 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PauseOptions.cpp">
+      <Filter>Source Files\PauseMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Resume.cpp">
+      <Filter>Source Files\PauseMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="ToMain.cpp">
+      <Filter>Source Files\PauseMenu\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -127,6 +142,15 @@
     </ClInclude>
     <ClInclude Include="Projectile.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseOptions.h">
+      <Filter>Header Files\PauseMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Resume.h">
+      <Filter>Header Files\PauseMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ToMain.h">
+      <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

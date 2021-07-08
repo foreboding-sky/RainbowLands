@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://TD/LevelManager.gdns" type="Script" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/prefabs/LifeBar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/prefabs/EmeraldCounter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tilesets/Space/TowerSpots.tres" type="TileSet" id=5]
+[ext_resource path="res://TD/Enemies/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://tilesets/Space/space_bg.tres" type="TileSet" id=9]
 [ext_resource path="res://TD/Towers/TestTileSet.tres" type="TileSet" id=11]
 [ext_resource path="res://PauseMenu/PauseMenu.tscn" type="PackedScene" id=12]
@@ -51,12 +52,12 @@ one_shot = true
 
 [node name="entities" type="YSort" parent="."]
 
+[node name="projectiles" type="YSort" parent="."]
+
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 17, 370 )
-rotation = -0.00892166
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource( 6 )]
 
 [node name="user_interface" type="Control" parent="."]
 margin_right = 40.0
