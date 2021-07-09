@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TD/LevelManager.gdns" type="Script" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://UI/prefabs/EmeraldCounter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tilesets/Space/TowerSpots.tres" type="TileSet" id=5]
 [ext_resource path="res://TD/Enemies/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TD/TowerShop.gdns" type="Script" id=7]
+[ext_resource path="res://UI/TowerShop.tscn" type="PackedScene" id=8]
 [ext_resource path="res://tilesets/Space/space_bg.tres" type="TileSet" id=9]
 [ext_resource path="res://TD/Towers/TestTileSet.tres" type="TileSet" id=11]
 [ext_resource path="res://PauseMenu/PauseMenu.tscn" type="PackedScene" id=12]
-[ext_resource path="res://TD/tower.gdns" type="Script" id=13]
 [ext_resource path="res://TD/UI.gdns" type="Script" id=14]
 [ext_resource path="res://MainMenu/fonts/Counter.tres" type="DynamicFont" id=15]
 
@@ -137,10 +138,12 @@ margin_right = 127.785
 margin_bottom = 116.576
 custom_fonts/font = ExtResource( 2 )
 text = "Tower"
-script = ExtResource( 13 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control" parent="user_interface/tower" instance=ExtResource( 8 )]
 
 [node name="next_wave" type="Label" parent="user_interface"]
 margin_left = 19.025

@@ -31,6 +31,7 @@ namespace godot
 		Ref<PackedScene> prefab = _loader->load("res://TD/Towers/TestTower.tscn");		
 		Area2D* tower = cast_to<Area2D>(prefab->instance());
 		get_node("/root/main/entities")->add_child(tower);
+		get_parent()->get_parent()->get_parent()->set("visible", false);
 	}
 	void SpawnTower::_on_mouse_hovered()
 	{

@@ -12,6 +12,7 @@
 #include "Resume.h"
 #include "ToMain.h"
 #include "TowerInfo.h"
+#include "TowerShop.h"
 
 using namespace godot;
 
@@ -39,4 +40,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Resume>();
 	register_class<ToMain>();
 	register_class<TowerInfo>();
+	register_class<TowerShop>();
 }

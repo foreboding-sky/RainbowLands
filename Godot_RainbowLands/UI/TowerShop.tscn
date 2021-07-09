@@ -8,6 +8,7 @@
 [ext_resource path="res://TD/tower.gdns" type="Script" id=6]
 
 [node name="Control" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -5.25375

@@ -120,6 +120,12 @@
     <ClCompile Include="TowerInfo.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="TowerBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerShop.cpp">
+      <Filter>Source Files\UI\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -178,6 +184,12 @@
     </ClInclude>
     <ClInclude Include="TowerInfo.h">
       <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerShop.h">
+      <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
