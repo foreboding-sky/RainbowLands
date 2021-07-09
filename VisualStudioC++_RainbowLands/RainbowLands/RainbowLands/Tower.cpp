@@ -38,7 +38,7 @@ void Tower::_register_methods()
     register_method((char*)"_on_aggro_area_exited", &Tower::_on_aggro_area_exited);
     register_method((char*)"_on_tower_area_entered", &Tower::_on_tower_area_entered);
     register_method((char*)"_on_tower_area_exited", &Tower::_on_tower_area_exited);
-    register_method((char*)"_set_projectile_path", &Tower::_set_projectile_path);
+    register_method((char*)"_set_projectile_path", &Tower::_set_projectile_prefab);
     register_method((char*)"_set_gun_path", &Tower::_set_gun_path);
     register_method((char*)"_set_base_path", &Tower::_set_base_path);
 }
@@ -203,10 +203,10 @@ void Tower::_follow_mouse()
     }
 }
 
-//set sprites in TowerBuilder
-void Tower::_set_projectile_path(String _scene_path)
+//Tower setters
+void Tower::_set_projectile_prefab(Ref<PackedScene> _projectile)
 {
-    _projectile_prefab_path = _scene_path;
+    _projectile_prefab = _projectile;
 }
 
 void Tower::_set_gun_path(String _iamge_path)
@@ -217,4 +217,10 @@ void Tower::_set_gun_path(String _iamge_path)
 void Tower::_set_base_path(String _iamge_path)
 {
     _base_sprite_path = _iamge_path;
+}
+
+void godot::Tower::_set_attack_speed(double _attck_speed)
+{
+    _attack_speed = _attack_speed;
+    _attack_timer->set_wait_time(_attack_speed);
 }
