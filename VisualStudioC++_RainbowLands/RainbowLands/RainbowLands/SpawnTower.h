@@ -7,6 +7,7 @@
 #include <Area2D.hpp>
 #include <Panel.hpp>
 #include <Texture.hpp>
+#include "TowerBuilder.h"
 
 namespace godot
 {
@@ -24,10 +25,13 @@ namespace godot
 		void _on_mouse_left();
 
 		void _on_button_pressed();
+		void BuildTower();
 
+	
 	private:
 		Ref<Texture>_texture;
 		Vector2 _size;
+		Ref<PackedScene> prefab = nullptr;
 		Vector2 _icon_size;
 	};
 }
