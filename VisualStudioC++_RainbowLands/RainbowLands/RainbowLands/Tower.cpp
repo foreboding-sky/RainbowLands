@@ -8,9 +8,22 @@ Tower::Tower()
 
 Tower::~Tower()
 {
+    _loader = nullptr;
+    _current_target = nullptr;
     _tile_map = nullptr;
     _gun = nullptr;
     _base = nullptr;
+    _projectile = nullptr;
+
+    _can_build = false;
+    _building_mode = true;
+    _is_colliding = false;
+    _cell_id = -1;
+
+    _attack_speed = 1.0;
+    _projectile_prefab_path = "res://TD/Projectiles/Projectile_1.tscn";
+    _base_sprite_path = "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png";
+    _gun_sprite_path = "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png";
 }
 
 void Tower::_register_methods()
@@ -18,8 +31,9 @@ void Tower::_register_methods()
     register_method((char*)"_physics_process", &Tower::_physics_process);
     register_method((char*)"_init", &Tower::_init);
     register_method((char*)"_ready", &Tower::_ready);
-
+    
     register_method((char*)"_follow_mouse", &Tower::_follow_mouse);
+    register_method((char*)"_on_AttackSpeedTimer_timeout", &Tower::_on_AttackSpeedTimer_timeout);
     register_method((char*)"_on_aggro_area_entered", &Tower::_on_aggro_area_entered);
     register_method((char*)"_on_aggro_area_exited", &Tower::_on_aggro_area_exited);
     register_method((char*)"_on_tower_area_entered", &Tower::_on_tower_area_entered);
@@ -32,22 +46,44 @@ void Tower::_init()
 
 void Tower::_ready()
 {
+    _loader = ResourceLoader::get_singleton();
+
+    //set gun texture
     _gun = cast_to<Sprite>(get_node("Gun"));
+    Ref<Texture> _gun_texture = _loader->load(_gun_sprite_path);
+    _gun->set_texture(_gun_texture);
+
+    //set tower base texture
     _base = cast_to<Sprite>(get_node("Base"));
+    Ref<Texture> _base_texture = _loader->load(_base_sprite_path);
+    _base->set_texture(_base_texture);
+
+    //set tower attack speed
+    _attack_timer = cast_to<Timer>(get_node("AttackSpeedTimer"));
+    _attack_timer->set_wait_time(_attack_speed);
 
     //set collider radius (!)
 
+    //get tilemap
     _tile_map = cast_to<TileMap>(get_node("/root/main/tower_placement"));
-    _can_build = false;
-    _building_mode = true;
-    _is_colliding = false;
+
+    //set tile size
     _cell_size = _tile_map->get_cell_size();
-    _cell_id = -1;
+    
     _enemy_array.clear();
+   
+    //set projectile
+    Ref<PackedScene> prefab = _loader->load(_projectile_prefab_path);
+    _projectile = cast_to<Area2D>(prefab->instance());
+    _projectile_spawn_position = Vector2{ 0, 0 };
 }
 
 void Tower::_physics_process(float delta)
 {
+    //debug
+    //std::string str = std::to_string(_enemy_array.size());
+    //Godot::print(str.c_str());
+
     Input* i = Input::get_singleton();
     if (_building_mode)
     {
@@ -84,8 +120,12 @@ void Tower::_physics_process(float delta)
 
             //rotation of the gun
             _gun->set_rotation((_target_position - get_position()).angle());
-
-            //shooting logic (!)
+            _attack_timer->start();
+        }
+        else
+        {
+            //stop the attack timer, so the tower stops to attack
+            _attack_timer->stop();
         }
     }
 }
@@ -121,6 +161,15 @@ void Tower::_on_tower_area_exited(Area2D* _other_area)
         _is_colliding = false;
 }
 
+//attack target, spawn bullets(projectiles)
+void Tower::_on_AttackSpeedTimer_timeout()
+{
+    _projectile_spawn_position = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
+    cast_to<Projectile>(_projectile)->_set_target(_current_target);
+    get_node("/root/main")->add_child(_projectile);
+}
+
+//toewr follows mouse cursor in building mode and snaps to allowed tiles
 void Tower::_follow_mouse()
 {
     set_position(get_global_mouse_position());
@@ -132,6 +181,7 @@ void Tower::_follow_mouse()
         _current_tile = _tile_map->get_tileset().ptr()->tile_get_name(_cell_id);
         if (_current_tile == "tower_base")
         {
+            //snap tower to tile center
             set_position(Vector2{ (_cell_position.x * _cell_size.x + _cell_size.x / 2),
                                   (_cell_position.y * _cell_size.y + _cell_size.y / 2) });
             _can_build = true;
@@ -141,4 +191,20 @@ void Tower::_follow_mouse()
     {
         _can_build = false;
     }
+}
+
+//set sprites in TowerBuilder
+void Tower::_set_projectile_path(String _scene_path)
+{
+    _projectile_prefab_path = _scene_path;
+}
+
+void Tower::_set_gun_path(String _iamge_path)
+{
+    _gun_sprite_path = _iamge_path;
+}
+
+void Tower::_set_base_path(String _iamge_path)
+{
+    _base_sprite_path = _iamge_path;
 }

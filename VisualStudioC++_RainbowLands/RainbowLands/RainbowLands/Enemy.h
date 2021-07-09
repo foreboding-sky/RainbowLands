@@ -23,6 +23,8 @@ namespace godot {
 		void _ready();
 		static void _register_methods();
 
+		void _on_Area2D_area_entered(Area2D* _other_area);
+
 		// variables
 	private:
 		
