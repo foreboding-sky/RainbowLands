@@ -9,6 +9,7 @@ namespace godot
 		register_method("_on_button_pressed", &SpawnTower::_on_button_pressed);
 		register_method("_on_mouse_hovered", &SpawnTower::_on_mouse_hovered);
 		register_method("_on_mouse_left", &SpawnTower::_on_mouse_left);
+		register_method("BuildTower", &SpawnTower::BuildTower);
 	}
 	void SpawnTower::_init()
 	{
@@ -28,7 +29,7 @@ namespace godot
 	}
 	void SpawnTower::_on_button_pressed()
 	{
-		Ref<PackedScene> prefab = _loader->load("res://TD/Towers/TestTower.tscn");		
+	
 		Area2D* tower = cast_to<Area2D>(prefab->instance());
 		get_node("/root/main/entities")->add_child(tower);
 		get_parent()->get_parent()->get_parent()->set("visible", false);
@@ -43,6 +44,17 @@ namespace godot
 		Godot::print("unvisivle");
 		//set_visible(false);
 		get_child(0)->set("visible", false);
+	}
+	void SpawnTower::BuildTower()
+	{
+		TowerBuilder builder;
+		builder.SetAmmoTypeProjectile01();
+		builder.SetAttackSpeedHigh();
+		builder.SetGunSprite01();
+		builder.SetPlatformSprite01();
+		get_node("/root/main/entities")->add_cild(builder.Build());
+		builder.Reset();
+
 	}
 }
 

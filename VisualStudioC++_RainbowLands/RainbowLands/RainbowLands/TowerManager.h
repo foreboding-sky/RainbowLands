@@ -5,12 +5,13 @@
 #include <SceneTree.hpp>
 #include <Panel.hpp>
 #include <Color.hpp>
-
+#include <Button.hpp>
+#include "TowerBuilder.h"
 namespace godot
 {
-	class TowerInfo : public Panel
+	class TowerManager : public Panel
 	{
-		GODOT_CLASS(TowerInfo, Panel);
+		GODOT_CLASS(TowerManager, Panel);
 
 	public:
 		static void _register_methods();
@@ -20,5 +21,7 @@ namespace godot
 		void _on_mouse_hovered();
 		void _on_mouse_left();
 
+	private:
+		Button* button = nullptr;
 	};
 }
