@@ -81,6 +81,7 @@ namespace godot {
 		void _set_projectile_path(String _scene_path);
 		void _set_gun_path(String _iamge_path);
 		void _set_base_path(String _iamge_path);
+		void _set_attack_speed(double _attck_speed);
 	};
 }
 

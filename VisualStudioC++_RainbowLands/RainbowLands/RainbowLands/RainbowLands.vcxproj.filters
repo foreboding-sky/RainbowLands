@@ -55,8 +55,14 @@
     <Filter Include="Header Files\PauseMenu\Buttons">
       <UniqueIdentifier>{6366dc17-16b6-47d1-80b9-4fc67579c796}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interfaces">
+    <Filter Include="Architecture-related">
       <UniqueIdentifier>{aaf2ef38-48d8-4642-b875-49e336b7730e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture-related\Header Files">
+      <UniqueIdentifier>{2fc64f93-daf8-4a39-b5bb-34a77f4233a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture-related\Source Files">
+      <UniqueIdentifier>{36415932-6ba1-47c0-8105-b305fac3359c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +114,9 @@
     <ClCompile Include="ToMain.cpp">
       <Filter>Source Files\PauseMenu\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="TowerBuilder.cpp">
+      <Filter>Architecture-related\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -156,7 +165,10 @@
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="IObserver.h">
-      <Filter>Interfaces</Filter>
+      <Filter>Architecture-related\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerBuilder.h">
+      <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
