@@ -3,9 +3,10 @@
 #include <Node.hpp>
 #include <Timer.hpp>
 #include <Array.hpp>
+#include "IObserver.h"
 
 namespace godot {
-	class LevelManager : public Node
+	class LevelManager : public Node, IObserver
 	{
 		// methods
 	private:
@@ -19,6 +20,7 @@ namespace godot {
 		void _ready();
 		static void _register_methods();
 
+		virtual void Notify();
 		void _mob_got_through(int damage);
 		void _level_over();
 		static LevelManager* get_singleton();
@@ -30,7 +32,6 @@ namespace godot {
 		int _current_health;
 		int _max_health;
 		int _placement_currency;
-
 	private:
 		// singleton
 	 static	LevelManager* _instance;

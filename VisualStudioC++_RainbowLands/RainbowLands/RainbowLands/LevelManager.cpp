@@ -11,7 +11,10 @@ LevelManager::LevelManager()
 LevelManager::~LevelManager()
 {
 }
+void LevelManager::Notify()
+{
 
+}
 void LevelManager::_register_methods()
 {
 	register_method((char*)"_physics_process", &LevelManager::_physics_process);
