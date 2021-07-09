@@ -40,6 +40,7 @@ void Enemy::_on_Area2D_area_entered(Area2D* _other_area)
 {
 	if (_other_area->is_in_group("Projectile"))
 	{
+		Godot::print("Got hit by projectile");
 		_other_area->queue_free();
 		_health -= 1;
 		if (_health <= 0)

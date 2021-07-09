@@ -1,5 +1,6 @@
 #pragma once
 #include <Godot.hpp>
+#include <Object.hpp>
 #include <string>
 #include <Area2D.hpp>
 #include <Vector2.hpp>
@@ -32,13 +33,14 @@ namespace godot {
 		bool _can_build;
 		bool _is_colliding;
 		
+		Input* _input;
 		Vector2 _cell_size;
 		Vector2 _cell_position;
 		int _cell_id;
 		String _current_tile;
 
 		//attack speed
-		float _attack_speed;
+		double _attack_speed;
 		Timer* _attack_timer;
 
 		//enemies
@@ -48,9 +50,11 @@ namespace godot {
 
 		//spawning projectiles
 		ResourceLoader* _loader; 
+		Ref<PackedScene> _projectile_prefab;
 		String _projectile_prefab_path;
 		Area2D* _projectile;
 		Vector2 _projectile_spawn_position;
+		bool _is_attacking;
 
 		//tower sprites
 		String _base_sprite_path;
@@ -77,6 +81,7 @@ namespace godot {
 		void _set_projectile_path(String _scene_path);
 		void _set_gun_path(String _iamge_path);
 		void _set_base_path(String _iamge_path);
+		void _set_attack_speed(double _attck_speed);
 	};
 }
 

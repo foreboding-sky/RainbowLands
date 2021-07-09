@@ -8,7 +8,7 @@
 radius = 31.2934
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 92.4036
+radius = 288.085
 
 [node name="Tower" type="Area2D" groups=[
 "Tower",
@@ -40,3 +40,4 @@ shape = SubResource( 2 )
 [connection signal="area_exited" from="." to="." method="_on_tower_area_exited"]
 [connection signal="area_entered" from="Aggro" to="." method="_on_aggro_area_entered"]
 [connection signal="area_exited" from="Aggro" to="." method="_on_aggro_area_exited"]
+[connection signal="timeout" from="AttackSpeedTimer" to="." method="_on_AttackSpeedTimer_timeout"]

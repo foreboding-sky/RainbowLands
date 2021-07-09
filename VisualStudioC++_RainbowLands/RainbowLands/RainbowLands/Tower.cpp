@@ -4,6 +4,16 @@ using namespace godot;
 
 Tower::Tower()
 {
+    _can_build = false;
+    _building_mode = true;
+    _is_colliding = false;
+    _is_attacking = false;
+    _cell_id = -1;
+
+    _attack_speed = 1;
+    _projectile_prefab_path = "res://TD/Projectiles/Projectile_1.tscn";
+    _base_sprite_path = "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png";
+    _gun_sprite_path = "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png";
 }
 
 Tower::~Tower()
@@ -14,16 +24,6 @@ Tower::~Tower()
     _gun = nullptr;
     _base = nullptr;
     _projectile = nullptr;
-
-    _can_build = false;
-    _building_mode = true;
-    _is_colliding = false;
-    _cell_id = -1;
-
-    _attack_speed = 1.0;
-    _projectile_prefab_path = "res://TD/Projectiles/Projectile_1.tscn";
-    _base_sprite_path = "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png";
-    _gun_sprite_path = "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png";
 }
 
 void Tower::_register_methods()
@@ -38,6 +38,9 @@ void Tower::_register_methods()
     register_method((char*)"_on_aggro_area_exited", &Tower::_on_aggro_area_exited);
     register_method((char*)"_on_tower_area_entered", &Tower::_on_tower_area_entered);
     register_method((char*)"_on_tower_area_exited", &Tower::_on_tower_area_exited);
+    register_method((char*)"_set_projectile_path", &Tower::_set_projectile_path);
+    register_method((char*)"_set_gun_path", &Tower::_set_gun_path);
+    register_method((char*)"_set_base_path", &Tower::_set_base_path);
 }
 
 void Tower::_init()
@@ -47,6 +50,7 @@ void Tower::_init()
 void Tower::_ready()
 {
     _loader = ResourceLoader::get_singleton();
+    _input = Input::get_singleton();
 
     //set gun texture
     _gun = cast_to<Sprite>(get_node("Gun"));
@@ -73,9 +77,8 @@ void Tower::_ready()
     _enemy_array.clear();
    
     //set projectile
-    Ref<PackedScene> prefab = _loader->load(_projectile_prefab_path);
-    _projectile = cast_to<Area2D>(prefab->instance());
-    _projectile_spawn_position = Vector2{ 0, 0 };
+    _projectile_prefab = _loader->load(_projectile_prefab_path);
+    _projectile_spawn_position = Vector2(0, 0);
 }
 
 void Tower::_physics_process(float delta)
@@ -84,7 +87,7 @@ void Tower::_physics_process(float delta)
     //std::string str = std::to_string(_enemy_array.size());
     //Godot::print(str.c_str());
 
-    Input* i = Input::get_singleton();
+     
     if (_building_mode)
     {
         _follow_mouse();
@@ -98,14 +101,14 @@ void Tower::_physics_process(float delta)
             _base->set_modulate(Color{ 1.0, 0.0, 0.0, 0.6 });
             _gun->set_modulate(Color{ 1.0, 0.0, 0.0, 0.6 });
         }
-        if (i->is_action_just_pressed("tower_build") && _can_build)
+        if (_input->is_action_just_pressed("tower_build") && _can_build)
         {
             _building_mode = false;
             _base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             _gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             //subtract money from the wallet (!)
         }
-        if (i->is_action_just_pressed("cancel_tower_build"))
+        if (_input->is_action_just_pressed("cancel_tower_build"))
         {
             queue_free();
         }
@@ -119,13 +122,18 @@ void Tower::_physics_process(float delta)
             _target_position = _current_target->get_global_transform().get_origin();
 
             //rotation of the gun
-            _gun->set_rotation((_target_position - get_position()).angle());
-            _attack_timer->start();
+            _gun->set_rotation((_target_position - get_position()).angle() + 90);
+            if (!_is_attacking)
+            {
+                _is_attacking = true;
+                _attack_timer->start();
+            }
         }
         else
         {
             //stop the attack timer, so the tower stops to attack
             _attack_timer->stop();
+            _is_attacking = false;
         }
     }
 }
@@ -134,7 +142,7 @@ void Tower::_physics_process(float delta)
 void Tower::_on_aggro_area_entered(Area2D* _other_area)
 {
     if (_other_area->is_in_group("Enemy"))
-        _enemy_array.append(_other_area->get_parent());
+        _enemy_array.append(_other_area->get_parent());    
 }
 
 void Tower::_on_aggro_area_exited(Area2D* _other_area)
@@ -164,9 +172,11 @@ void Tower::_on_tower_area_exited(Area2D* _other_area)
 //attack target, spawn bullets(projectiles)
 void Tower::_on_AttackSpeedTimer_timeout()
 {
+    _projectile = cast_to<Area2D>(_projectile_prefab->instance());
     _projectile_spawn_position = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
-    cast_to<Projectile>(_projectile)->_set_target(_current_target);
-    get_node("/root/main")->add_child(_projectile);
+    _projectile->set_position(_projectile_spawn_position);
+    _projectile->call("_set_target", _current_target);
+    get_node("/root/main/projectiles")->add_child(_projectile);
 }
 
 //toewr follows mouse cursor in building mode and snaps to allowed tiles
