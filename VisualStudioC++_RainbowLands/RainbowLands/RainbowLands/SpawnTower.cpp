@@ -29,9 +29,7 @@ namespace godot
 	}
 	void SpawnTower::_on_button_pressed()
 	{
-	
-		Area2D* tower = cast_to<Area2D>(prefab->instance());
-		get_node("/root/main/entities")->add_child(tower);
+		BuildTower();
 		get_parent()->get_parent()->get_parent()->set("visible", false);
 	}
 	void SpawnTower::_on_mouse_hovered()
@@ -52,7 +50,7 @@ namespace godot
 		builder.SetAttackSpeedHigh();
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
-		get_node("/root/main/entities")->add_cild(builder.Build());
+		get_node("/root/main/entities")->add_child(builder.Build());
 		builder.Reset();
 
 	}

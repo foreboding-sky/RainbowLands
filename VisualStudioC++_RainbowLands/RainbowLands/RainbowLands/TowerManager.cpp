@@ -14,7 +14,6 @@ namespace godot
 	}
 	void TowerManager::_ready()
 	{
-		cast_to<Button>(get_child(0))->call("SetTower",)
 	}
 
 }
