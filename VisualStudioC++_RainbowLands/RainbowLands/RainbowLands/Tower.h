@@ -78,7 +78,7 @@ namespace godot {
 		void _on_tower_area_entered(Area2D* _other_area);
 		void _on_tower_area_exited(Area2D* _other_area);
 
-		void _set_projectile_path(String _scene_path);
+		void _set_projectile_prefab(Ref<PackedScene> _projectile);
 		void _set_gun_path(String _iamge_path);
 		void _set_base_path(String _iamge_path);
 		void _set_attack_speed(double _attck_speed);

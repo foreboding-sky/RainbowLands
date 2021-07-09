@@ -5,8 +5,8 @@ using namespace godot;
 TowerBuilder::TowerBuilder()
 {
 	_loader = ResourceLoader::get_singleton();
-	_tower_prefab = _loader->load("res://TD/Towers/TestTower.tscn");
-	_tower = Object::cast_to<Area2D>(_tower_prefab->instance());
+	_towerPrefab = _loader->load("res://TD/Towers/TestTower.tscn");
+	_tower = Object::cast_to<Area2D>(_towerPrefab->instance());
 }
 
 godot::TowerBuilder::~TowerBuilder()
@@ -18,33 +18,60 @@ godot::TowerBuilder::~TowerBuilder()
 	delete _loader;
 }
 
-Area2D* godot::TowerBuilder::get_tower()
+// Get tower instance
+Area2D* godot::TowerBuilder::Build()
 {
 	return _tower;
 }
 
-void godot::TowerBuilder::reset()
+// Reset tower instance to default (create a new instance of an Tower object)
+void godot::TowerBuilder::Reset()
 {
-	_tower = Object::cast_to<Area2D>(_tower_prefab->instance());
+	_tower = Object::cast_to<Area2D>(_towerPrefab->instance());
 }
 
-void godot::TowerBuilder::_set_gun_sprite_01()
+// Gun sprites
+void godot::TowerBuilder::SetGunSprite01()
 {
 	_tower->call("_set_gun_path", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
 }
 
-void godot::TowerBuilder::_set_base_sprite_01()
+void godot::TowerBuilder::SetGunSprite02()
+{
+	_tower->call("_set_gun_path", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
+}
+
+// Base platform sprites
+void godot::TowerBuilder::SetPlatformSprite01()
 {
 	_tower->call("_set_base_path", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
 }
 
-void godot::TowerBuilder::_set_attack_speed_low()
+void godot::TowerBuilder::SetPlatformSprite02()
 {
-	_tower->call("_set_base_path", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
+	_tower->call("_set_base_path", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
 }
 
-void godot::TowerBuilder::_set_ammo_type_projectile01()
+// Attack speed
+void godot::TowerBuilder::SetAttackSpeedLow()
 {
+	_tower->call("_set_attack_speed", 1.0);
 }
 
+void godot::TowerBuilder::SetAttackSpeedHigh()
+{
+	_tower->call("_set_attack_speed", 0.5);
+}
 
+// Projectiles
+void godot::TowerBuilder::SetAmmoTypeProjectile01()
+{
+	Ref<PackedScene> _projectile_prefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	_tower->call("_set_projectile_prefab", _projectile_prefab);
+}
+
+void godot::TowerBuilder::SetAmmoTypeProjectile02()
+{
+	Ref<PackedScene> _projectile_prefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	_tower->call("_set_projectile_prefab", _projectile_prefab);
+}
