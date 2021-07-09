@@ -50,19 +50,16 @@
       <UniqueIdentifier>{ba1f0a27-78d7-4030-8841-4b33064df518}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\PauseMenu\Buttons">
-      <UniqueIdentifier>{3e06733d-841c-4e0e-9d9c-60c7ff4ad58c}</UniqueIdentifier>
+      <UniqueIdentifier>{ea1b2441-a7df-4199-9093-f386e7612957}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\PauseMenu\Buttons">
-      <UniqueIdentifier>{6366dc17-16b6-47d1-80b9-4fc67579c796}</UniqueIdentifier>
+      <UniqueIdentifier>{19908ce3-d044-4697-b329-fe6e3d773c07}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Architecture-related">
-      <UniqueIdentifier>{aaf2ef38-48d8-4642-b875-49e336b7730e}</UniqueIdentifier>
+    <Filter Include="Header Files\SaveSystem">
+      <UniqueIdentifier>{174891fb-f729-46f2-a83f-7c06dcf380dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Architecture-related\Header Files">
-      <UniqueIdentifier>{2fc64f93-daf8-4a39-b5bb-34a77f4233a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Architecture-related\Source Files">
-      <UniqueIdentifier>{36415932-6ba1-47c0-8105-b305fac3359c}</UniqueIdentifier>
+    <Filter Include="Source Files\SaveSystem">
+      <UniqueIdentifier>{5ad7b848-efb7-4e13-82b8-f9e8e5b23105}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -70,15 +67,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Root.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Tower.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exit.cpp">
@@ -102,37 +90,52 @@
     <ClCompile Include="SpawnTower.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PauseOptions.cpp">
-      <Filter>Source Files\PauseMenu\Buttons</Filter>
+    <ClCompile Include="Tower.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Resume.cpp">
+      <Filter>Source Files\PauseMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseOptions.cpp">
       <Filter>Source Files\PauseMenu\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="ToMain.cpp">
       <Filter>Source Files\PauseMenu\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="Load.cpp">
+      <Filter>Source Files\SaveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Save.cpp">
+      <Filter>Source Files\SaveSystem</Filter>
+    </ClCompile>
     <ClCompile Include="TowerBuilder.cpp">
-      <Filter>Architecture-related\Source Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TowerShop.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="TowerManager.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="StartWave.cpp">
+      <Filter>Source Files\UI\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Root.h">
+    <ClInclude Include="Player.h">
       <Filter>Header Files\Root</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Root.h">
+      <Filter>Header Files\Root</Filter>
     </ClInclude>
     <ClInclude Include="Exit.h">
       <Filter>Header Files\MainMenu\Buttons</Filter>
@@ -155,25 +158,43 @@
     <ClInclude Include="SpawnTower.h">
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Projectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PauseOptions.h">
-      <Filter>Header Files\PauseMenu\Buttons</Filter>
+    <ClInclude Include="Tower.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resume.h">
+      <Filter>Header Files\PauseMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseOptions.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="ToMain.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="IObserver.h">
-      <Filter>Architecture-related\Header Files</Filter>
+    <ClInclude Include="Save.h">
+      <Filter>Header Files\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Load.h">
+      <Filter>Header Files\SaveSystem</Filter>
     </ClInclude>
     <ClInclude Include="TowerBuilder.h">
-      <Filter>Architecture-related\Header Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TowerShop.h">
+      <Filter>Header Files\UI\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerManager.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="StartWave.h">
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
   </ItemGroup>

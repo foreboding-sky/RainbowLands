@@ -19,7 +19,7 @@ namespace godot
 	}
 	void Play::_on_button_pressed()
 	{
-		get_tree()->change_scene("res://TD//Test.tscn");
+		get_tree()->change_scene("res://TD/SpaceLevel.tscn");
 	}
 }
 
