@@ -5,6 +5,8 @@
 #include <ResourceLoader.hpp>
 #include <SceneTree.hpp>
 #include <Area2D.hpp>
+#include <Panel.hpp>
+#include <Texture.hpp>
 
 namespace godot
 {
@@ -18,7 +20,14 @@ namespace godot
 		static void _register_methods();
 		void _init();
 		void _ready();
+		void _on_mouse_hovered();
+		void _on_mouse_left();
 
 		void _on_button_pressed();
+
+	private:
+		Ref<Texture>_texture;
+		Vector2 _size;
+		Vector2 _icon_size;
 	};
 }

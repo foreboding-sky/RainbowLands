@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/TowerInfo.gdns" type="Script" id=1]
+
+[node name="Info" type="Panel"]
+visible = false
+margin_left = 1.0
+margin_right = 130.0
+margin_bottom = 121.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_right = 129.0
+margin_bottom = 120.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Damage" type="RichTextLabel" parent="VBox"]
+margin_top = 14.0
+margin_right = 129.0
+margin_bottom = 29.0
+mouse_filter = 2
+text = "Damage:"
+fit_content_height = true
+
+[node name="ATKSPD" type="RichTextLabel" parent="VBox"]
+margin_top = 33.0
+margin_right = 129.0
+margin_bottom = 48.0
+mouse_filter = 2
+text = "ATK SPD:"
+fit_content_height = true
+
+[node name="Ammo" type="RichTextLabel" parent="VBox"]
+margin_top = 52.0
+margin_right = 129.0
+margin_bottom = 67.0
+mouse_filter = 2
+text = "Ammo:"
+fit_content_height = true
+
+[node name="Multishot" type="RichTextLabel" parent="VBox"]
+margin_top = 71.0
+margin_right = 129.0
+margin_bottom = 86.0
+mouse_filter = 2
+text = "Multishot:"
+fit_content_height = true
+
+[node name="Special" type="RichTextLabel" parent="VBox"]
+margin_top = 90.0
+margin_right = 129.0
+margin_bottom = 105.0
+mouse_filter = 2
+text = "Special:"
+fit_content_height = true

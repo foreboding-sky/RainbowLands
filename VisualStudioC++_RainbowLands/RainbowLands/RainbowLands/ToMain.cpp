@@ -18,6 +18,7 @@ namespace godot
 	}
 	void ToMain::_on_button_pressed()
 	{
+		get_tree()->set_pause(false);
 		get_tree()->change_scene("res://MainMenu/MainMenu.tscn");
 	}
 }
