@@ -13,7 +13,6 @@
 #include "ToMain.h"
 #include "TowerShop.h"
 #include "Projectile.h"
-#include "StartWave.h"
 
 using namespace godot;
 
@@ -42,5 +41,4 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<ToMain>();
 	register_class<TowerShop>();
 	register_class<Projectile>();
-	register_class<StartWave>();
 }
