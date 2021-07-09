@@ -3,6 +3,7 @@
 using namespace godot;
 Projectile::Projectile()
 {
+	_target = nullptr;
 }
 
 Projectile::~Projectile()
@@ -31,7 +32,8 @@ void Projectile::_ready()
 
 void Projectile::_physics_process(float delta)
 {
-	if (_target != nullptr)
+	
+	if (_target->get_instance_id())
 	{
 		_velocity = ((_target->get_global_transform().get_origin() - get_position()).normalized() * _speed);
 		set_position(get_position() + _velocity * delta);

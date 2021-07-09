@@ -2,7 +2,8 @@
 #include <Godot.hpp>
 #include <Area2D.hpp>
 #include <PathFollow2D.hpp>
-
+#include <WeakRef.hpp>
+#include <SceneTree.hpp>
 namespace godot {
 	class Projectile : public Area2D
 	{

@@ -43,14 +43,10 @@ void LevelManager::LoadEnemies()
 
 void LevelManager::SpawnEnemy()
 {
-	Godot::print("entered");
 	while (waveThreat > 0)
 	{
-		Godot::print("0");
 		int randomNumber = rand() % enemyRefs.size();
-		Godot::print("1");
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		Godot::print("2");
 
 		if (i <= waveThreat)
 		{
@@ -69,7 +65,6 @@ void LevelManager::SpawnEnemy()
 
 void LevelManager::EndWave()
 {
-	Godot::print("end");
 	waveIsActive = false;
 	threatPool += increment++;
 	spawnTimer->stop();
@@ -78,7 +73,6 @@ void LevelManager::StartWave()
 {
 	if (waveIsActive == false)
 	{
-		Godot::print("start");
 		waveIsActive = true;
 		waveThreat = threatPool;
 		spawnTimer->start();

@@ -172,11 +172,14 @@ void Tower::_on_tower_area_exited(Area2D* _other_area)
 //attack target, spawn bullets(projectiles)
 void Tower::_on_AttackSpeedTimer_timeout()
 {
-    _projectile = cast_to<Area2D>(_projectile_prefab->instance());
-    _projectile_spawn_position = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
-    _projectile->set_position(_projectile_spawn_position);
-    _projectile->call("_set_target", _current_target);
-    get_node("/root/main/projectiles")->add_child(_projectile);
+	if (_current_target->is_inside_tree()) 
+	{
+		_projectile = cast_to<Area2D>(_projectile_prefab->instance());
+		_projectile_spawn_position = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
+		_projectile->set_position(_projectile_spawn_position);
+		_projectile->call("_set_target", _current_target);
+		get_node("/root/main/projectiles")->add_child(_projectile);
+	}
 }
 
 //toewr follows mouse cursor in building mode and snaps to allowed tiles

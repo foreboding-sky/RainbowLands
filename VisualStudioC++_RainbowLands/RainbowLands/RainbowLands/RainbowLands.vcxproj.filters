@@ -61,6 +61,12 @@
     <Filter Include="Source Files\SaveSystem">
       <UniqueIdentifier>{5ad7b848-efb7-4e13-82b8-f9e8e5b23105}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Enemies">
+      <UniqueIdentifier>{b2027e5a-5d5a-4bef-87ed-b8212b0ba708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemies">
+      <UniqueIdentifier>{f2cd356d-fdf0-48f3-8934-d2d33ca89c86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -91,9 +97,6 @@
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="LevelManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Projectile.cpp">
@@ -129,6 +132,9 @@
     <ClCompile Include="StartWave.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -159,9 +165,6 @@
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="LevelManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Projectile.h">
@@ -196,6 +199,9 @@
     </ClInclude>
     <ClInclude Include="StartWave.h">
       <Filter>Header Files\UI\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
