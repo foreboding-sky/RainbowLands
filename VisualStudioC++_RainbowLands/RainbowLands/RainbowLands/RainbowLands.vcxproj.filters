@@ -120,9 +120,6 @@
     <ClCompile Include="TowerShop.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="TowerInfo.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -178,9 +175,6 @@
     </ClInclude>
     <ClInclude Include="TowerShop.h">
       <Filter>Header Files\UI\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="TowerInfo.h">
-      <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -52,7 +52,7 @@ namespace godot
 		builder.SetAttackSpeedHigh();
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
-		get_node("/root/main/entities")->add_cild(builder.Build());
+		get_node("/root/main/entities")->add_child(builder.Build());
 		builder.Reset();
 
 	}
