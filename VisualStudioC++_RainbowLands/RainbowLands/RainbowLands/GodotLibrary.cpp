@@ -13,7 +13,7 @@
 #include "ToMain.h"
 #include "TowerShop.h"
 #include "Projectile.h"
-
+#include "Arrow.h"
 using namespace godot;
 
 extern "C" void GDN_EXPORT godot_gdnative_init(godot_gdnative_init_options * o) {
@@ -41,4 +41,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<ToMain>();
 	register_class<TowerShop>();
 	register_class<Projectile>();
+	register_class<Arrow>();
 }

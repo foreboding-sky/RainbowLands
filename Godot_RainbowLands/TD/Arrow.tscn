@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Arrow.png" type="Texture" id=1]
+[ext_resource path="res://Arrow.gdns" type="Script" id=2]
+
+[node name="PathFollow2D" type="PathFollow2D"]
+script = ExtResource( 2 )
+Speed = 300
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.0524199, 0.0511551 )
+texture = ExtResource( 1 )

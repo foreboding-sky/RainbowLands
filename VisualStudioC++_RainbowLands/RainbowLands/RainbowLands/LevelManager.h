@@ -36,17 +36,17 @@ namespace godot
 		void EndWave();
 		void StartWave();
 		void LoadEnemies();
-		void _mob_got_through(int damage);
-		void _level_over();
+		void AddCurrency(int amount);
+		void MobGotThrough(int damage);
+		void LevelOver();
 		static LevelManager* get_singleton();
 
-		int _wave_counter;
-		int _remaining_mobs_counter;
-		int _max_waves;
+		int waveCounter;
 		Timer* spawnTimer;
-		int _current_health;
-		int _max_health;
-		int _placement_currency;
+		int currentHealth;
+		int maxHealth;
+		int currency;
+		int score;
 	private:
 		// singleton
 		static	LevelManager* _instance;

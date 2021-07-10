@@ -1,7 +1,3 @@
-#pragma once
-#include <Godot.hpp>
-#include <Area2D.hpp>
-#include <TileMap.hpp>
 #include <Position2D.hpp>
 #include <AnimationPlayer.hpp>
 #include <Array.hpp>
@@ -10,30 +6,21 @@
 #include "LevelManager.h"
 
 namespace godot {
-	class Enemy : public PathFollow2D
+	class Arrow : public PathFollow2D
 	{
 		// methods
 	private:
-		GODOT_CLASS(Enemy, PathFollow2D)
+		GODOT_CLASS(Arrow, PathFollow2D)
 	public:
-		Enemy();
-		~Enemy();
+		Arrow();
+		~Arrow();
 		void _physics_process(float delta);
 		void _init();
 		void _ready();
 		static void _register_methods();
 
-		void _on_Area2D_area_entered(Area2D* _other_area);
-
 		// variables
 	private:
-		
-		int speed;
-		int health;
-		int damage;
-		LevelManager* levelManager;
-		//animations
-		
-		//collision
+		int _speed;
 	};
 }
