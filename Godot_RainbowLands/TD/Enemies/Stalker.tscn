@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/Top Down SpaceShips/DragonShip_Aqua_124x121.png" type="Texture" id=1]
+[ext_resource path="res://assets/Top Down SpaceShips/StalkerEvo_Sky_100x130.png" type="Texture" id=1]
 [ext_resource path="res://TD/Enemies/Enemy.gdns" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -11,6 +11,9 @@ position = Vector2( 17, 370 )
 rotation = -0.00892166
 loop = false
 script = ExtResource( 2 )
+Health = 4
+Speed = 180
+Damage = 2
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708

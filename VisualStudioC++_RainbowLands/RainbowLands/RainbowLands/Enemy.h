@@ -31,7 +31,7 @@ namespace godot {
 		int _speed;
 		int _health;
 		int _damage;
-		LevelManager* _level_manager = nullptr;
+		LevelManager* _level_manager;
 		//animations
 		
 		//collision
