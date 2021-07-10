@@ -124,7 +124,7 @@ void Tower::_physics_process(float delta)
             targetPosition = currentTarget->get_global_transform().get_origin();
 
             //rotation of the gun
-            gun->set_rotation((targetPosition - get_position()).angle() + 90);
+            gun->set_rotation((targetPosition - get_position()).angle() + 1.5708);
             if (!isAttacking)
             {
                 isAttacking = true;

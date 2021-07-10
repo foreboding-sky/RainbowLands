@@ -4,12 +4,14 @@ using namespace godot;
 
 LevelManager* LevelManager::_instance = nullptr;
 
-LevelManager::LevelManager() {}
-LevelManager::~LevelManager() {}
-void LevelManager::Notify()
+LevelManager::LevelManager()
 {
-
 }
+
+LevelManager::~LevelManager() 
+{
+}
+
 void LevelManager::_register_methods()
 {
 	register_method((char*)"_physics_process", &LevelManager::_physics_process);
@@ -106,13 +108,15 @@ void LevelManager::StartWave()
 		waveIsActive = true;
 		waveThreat = threatPool;
 		spawnTimer->start();
-
+		Notify(Message::WAVE_STARTED);
 	}
 }
 void LevelManager::_ready()
 {
 	Godot::print("ready");
 	std::srand(time(0));
+	ui = cast_to<UI>(get_node("/root/main/UI"));
+	AttachObserver((IObserver*)ui);
 	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
 	startButton->connect("pressed", this, "StartWave");
 	waveIsActive = false;
@@ -142,6 +146,7 @@ void LevelManager::MobGotThrough(int damage)
 		LevelOver();
 	else
 		currentHealth -= damage;
+	Notify(Message::DAMAGE_TAKEN);
 }
 void LevelManager::LevelOver()
 {

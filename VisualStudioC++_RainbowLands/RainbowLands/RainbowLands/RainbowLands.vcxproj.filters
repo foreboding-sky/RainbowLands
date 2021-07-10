@@ -126,21 +126,6 @@
     <ClCompile Include="TowerShop.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="Load.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Save.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CrystalAngel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StartWave.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TowerManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Arrow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -197,23 +182,11 @@
     <ClInclude Include="TowerShop.h">
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="CrystalAngel.h">
+    <ClInclude Include="IObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StartWave.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TowerManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Load.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Save.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ISubject.h">
+      <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Arrow.h">
       <Filter>Header Files</Filter>
