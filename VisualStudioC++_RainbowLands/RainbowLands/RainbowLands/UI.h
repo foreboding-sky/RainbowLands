@@ -4,28 +4,30 @@
 #include <Control.hpp>
 #include <String.hpp>
 #include <string>
+#include "IObserver.h"
+#include "ISubject.h"
 
 namespace godot
 {
-	class UI : public  Control
+	class UI : public  Control, public IObserver
 	{
 		GODOT_CLASS(UI, Control);
 
+		// methods
 	public:
 		static void _register_methods();
 		void _init();
 		void _ready();
 		void _process(float delta);
 
-		void on_coins_changed(int value);
-		void on_emeralds_changed(int value);
-		void on_health_changed(int value);
-		void on_wave_changed(int value);
+		void OnCoinsChanged(int value);
+		void OnEmeraldsChanged(int value);
+		void OnHealthChanged(int value);
+		void OnWaveChanged();
+		virtual void Update(Message& msg);
 
-		static UI* get_singleon();
-
+		// variables
 	private:
-		static UI* _instance;
-
+		int waveCouner;
 	};
 }

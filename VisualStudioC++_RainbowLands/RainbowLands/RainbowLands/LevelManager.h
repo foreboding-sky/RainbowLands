@@ -3,7 +3,7 @@
 #include <Node.hpp>
 #include <Timer.hpp>
 #include <Array.hpp>
-#include "IObserver.h"
+#include "ISubject.h"
 #include <PathFollow2D.hpp>
 #include <vector>
 #include <ResourceLoader.hpp>
@@ -14,10 +14,11 @@
 #include <Object.hpp>
 #include <Button.hpp>
 #include <time.h>
+#include "UI.h"
 
 namespace godot 
 {
-	class LevelManager : public Node, IObserver
+	class LevelManager : public Node, public ISubject
 	{
 		// methods
 	private:
@@ -31,7 +32,6 @@ namespace godot
 		void _ready();
 		static void _register_methods();
 
-		virtual void Notify();
 		void SpawnEnemy();
 		void EndWave();
 		void StartWave();
@@ -50,6 +50,8 @@ namespace godot
 	private:
 		// singleton
 		static	LevelManager* _instance;
+
+		UI* ui;
 		Button* startButton;
 		RandomNumberGenerator* random;
 		ResourceLoader* loader;

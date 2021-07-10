@@ -182,5 +182,8 @@
     <ClInclude Include="IObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ISubject.h">
+      <Filter>Architecture-related\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,9 +1,12 @@
 #pragma once
+
+enum Message;
+
 class IObserver
 {
 public:
     IObserver() {}
     virtual ~IObserver() {}
-    virtual void Notify() = 0;
+    virtual void Update(Message&) = 0;
 
 };
