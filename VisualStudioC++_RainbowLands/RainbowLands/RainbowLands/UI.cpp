@@ -22,7 +22,11 @@ namespace godot
 				OnWaveChanged();
 				break;
 			}
-
+			case DAMAGE_TAKEN:
+			{
+				OnHealthChanged(levelManager->currentHealth);
+				break;
+			}
 			default:
 				break;
 		}
@@ -30,12 +34,12 @@ namespace godot
 
 	void UI::_init()
 	{
+		levelManager = LevelManager::get_singleton();
 		waveCouner = 0;
 	}
 
 	void UI::_ready()
 	{
-
 	}
 
 	void UI::_process(float delta)

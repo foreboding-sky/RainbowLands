@@ -6,6 +6,7 @@
 #include <string>
 #include "IObserver.h"
 #include "ISubject.h"
+#include "LevelManager.h"
 
 namespace godot
 {
@@ -29,5 +30,6 @@ namespace godot
 		// variables
 	private:
 		int waveCouner;
+		LevelManager* levelManager;
 	};
 }

@@ -145,6 +145,7 @@ void LevelManager::MobGotThrough(int damage)
 		LevelOver();
 	else
 		currentHealth -= damage;
+	Notify(Message::DAMAGE_TAKEN);
 }
 void LevelManager::LevelOver()
 {
