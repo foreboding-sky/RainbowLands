@@ -28,10 +28,10 @@ namespace godot {
 		// variables
 	private:
 		
-		int _speed;
-		int _health;
-		int _damage;
-		LevelManager* _level_manager;
+		int speed;
+		int health;
+		int damage;
+		LevelManager* levelManager;
 		//animations
 		
 		//collision

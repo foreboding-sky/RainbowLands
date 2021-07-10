@@ -16,8 +16,8 @@ void LevelManager::_register_methods()
 	register_method((char*)"_init", &LevelManager::_init);
 	register_method((char*)"_ready", &LevelManager::_ready);
 
-	register_method((char*)"_mob_got_through", &LevelManager::_mob_got_through);
-	register_method((char*)"_level_over", &LevelManager::_level_over);
+	register_method((char*)"_mob_got_through", &LevelManager::MobGotThrough);
+	register_method((char*)"_level_over", &LevelManager::LevelOver);
 	register_method("SpawnEnemy", &LevelManager::SpawnEnemy);
 	register_method("LoadEnemies", &LevelManager::LoadEnemies);
 	register_method("StartWave", &LevelManager::StartWave);
@@ -101,7 +101,8 @@ void LevelManager::EndWave()
 void LevelManager::StartWave()
 {
 	if (waveIsActive == false)
-	{
+	{	
+		waveCounter++;
 		waveIsActive = true;
 		waveThreat = threatPool;
 		spawnTimer->start();
@@ -110,6 +111,7 @@ void LevelManager::StartWave()
 }
 void LevelManager::_ready()
 {
+	Godot::print("ready");
 	std::srand(time(0));
 	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
 	startButton->connect("pressed", this, "StartWave");
@@ -119,29 +121,31 @@ void LevelManager::_ready()
 	spawnTimer->connect("timeout", this, "SpawnEnemy");
 	threatPool = 5;
 	increment = 1;
-	_wave_counter = 0;
-	_remaining_mobs_counter = 0;
-	_max_waves = 10;
-	_current_health = 10;
-	_max_health = 10;
-	_placement_currency = 10;
+	waveCounter = 0;
+	currentHealth = 50;
+	maxHealth = 50;
+	currency = 10;
 	LoadEnemies();
 
 }
 
-void LevelManager::_level_over()
+void LevelManager::AddCurrency(int amount)
 {
-	//level over logic
+	currency += amount;
+	score += amount;
 }
 
-void LevelManager::_mob_got_through(int damage)
+void LevelManager::MobGotThrough(int damage)
 {
-	if (_current_health <= 0)
-		_level_over();
+	if (currentHealth <= 0)
+		LevelOver();
 	else
-		_current_health -= damage;
+		currentHealth -= damage;
 }
+void LevelManager::LevelOver()
+{
 
+}
 void LevelManager::_physics_process(float delta)
 {
 }
