@@ -16,10 +16,10 @@ namespace godot
 		void _init();
 		void _ready();
 
-		void _on_button_pressed();
+		void OnButtonPressed();
 
 
 	private:
-		ResourceLoader* _resource_loader = nullptr;
+		ResourceLoader* loader = nullptr;
 	};
 }

@@ -6,7 +6,7 @@ namespace godot
 	{
 		register_method("_init", &Exit::_init);
 		register_method("_ready", &Exit::_ready);
-		register_method("_on_button_pressed", &Exit::_on_button_pressed);
+		register_method("_on_button_pressed", &Exit::OnButtonPressed);
 	}
 	void Exit::_init()
 	{
@@ -16,7 +16,7 @@ namespace godot
 	{
 		connect("pressed", this, "_on_button_pressed");
 	}
-	void Exit::_on_button_pressed()
+	void Exit::OnButtonPressed()
 	{
 		get_tree()->quit();
 	}

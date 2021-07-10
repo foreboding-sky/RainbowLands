@@ -46,7 +46,7 @@ void Enemy::_on_Area2D_area_entered(Area2D* _other_area)
 		if (_health <= 0)
 		{
 			//add money to wallet (!)
-			queue_free();
+			call_deferred("queue_free");
 		}
 	}
 }

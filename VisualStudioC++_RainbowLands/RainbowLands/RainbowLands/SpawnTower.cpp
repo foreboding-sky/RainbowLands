@@ -6,9 +6,9 @@ namespace godot
 	{
 		register_method("_init", &SpawnTower::_init);
 		register_method("_ready", &SpawnTower::_ready);
-		register_method("_on_button_pressed", &SpawnTower::_on_button_pressed);
-		register_method("_on_mouse_hovered", &SpawnTower::_on_mouse_hovered);
-		register_method("_on_mouse_left", &SpawnTower::_on_mouse_left);
+		register_method("_on_button_pressed", &SpawnTower::OnButtonPressed);
+		register_method("_on_mouse_hovered", &SpawnTower::OnMouseHovered);
+		register_method("_on_mouse_left", &SpawnTower::OnMouseLeft);
 		register_method("BuildTower", &SpawnTower::BuildTower);
 	}
 	void SpawnTower::_init()
@@ -17,7 +17,7 @@ namespace godot
 	}
 	void SpawnTower::_ready()
 	{
-		_loader = ResourceLoader::get_singleton();
+		loader = ResourceLoader::get_singleton();
 		_texture = this->get_button_icon();
 		_icon_size = _texture.ptr()->get_size();
 		
@@ -27,17 +27,17 @@ namespace godot
 		connect("mouse_entered", this, "_on_mouse_hovered");
 		connect("mouse_exited", this, "_on_mouse_left");
 	}
-	void SpawnTower::_on_button_pressed()
+	void SpawnTower::OnButtonPressed()
 	{
 		BuildTower();
 		get_parent()->get_parent()->get_parent()->set("visible", false);
 	}
-	void SpawnTower::_on_mouse_hovered()
+	void SpawnTower::OnMouseHovered()
 	{
 		Godot::print("visivle");
 		get_child(0)->set("visible", true);
 	}
-	void SpawnTower::_on_mouse_left()
+	void SpawnTower::OnMouseLeft()
 	{
 		Godot::print("unvisivle");
 		//set_visible(false);

@@ -6,7 +6,7 @@ namespace godot
 	{
 		register_method("_init", &Return::_init);
 		register_method("_ready", &Return::_ready);
-		register_method("_on_button_pressed", &Return::_on_button_pressed);
+		register_method("_on_button_pressed", &Return::OnButtonPressed);
 	}
 	void Return::_init()
 	{
@@ -17,7 +17,7 @@ namespace godot
 		connect("pressed", this, "_on_button_pressed");
 		_resource_loader = ResourceLoader::get_singleton();
 	}
-	void Return::_on_button_pressed()
+	void Return::OnButtonPressed()
 	{
 		get_tree()->change_scene("res://MainMenu/MainMenu.tscn");
 	}

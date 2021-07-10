@@ -3,11 +3,12 @@
 using namespace godot;
 Projectile::Projectile()
 {
+	target = nullptr;
 }
 
 Projectile::~Projectile()
 {
-	_target = nullptr;
+	target = nullptr;
 }
 
 void Projectile::_register_methods()
@@ -16,7 +17,7 @@ void Projectile::_register_methods()
 	register_method((char*)"_init", &Projectile::_init);
 	register_method((char*)"_ready", &Projectile::_ready);
 
-	register_method((char*)"_set_target", &Projectile::_set_target);
+	register_method((char*)"SetTarget", &Projectile::SetTarget);
 }
 
 void Projectile::_init()
@@ -25,26 +26,34 @@ void Projectile::_init()
 
 void Projectile::_ready()
 {
-	_velocity = { 0, 0 };
-	_speed = 300;
+	velocity = { 0, 0 };
+	speed = 300;
 }
 
 void Projectile::_physics_process(float delta)
 {
-	if (_target != nullptr)
+	try
 	{
-		_velocity = ((_target->get_global_transform().get_origin() - get_position()).normalized() * _speed);
-		set_position(get_position() + _velocity * delta);
-		set_rotation(_velocity.angle());
+		if (target != nullptr && target->get_instance_id())
+		{
+			velocity = ((target->get_global_transform().get_origin() - get_position()).normalized() * speed);
+			set_position(get_position() + velocity * delta);
+			set_rotation(velocity.angle());
+		}
+		else
+		{
+			Godot::print("No target");
+			queue_free();
+		}
 	}
-	else
+	catch (const std::exception& e)
 	{
-		Godot::print("No target");
-		queue_free();
+		Godot::print(e.what());
 	}
+	
 }
 
-void Projectile::_set_target(PathFollow2D* target)
+void Projectile::SetTarget(PathFollow2D* _target)
 {
-	_target = target;
+	target = _target;
 }

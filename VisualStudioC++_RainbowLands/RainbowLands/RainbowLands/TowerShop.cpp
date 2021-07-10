@@ -6,7 +6,7 @@ namespace godot
 	{
 		register_method("_init", &TowerShop::_init);
 		register_method("_ready", &TowerShop::_ready);
-		register_method("_on_button_pressed", &TowerShop::_on_button_pressed);
+		register_method("_on_button_pressed", &TowerShop::OnButtonPressed);
 	}
 	void TowerShop::_init()
 	{
@@ -14,17 +14,17 @@ namespace godot
 	}
 	void TowerShop::_ready()
 	{
-		_visible = cast_to<CanvasItem>(get_child(0))->is_visible();
-		get_child(0)->set("visible", _visible);
+		visible = cast_to<CanvasItem>(get_child(0))->is_visible();
+		get_child(0)->set("visible", visible);
 		connect("pressed", this, "_on_button_pressed");
 	}
-	void TowerShop::_on_button_pressed()
+	void TowerShop::OnButtonPressed()
 	{
-		_visible = cast_to<CanvasItem>(get_child(0))->is_visible();
+		visible = cast_to<CanvasItem>(get_child(0))->is_visible();
 
-		if(_visible == true) Godot::print("True");
+		if(visible == true) Godot::print("True");
 		else Godot::print("Not True");
-		get_child(0)->set("visible", !_visible);	
+		get_child(0)->set("visible", !visible);
 	}
 }
 

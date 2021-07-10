@@ -37,7 +37,7 @@ LevelManager* LevelManager::get_singleton()
 
 void LevelManager::LoadEnemies()
 {
-	enemyRefs.push_back(_loader->load("res://TD/Enemies/Enemy.tscn"));
+	enemyRefs.push_back(loader->load("res://TD/Enemies/Enemy.tscn"));
 	enemyThreat[enemyRefs[0]] = (int)1;
 }
 
@@ -91,7 +91,7 @@ void LevelManager::_ready()
 	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
 	startButton->connect("pressed", this, "StartWave");
 	waveIsActive = false;
-	_loader = ResourceLoader::get_singleton();
+	loader = ResourceLoader::get_singleton();
 	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
 	spawnTimer->connect("timeout", this, "SpawnEnemy");
 	threatPool = 5;

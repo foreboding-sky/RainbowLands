@@ -52,7 +52,7 @@ namespace godot
 		static	LevelManager* _instance;
 		Button* startButton;
 		RandomNumberGenerator* random;
-		ResourceLoader* _loader;
+		ResourceLoader* loader;
 		std::vector<Ref<PackedScene>> enemyRefs;
 		PathFollow2D* enemy;
 		Dictionary enemyThreat;

@@ -2,6 +2,9 @@
 #include <Godot.hpp>
 #include <Area2D.hpp>
 #include <PathFollow2D.hpp>
+#include <memory>
+#include <WeakRef.hpp>
+#include <Reference.hpp>
 
 namespace godot {
 	class Projectile : public Area2D
@@ -17,13 +20,14 @@ namespace godot {
 		void _ready();
 		static void _register_methods();
 
-		void _set_target(PathFollow2D* target);
+		void SetTarget(PathFollow2D* target);
 
 		// variables
 	private:
-		int _speed;
-		PathFollow2D* _target;
-		Vector2 _velocity;
+		int speed;
+		PathFollow2D* target;
+		//std::weak_ptr<PathFollow2D> target_;
+		Vector2 velocity;
 		//collision
 	};
 }

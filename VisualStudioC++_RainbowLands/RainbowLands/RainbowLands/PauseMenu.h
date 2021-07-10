@@ -19,6 +19,6 @@ namespace godot
 
 
 	private:
-		bool _is_paused = false;
+		bool isPaused = false;
 	};
 }

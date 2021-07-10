@@ -16,15 +16,15 @@ namespace godot
 		GODOT_CLASS(SpawnTower, Button);
 		// variables
 	private:
-		ResourceLoader* _loader;
+		ResourceLoader* loader;
 	public:
 		static void _register_methods();
 		void _init();
 		void _ready();
-		void _on_mouse_hovered();
-		void _on_mouse_left();
 
-		void _on_button_pressed();
+		void OnMouseHovered();
+		void OnMouseLeft();
+		void OnButtonPressed();
 		void BuildTower();
 
 	

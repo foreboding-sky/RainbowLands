@@ -24,64 +24,65 @@ namespace godot {
 	{
 		// variables
 	public:
-		TileMap* _tile_map;
+		TileMap* tileMap;
 	private:
 		GODOT_CLASS(Tower, Area2D)
 
 		//tower placing logic
-		bool _building_mode;
-		bool _can_build;
-		bool _is_colliding;
+		bool isBuilding;
+		bool canBuild;
+		bool isColliding;
 		
-		Input* _input;
-		Vector2 _cell_size;
-		Vector2 _cell_position;
-		int _cell_id;
-		String _current_tile;
+		Input* input;
+		Vector2 cellSize;
+		Vector2 cellPosition;
+		int cellId;
+		String currentTile;
 
 		//attack speed
-		double _attack_speed;
-		Timer* _attack_timer;
+		double attackSpeed;
+		Timer* attackTimer;
 
 		//enemies
-		Array _enemy_array;
-		PathFollow2D* _current_target;
-		Vector2 _target_position;
+		Array enemyArray;
+		PathFollow2D* currentTarget;
+		Vector2 targetPosition;
 
 		//spawning projectiles
-		ResourceLoader* _loader; 
-		Ref<PackedScene> _projectile_prefab;
-		String _projectile_prefab_path;
-		Area2D* _projectile;
-		Vector2 _projectile_spawn_position;
-		bool _is_attacking;
+		ResourceLoader* loader; 
+		Ref<PackedScene> projectilePrefab;
+		String projectilePrefabPath;
+		Area2D* projectile;
+		Vector2 projectileSpawnPosition;
+		bool isAttacking;
 
 		//tower sprites
-		String _base_sprite_path;
-		Sprite* _base;
-		String _gun_sprite_path;
-		Sprite* _gun;
+		String baseSpritePath;
+		Sprite* base;
+		String gunSpritePath;
+		Sprite* gun;
 
 		// methods
 	public:
 		Tower();
 		~Tower();
+		static void _register_methods();
+
 		void _physics_process(float delta);
 		void _init();
 		void _ready();
-		static void _register_methods();
 
-		void _follow_mouse();
-		void _on_AttackSpeedTimer_timeout();
-		void _on_aggro_area_entered(Area2D* _other_area);
-		void _on_aggro_area_exited(Area2D* _other_area);
-		void _on_tower_area_entered(Area2D* _other_area);
-		void _on_tower_area_exited(Area2D* _other_area);
+		void FollowMouse();
+		void OnAttackSpeedTimerTimeout();
+		void OnAggroAreaEntered(Area2D* _other_area);
+		void OnAggroAreaExited(Area2D* _other_area);
+		void OnTowerAreaEntered(Area2D* _other_area);
+		void OnTowerAreaExited(Area2D* _other_area);
 
-		void _set_projectile_prefab(Ref<PackedScene> _projectile);
-		void _set_gun_path(String _iamge_path);
-		void _set_base_path(String _iamge_path);
-		void _set_attack_speed(double _attck_speed);
+		void SetProjectilePrefab(Ref<PackedScene> _projectile);
+		void SetGunPath(String _iamge_path);
+		void SetBasePath(String _iamge_path);
+		void SetAttackSpeed(double _attck_speed);
 	};
 }
 

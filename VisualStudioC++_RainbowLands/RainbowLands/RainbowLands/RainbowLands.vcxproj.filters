@@ -61,6 +61,15 @@
     <Filter Include="Source Files\SaveSystem">
       <UniqueIdentifier>{5ad7b848-efb7-4e13-82b8-f9e8e5b23105}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Architecture-related">
+      <UniqueIdentifier>{5614236b-336d-4b1d-98e1-a30d0a9a6c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture-related\Header Files">
+      <UniqueIdentifier>{bd82116c-eb18-4578-aa45-3eedf44ad45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture-related\Sourse Files">
+      <UniqueIdentifier>{53f70ecd-8899-4db9-9d98-1f05da535b7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -111,29 +120,14 @@
     <ClCompile Include="ToMain.cpp">
       <Filter>Source Files\PauseMenu\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="Load.cpp">
-      <Filter>Source Files\SaveSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Save.cpp">
-      <Filter>Source Files\SaveSystem</Filter>
-    </ClCompile>
     <ClCompile Include="TowerBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TowerShop.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="TowerManager.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="StartWave.cpp">
-      <Filter>Source Files\UI\Buttons</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files\Root</Filter>
-    </ClInclude>
     <ClInclude Include="Root.h">
       <Filter>Header Files\Root</Filter>
     </ClInclude>
@@ -179,23 +173,14 @@
     <ClInclude Include="ToMain.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="Save.h">
-      <Filter>Header Files\SaveSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="Load.h">
-      <Filter>Header Files\SaveSystem</Filter>
-    </ClInclude>
     <ClInclude Include="TowerBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TowerShop.h">
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="TowerManager.h">
-      <Filter>Header Files\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="StartWave.h">
-      <Filter>Header Files\UI\Buttons</Filter>
+    <ClInclude Include="IObserver.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,8 +15,8 @@ namespace godot
 		void _init();
 		void _ready();
 
-		void _on_button_pressed();
+		void OnButtonPressed();
 	private:
-		bool _is_paused = false;
+		bool isPaused = false;
 	};
 }

@@ -33,45 +33,45 @@ void godot::TowerBuilder::Reset()
 // Gun sprites
 void godot::TowerBuilder::SetGunSprite01()
 {
-	_tower->call("_set_gun_path", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
+	_tower->call("SetGunPath", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
 }
 
 void godot::TowerBuilder::SetGunSprite02()
 {
-	_tower->call("_set_gun_path", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
+	_tower->call("SetGunPath", "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
 }
 
 // Base platform sprites
 void godot::TowerBuilder::SetPlatformSprite01()
 {
-	_tower->call("_set_base_path", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
+	_tower->call("SetBasePath", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
 }
 
 void godot::TowerBuilder::SetPlatformSprite02()
 {
-	_tower->call("_set_base_path", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
+	_tower->call("SetBasePath", "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
 }
 
 // Attack speed
 void godot::TowerBuilder::SetAttackSpeedLow()
 {
-	_tower->call("_set_attack_speed", 1.0);
+	_tower->call("SetAttackSpeed", 1.0);
 }
 
 void godot::TowerBuilder::SetAttackSpeedHigh()
 {
-	_tower->call("_set_attack_speed", 0.5);
+	_tower->call("SetAttackSpeed", 0.5);
 }
 
 // Projectiles
 void godot::TowerBuilder::SetAmmoTypeProjectile01()
 {
-	Ref<PackedScene> _projectile_prefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
-	_tower->call("_set_projectile_prefab", _projectile_prefab);
+	Ref<PackedScene> projectilePrefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	_tower->call("SetProjectilePrefab", projectilePrefab);
 }
 
 void godot::TowerBuilder::SetAmmoTypeProjectile02()
 {
-	Ref<PackedScene> _projectile_prefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
-	_tower->call("_set_projectile_prefab", _projectile_prefab);
+	Ref<PackedScene> projectilePrefab = _loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	_tower->call("SetProjectilePrefab", projectilePrefab);
 }
