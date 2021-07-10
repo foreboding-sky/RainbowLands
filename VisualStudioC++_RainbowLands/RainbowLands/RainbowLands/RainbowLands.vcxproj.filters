@@ -135,6 +135,9 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="CrystalAngel.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -201,6 +204,9 @@
       <Filter>Header Files\UI\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="CrystalAngel.h">
       <Filter>Header Files\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
