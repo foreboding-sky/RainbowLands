@@ -49,6 +49,7 @@ namespace godot
 		int score;
 	private:
 		// singleton
+		UI* ui;
 		static	LevelManager* _instance;
 
 		UI* ui;
