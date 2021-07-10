@@ -137,6 +137,8 @@ void LevelManager::AddCurrency(int amount)
 {
 	currency += amount;
 	score += amount;
+	Notify(Message::SCORE_GAINED, score);
+	Notify(Message::GOLD_GAINED, currency);
 }
 
 void LevelManager::MobGotThrough(int damage)
@@ -145,6 +147,7 @@ void LevelManager::MobGotThrough(int damage)
 		LevelOver();
 	else
 		currentHealth -= damage;
+	Notify(Message::DAMAGE_TAKEN, currentHealth);
 }
 void LevelManager::LevelOver()
 {

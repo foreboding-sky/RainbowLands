@@ -21,10 +21,10 @@ namespace godot
 		void _process(float delta);
 
 		void OnCoinsChanged(int value);
-		void OnEmeraldsChanged(int value);
+		void OnScoreChanged(int value);
 		void OnHealthChanged(int value);
 		void OnWaveChanged();
-		virtual void Update(Message& msg);
+		virtual void Update(Message& msg, int& param);
 
 		// variables
 	private:

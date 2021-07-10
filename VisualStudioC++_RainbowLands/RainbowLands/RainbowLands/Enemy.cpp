@@ -40,7 +40,6 @@ void Enemy::_physics_process(float delta)
 	if (get_unit_offset() >= 1)
 	{
 		levelManager->MobGotThrough(damage);
-		levelManager->AddCurrency(damage);
 			queue_free();
 	}
 }
@@ -54,8 +53,8 @@ void Enemy::_on_Area2D_area_entered(Area2D* _other_area)
 		health -= 1;
 		if (health <= 0)
 		{	
-			//add money to wallet (!)
 			queue_free();
+			levelManager->AddCurrency(damage);
 		}
 	}
 }

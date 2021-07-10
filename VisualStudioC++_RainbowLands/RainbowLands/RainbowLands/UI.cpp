@@ -8,12 +8,12 @@ namespace godot
 		register_method("_ready", &UI::_ready);
 		register_method("_process", &UI::_process);
 		register_method("on_coins_changed", &UI::OnCoinsChanged);
-		register_method("on_emeralds_changed", &UI::OnEmeraldsChanged);
+		register_method("on_emeralds_changed", &UI::OnScoreChanged);
 		register_method("on_health_changed", &UI::OnHealthChanged);
 		register_method("on_wave_changed", &UI::OnWaveChanged);
 	}
 
-	void UI::Update(Message& msg)
+	void UI::Update(Message& msg, int& param)
 	{
 		switch (msg)
 		{
@@ -22,7 +22,21 @@ namespace godot
 				OnWaveChanged();
 				break;
 			}
-
+			case DAMAGE_TAKEN:
+			{
+				OnHealthChanged(param);
+				break;
+			}
+			case SCORE_GAINED:
+			{
+				OnScoreChanged(param);
+				break;
+			}
+			case GOLD_GAINED:
+			{
+				OnCoinsChanged(param);
+				break;
+			}
 			default:
 				break;
 		}
@@ -35,7 +49,6 @@ namespace godot
 
 	void UI::_ready()
 	{
-
 	}
 
 	void UI::_process(float delta)
@@ -47,21 +60,21 @@ namespace godot
 	{
 		std::string converter = std::to_string(value);
 		String text = String(converter.c_str());
-		this->get_node("/root/main/user_interface/gold")->set("text", text);
+		this->get_node("/root/main/UI/gold")->set("text", text);
 	}
 
-	void UI::OnEmeraldsChanged(int value)
+	void UI::OnScoreChanged(int value)
 	{
-		std::string converter = std::to_string(value);
+		std::string converter = "Score: " + std::to_string(value);
 		String text = String(converter.c_str());
-		this->get_node("/root/main/user_interface/points")->set("text", text);
+		this->get_node("/root/main/UI/points")->set("text", text);
 	}
 
 	void UI::OnHealthChanged(int value)
 	{
 		std::string converter = std::to_string(value);
 		String text = String(converter.c_str());
-		this->get_node("/root/main/user_interface/lives")->set("text", text);
+		this->get_node("/root/main/UI/lives")->set("text", text);
 	}
 
 	void UI::OnWaveChanged()

@@ -153,7 +153,6 @@ __meta__ = {
 }
 
 [node name="points" type="Label" parent="UI"]
-visible = false
 margin_top = 96.0
 margin_right = 64.0
 margin_bottom = 128.0

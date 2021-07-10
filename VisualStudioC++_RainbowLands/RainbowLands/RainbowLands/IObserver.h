@@ -7,6 +7,6 @@ class IObserver
 public:
     IObserver() {}
     virtual ~IObserver() {}
-    virtual void Update(Message&) = 0;
+    virtual void Update(Message&, int&) = 0;
 
 };

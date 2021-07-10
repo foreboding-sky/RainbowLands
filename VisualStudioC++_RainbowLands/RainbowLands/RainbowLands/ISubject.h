@@ -4,10 +4,12 @@
 
 enum Message
 {
-    ENEMY_DIED,
+    SCORE_GAINED,
+    GOLD_GAINED,
     DAMAGE_TAKEN,
     WAVE_STARTED,
-    TOWER_SPAWNED
+    TOWER_SPAWNED,
+    TOWER_DESPAWNED
 };
 
 class ISubject
@@ -25,10 +27,10 @@ public:
     {
         observers.erase(std::remove(observers.begin(), observers.end(), o));
     }
-    void Notify(Message msg)
+    void Notify(Message msg, int param = 0)
     {
         for (auto* o : observers) {
-            o->Update(msg);
+            o->Update(msg, param);
         }
     }
 };
