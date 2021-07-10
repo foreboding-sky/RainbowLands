@@ -52,7 +52,6 @@ namespace godot
 		UI* ui;
 		static	LevelManager* _instance;
 
-		UI* ui;
 		Button* startButton;
 		RandomNumberGenerator* random;
 		ResourceLoader* loader;
