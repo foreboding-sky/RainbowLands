@@ -3,6 +3,9 @@
 namespace godot
 {
 	UI* UI::_instance;
+
+	UI::UI() {}
+	UI::~UI() {}
 	void UI::_register_methods()
 	{
 		register_method("_init", &UI::_init);

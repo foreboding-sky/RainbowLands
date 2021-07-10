@@ -117,6 +117,7 @@ void LevelManager::_ready()
 	startButton->connect("pressed", this, "StartWave");
 	waveIsActive = false;
 	loader = ResourceLoader::get_singleton();
+	ui = UI::get_singleon();
 	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
 	spawnTimer->connect("timeout", this, "SpawnEnemy");
 	threatPool = 5;

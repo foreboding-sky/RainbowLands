@@ -14,6 +14,7 @@
 #include <Object.hpp>
 #include <Button.hpp>
 #include <time.h>
+#include "UI.h"
 
 namespace godot 
 {
@@ -49,6 +50,7 @@ namespace godot
 		int score;
 	private:
 		// singleton
+		UI* ui;
 		static	LevelManager* _instance;
 		Button* startButton;
 		RandomNumberGenerator* random;

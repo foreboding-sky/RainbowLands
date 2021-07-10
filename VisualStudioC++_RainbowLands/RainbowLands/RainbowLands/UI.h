@@ -12,6 +12,9 @@ namespace godot
 		GODOT_CLASS(UI, Control);
 
 	public:
+		UI();
+		~UI();
+
 		static void _register_methods();
 		void _init();
 		void _ready();
@@ -26,6 +29,5 @@ namespace godot
 
 	private:
 		static UI* _instance;
-
 	};
 }
