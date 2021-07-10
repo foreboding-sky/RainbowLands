@@ -1,6 +1,7 @@
 #pragma once
 #include "IObserver.h"
 #include <vector>
+#include <algorithm>
 
 enum Message
 {

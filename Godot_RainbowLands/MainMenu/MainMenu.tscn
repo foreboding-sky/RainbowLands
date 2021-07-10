@@ -39,10 +39,10 @@ text = "Rainbow Lands"
 fit_content_height = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
-margin_left = 368.0
-margin_top = -1.88776
-margin_right = 656.0
-margin_bottom = 594.112
+margin_left = 416.0
+margin_top = -2.0
+margin_right = 608.0
+margin_bottom = 594.0
 size_flags_vertical = 3
 custom_constants/separation = 30
 alignment = 1
@@ -52,7 +52,7 @@ __meta__ = {
 
 [node name="Play" type="Button" parent="TextureRect/VBoxContainer2"]
 margin_top = 224.0
-margin_right = 288.0
+margin_right = 192.0
 margin_bottom = 253.0
 custom_fonts/font = ExtResource( 2 )
 text = "Play"
@@ -60,7 +60,7 @@ script = ExtResource( 5 )
 
 [node name="Options" type="Button" parent="TextureRect/VBoxContainer2"]
 margin_top = 283.0
-margin_right = 288.0
+margin_right = 192.0
 margin_bottom = 312.0
 custom_fonts/font = ExtResource( 2 )
 text = "Options"
@@ -68,7 +68,7 @@ script = ExtResource( 3 )
 
 [node name="Exit" type="Button" parent="TextureRect/VBoxContainer2"]
 margin_top = 342.0
-margin_right = 288.0
+margin_right = 192.0
 margin_bottom = 371.0
 custom_fonts/font = ExtResource( 2 )
 text = "Exit"
