@@ -19,6 +19,10 @@
 #include "Projectile.h"
 #include <Texture.hpp>
 #include "LevelManager.h"
+#include "ClosestNoLock.h"
+#include <CircleShape2D.hpp>
+#include <CollisionShape2D.hpp>
+#include <Shape.hpp>
 
 namespace godot {
 	class Tower : public Area2D
@@ -55,6 +59,9 @@ namespace godot {
 		Area2D* projectile;
 		Vector2 projectileSpawnPosition;
 		bool isAttacking;
+		TargetingMethod* targeting;
+		CollisionShape2D* collisionShape;
+		Ref<CircleShape2D> circleShape;
 
 		//tower sprites
 		String baseSpritePath;
@@ -85,6 +92,8 @@ namespace godot {
 		void SetBasePath(String imagePath);
 		void SetAttackSpeed(double atkSpeed);
 		void SetTowerCost(int cost);
+		void SetTargetingMethod(TargetingMethod* method);
+		void SetCollisionShape(Ref<CircleShape2D> shape);
 
 		// getters
 		int GetTowerPlacementCost();

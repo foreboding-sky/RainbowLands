@@ -63,17 +63,17 @@ void Tower::_init()
 
 void Tower::_ready()
 {
-    Godot::print("ready");
+    // get singletons
     loader = ResourceLoader::get_singleton();
     input = Input::get_singleton();
     levelManager = LevelManager::get_singleton();
 
-    //set gun texture
+    // set gun texture
     gun = cast_to<Sprite>(get_node("Gun"));
     Ref<Texture> _gun_texture = loader->load(gunSpritePath);
     gun->set_texture(_gun_texture);
 
-    //set tower base texture
+    // set tower base(platform) texture
     base = cast_to<Sprite>(get_node("Base"));
     Ref<Texture> _base_texture = loader->load(baseSpritePath);
     base->set_texture(_base_texture);
@@ -82,7 +82,9 @@ void Tower::_ready()
     attackTimer = cast_to<Timer>(get_node("AttackSpeedTimer"));
     attackTimer->set_wait_time(attackSpeed);
 
-    //set collider radius (!)
+    //set collider radius
+    collisionShape = cast_to<CollisionShape2D>(get_node("Aggro")->get_child(0));
+    collisionShape->set_shape((Ref<Shape2D>)circleShape);
 
     //get tilemap
     tileMap = cast_to<TileMap>(get_node("/root/main/tower_placement"));
@@ -123,6 +125,7 @@ void Tower::_physics_process(float delta)
             base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             levelManager->ChangeCurrency(placementCost * -1);
+            targeting->SetTowerPosition(get_global_position());
         }
         if (input->is_action_just_pressed("cancel_tower_build"))
         {
@@ -134,8 +137,9 @@ void Tower::_physics_process(float delta)
     {
         if (enemyArray.size() > 0)
         {
+            targeting->SetEnemies(enemyArray);
+            currentTarget = targeting->GetTarget();
             //getting target's global transform
-            currentTarget = enemyArray[0];
             targetPosition = currentTarget->get_global_transform().get_origin();
 
             //rotation of the gun
@@ -246,6 +250,17 @@ void Tower::SetTowerCost(int cost)
 {
     placementCost = cost;
 }
+
+void Tower::SetTargetingMethod(TargetingMethod* method)
+{
+    targeting = method;
+}
+
+void Tower::SetCollisionShape(Ref<CircleShape2D> shape)
+{
+    circleShape = shape;
+}
+
 int Tower::GetTowerPlacementCost()
 {
     return placementCost;
