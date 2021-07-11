@@ -10,6 +10,7 @@ LevelManager::LevelManager()
 
 LevelManager::~LevelManager() 
 {
+
 }
 
 void LevelManager::_register_methods()
@@ -78,7 +79,7 @@ void LevelManager::SpawnEnemy()
 	{
 		int randomNumber = rand() % enemyRefs.size();
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time((float)i / 3.0);
+		spawnTimer->set_wait_time(0.6f + (float)i / (3.0f + (float)waveCounter/2.0f));
 		if (i <= waveThreat)
 		{
 			waveThreat -= i;
@@ -99,6 +100,7 @@ void LevelManager::EndWave()
 	waveIsActive = false;
 	threatPool += increment++;
 	spawnTimer->stop();
+	Notify(Message::WAVE_ENDED);
 }
 void LevelManager::StartWave()
 {
@@ -128,9 +130,8 @@ void LevelManager::_ready()
 	waveCounter = 0;
 	currentHealth = 50;
 	maxHealth = 50;
-	currency = 10;
+	currency = 60;
 	LoadEnemies();
-
 }
 
 void LevelManager::AddCurrency(int amount)
@@ -143,15 +144,20 @@ void LevelManager::AddCurrency(int amount)
 
 void LevelManager::MobGotThrough(int damage)
 {
+	currentHealth -= damage;
+	Notify(Message::DAMAGE_TAKEN, currentHealth);
 	if (currentHealth <= 0)
 		LevelOver();
-	else
-		currentHealth -= damage;
-	Notify(Message::DAMAGE_TAKEN, currentHealth);
 }
 void LevelManager::LevelOver()
 {
-
+	Ref<PackedScene> scene = loader->load("res://UI/GameOverScreen.tscn");
+	Node2D* gameOver = cast_to<Node2D>(scene->instance());
+	gameOver->call("SetScore", score);
+	get_node("/root")->add_child(gameOver);
+	get_tree()->set_current_scene(gameOver);
+	get_node("/root")->remove_child(this);
+	queue_free();
 }
 void LevelManager::_physics_process(float delta)
 {

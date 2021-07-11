@@ -10,7 +10,8 @@ namespace godot
 		register_method("on_coins_changed", &UI::OnCoinsChanged);
 		register_method("on_emeralds_changed", &UI::OnScoreChanged);
 		register_method("on_health_changed", &UI::OnHealthChanged);
-		register_method("on_wave_changed", &UI::OnWaveChanged);
+		register_method("OnWaveStarted", &UI::OnWaveStarted);
+		register_method("OnWaveEnded", &UI::OnWaveEnded);
 	}
 
 	void UI::Update(Message& msg, int& param)
@@ -19,7 +20,7 @@ namespace godot
 		{
 			case WAVE_STARTED:
 			{
-				OnWaveChanged();
+				OnWaveStarted();
 				break;
 			}
 			case DAMAGE_TAKEN:
@@ -35,6 +36,11 @@ namespace godot
 			case GOLD_GAINED:
 			{
 				OnCoinsChanged(param);
+				break;
+			}
+			case WAVE_ENDED:
+			{
+				OnWaveEnded();
 				break;
 			}
 			default:
@@ -77,12 +83,21 @@ namespace godot
 		this->get_node("/root/main/UI/lives")->set("text", text);
 	}
 
-	void UI::OnWaveChanged()
+	void UI::OnWaveStarted()
 	{
 		waveCouner++;
 		std::string converter = "Wave: " + std::to_string(waveCouner);
 		String text = String(converter.c_str());
 		this->get_node("/root/main/UI/level")->set("text", text);
+		converter = "Cannot start";
+		text = String(converter.c_str());
+		this->get_node("/root/main/UI/CanStart")->set("text", text);
+	}
+	void UI::OnWaveEnded()
+	{
+		std::string converter = "Can Start";
+		String text = String(converter.c_str());
+		this->get_node("/root/main/UI/CanStart")->set("text", text);
 	}
 	
 }

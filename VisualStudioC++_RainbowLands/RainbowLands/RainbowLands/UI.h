@@ -23,7 +23,8 @@ namespace godot
 		void OnCoinsChanged(int value);
 		void OnScoreChanged(int value);
 		void OnHealthChanged(int value);
-		void OnWaveChanged();
+		void OnWaveStarted();
+		void OnWaveEnded();
 		virtual void Update(Message& msg, int& param);
 
 		// variables

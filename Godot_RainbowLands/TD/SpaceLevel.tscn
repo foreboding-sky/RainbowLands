@@ -146,16 +146,16 @@ __meta__ = {
 }
 
 [node name="LifeBar" parent="UI" instance=ExtResource( 3 )]
-margin_left = 1.11009
-margin_top = 545.0
-margin_right = 501.11
-margin_bottom = 598.0
+margin_left = 48.0
+margin_top = 525.0
+margin_right = 148.0
+margin_bottom = 578.0
 
 [node name="level" type="Label" parent="UI"]
-margin_left = 47.9453
-margin_top = 476.468
-margin_right = 143.945
-margin_bottom = 499.468
+margin_left = 29.0
+margin_top = 472.0
+margin_right = 166.0
+margin_bottom = 495.0
 custom_fonts/font = ExtResource( 2 )
 text = "Wave: 0"
 align = 1
@@ -165,11 +165,12 @@ __meta__ = {
 }
 
 [node name="points" type="Label" parent="UI"]
-margin_top = 96.0
-margin_right = 64.0
-margin_bottom = 128.0
-rect_scale = Vector2( 3, 3 )
-text = "0"
+margin_left = 58.0
+margin_top = 159.0
+margin_right = 139.0
+margin_bottom = 191.0
+custom_fonts/font = ExtResource( 2 )
+text = "Score: "
 align = 1
 valign = 1
 __meta__ = {
@@ -177,11 +178,12 @@ __meta__ = {
 }
 
 [node name="lives" type="Label" parent="UI"]
-margin_top = 192.0
-margin_right = 96.0
-margin_bottom = 208.0
-rect_scale = Vector2( 2, 2 )
-text = "Lives: 100"
+margin_left = 67.5951
+margin_top = 537.5
+margin_right = 166.595
+margin_bottom = 570.5
+custom_fonts/font = ExtResource( 15 )
+text = "50"
 align = 1
 valign = 1
 __meta__ = {
@@ -189,18 +191,18 @@ __meta__ = {
 }
 
 [node name="EmeraldCounter" parent="UI" instance=ExtResource( 4 )]
-margin_left = 1.02713
-margin_top = -19.2379
-margin_right = 101.027
-margin_bottom = 60.7621
+margin_left = 8.0
+margin_top = -20.0
+margin_right = 108.0
+margin_bottom = 60.0
 
 [node name="gold" type="Label" parent="UI"]
-margin_left = 16.5969
-margin_top = 27.2456
-margin_right = 112.597
-margin_bottom = 59.2456
+margin_left = 24.0
+margin_top = 27.7798
+margin_right = 120.0
+margin_bottom = 59.7798
 custom_fonts/font = ExtResource( 15 )
-text = "123"
+text = "60"
 align = 1
 valign = 1
 __meta__ = {
@@ -208,10 +210,10 @@ __meta__ = {
 }
 
 [node name="tower" type="Button" parent="UI"]
-margin_left = 51.785
-margin_top = 87.5761
-margin_right = 127.785
-margin_bottom = 116.576
+margin_left = 58.0
+margin_top = 91.0
+margin_right = 137.0
+margin_bottom = 120.0
 custom_fonts/font = ExtResource( 2 )
 text = "Tower"
 script = ExtResource( 7 )
@@ -221,26 +223,12 @@ __meta__ = {
 
 [node name="Control" parent="UI/tower" instance=ExtResource( 8 )]
 
-[node name="next_wave" type="Label" parent="UI"]
-margin_left = 19.025
-margin_top = 400.532
-margin_right = 133.025
-margin_bottom = 423.532
+[node name="CanStart" type="Label" parent="UI"]
+margin_left = 29.0
+margin_top = 401.0
+margin_right = 166.0
+margin_bottom = 424.0
 custom_fonts/font = ExtResource( 2 )
-text = "Next Wave:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="next_wave_time" type="Label" parent="UI"]
-margin_left = 137.203
-margin_top = 402.251
-margin_right = 181.203
-margin_bottom = 425.251
-custom_fonts/font = ExtResource( 2 )
-text = "00"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -259,6 +247,6 @@ __meta__ = {
 [node name="PauseMenu" parent="UI" instance=ExtResource( 12 )]
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 0.31
+wait_time = 0.6
 
 [connection signal="timeout" from="mob_spawn_timer" to="." method="_on_mob_spawn_timer_timeout"]

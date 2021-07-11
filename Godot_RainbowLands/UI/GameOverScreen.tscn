@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/OptionsMenuBg.png" type="Texture" id=1]
+[ext_resource path="res://MainMenu/fonts/LogoFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/GameOver.gdns" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="BG"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="BG/VBox"]
+margin_top = 270.0
+margin_right = 1024.0
+margin_bottom = 330.0
+size_flags_horizontal = 7
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "Final Score:"
+align = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true

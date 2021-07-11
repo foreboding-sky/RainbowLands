@@ -10,7 +10,8 @@ enum Message
     DAMAGE_TAKEN,
     WAVE_STARTED,
     TOWER_SPAWNED,
-    TOWER_DESPAWNED
+    TOWER_DESPAWNED,
+	WAVE_ENDED
 };
 
 class ISubject

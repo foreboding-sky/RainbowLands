@@ -15,6 +15,7 @@
 #include <Button.hpp>
 #include <time.h>
 #include "UI.h"
+#include <SceneTree.hpp>
 
 namespace godot 
 {
