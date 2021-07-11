@@ -123,7 +123,7 @@ void Tower::_physics_process(float delta)
             base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             levelManager->ChangeCurrency(placementCost * -1);
-            targeting.SetTowerPosition(get_global_position());
+            targeting->SetTowerPosition(get_global_position());
         }
         if (input->is_action_just_pressed("cancel_tower_build"))
         {
@@ -135,8 +135,8 @@ void Tower::_physics_process(float delta)
     {
         if (enemyArray.size() > 0)
         {
-            targeting.SetEnemies(enemyArray);
-            currentTarget = targeting.GetTarget();
+            targeting->SetEnemies(enemyArray);
+            currentTarget = targeting->GetTarget();
             //getting target's global transform
             //currentTarget = enemyArray[0];
             targetPosition = currentTarget->get_global_transform().get_origin();
@@ -249,6 +249,12 @@ void Tower::SetTowerCost(int cost)
 {
     placementCost = cost;
 }
+
+void Tower::SetTargetingMethod(TargetingMethod* method)
+{
+    targeting = method;
+}
+
 int Tower::GetTowerPlacementCost()
 {
     return placementCost;

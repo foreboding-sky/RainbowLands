@@ -81,3 +81,9 @@ void godot::TowerBuilder::SetTowerPlacementCost30()
 {
 	Object::cast_to<Tower>(tower)->SetTowerCost(30);
 }
+// Targeting methods
+void godot::TowerBuilder::SetTargetingClosestNoLock()
+{
+	ClosestNoLock* method = new ClosestNoLock();
+	Object::cast_to<Tower>(tower)->SetTargetingMethod(method);
+}

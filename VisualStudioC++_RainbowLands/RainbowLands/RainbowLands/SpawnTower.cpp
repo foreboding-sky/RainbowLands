@@ -53,6 +53,7 @@ namespace godot
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
 		builder.SetTowerPlacementCost30();
+		builder.SetTargetingClosestNoLock();
 		Area2D* tower = builder.Build();
 		builder.Reset();
 

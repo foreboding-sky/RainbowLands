@@ -72,7 +72,6 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 16, 352 )
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
 rotation = 1.5708
@@ -83,7 +82,6 @@ texture = ExtResource( 1 )
 position = Vector2( 166.047, 352 )
 offset = 150.0
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D2"]
 rotation = 1.5708
@@ -95,7 +93,6 @@ position = Vector2( 224, 258.092 )
 rotation = -1.57079
 offset = 300.0
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D3"]
 rotation = 1.5708
@@ -107,7 +104,6 @@ position = Vector2( 224, 107.987 )
 rotation = -1.5708
 offset = 450.0
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D4"]
 rotation = 1.5708
@@ -118,7 +114,6 @@ texture = ExtResource( 1 )
 position = Vector2( 363.585, 96 )
 offset = 600.0
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D5"]
 rotation = 1.5708
@@ -130,7 +125,6 @@ position = Vector2( 480, 130.794 )
 rotation = 1.57079
 offset = 750.0
 script = ExtResource( 6 )
-Speed = 400
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D6"]
 rotation = 1.5708

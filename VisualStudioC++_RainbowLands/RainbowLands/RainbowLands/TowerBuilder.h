@@ -9,6 +9,7 @@
 #include <PackedScene.hpp>
 #include <ResourceLoader.hpp>
 #include "Tower.h"
+#include "ClosestNoLock.h"
 
 namespace godot {
 	class TowerBuilder
@@ -42,6 +43,9 @@ namespace godot {
 
 		//set tower placement cost
 		void SetTowerPlacementCost30();
+
+		//set tower targeting method
+		void SetTargetingClosestNoLock();
 
 		Area2D* Build();
 		void Reset();
