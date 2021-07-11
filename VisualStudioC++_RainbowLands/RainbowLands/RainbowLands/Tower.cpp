@@ -246,3 +246,7 @@ void Tower::SetTowerCost(int cost)
 {
     placementCost = cost;
 }
+int Tower::GetTowerPlacementCost()
+{
+    return placementCost;
+}
