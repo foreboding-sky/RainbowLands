@@ -4,18 +4,23 @@ using namespace godot;
 
 LevelManager* LevelManager::_instance = nullptr;
 
+LevelManager* LevelManager::get_singleton()
+{
+	if (!_instance) _instance = new LevelManager();
+	return _instance;
+}
+
 LevelManager::LevelManager()
 {
 }
 
 LevelManager::~LevelManager() 
 {
-
+	DetachObserver((IObserver*)ui);
 }
 
 void LevelManager::_register_methods()
 {
-	register_method((char*)"_physics_process", &LevelManager::_physics_process);
 	register_method((char*)"_init", &LevelManager::_init);
 	register_method((char*)"_ready", &LevelManager::_ready);
 
@@ -27,10 +32,105 @@ void LevelManager::_register_methods()
 	register_method("EndWave", &LevelManager::EndWave);
 }
 
-LevelManager* LevelManager::get_singleton()
+void LevelManager::_init()
 {
-	if (!_instance) _instance = new LevelManager();
-	return _instance;
+	_instance = this;
+}
+
+void LevelManager::_ready()
+{
+	//Godot::print("ready");
+	std::srand(time(0));
+	ui = cast_to<UI>(get_node("/root/main/UI"));
+	AttachObserver((IObserver*)ui);
+	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
+	startButton->connect("pressed", this, "StartWave");
+	waveIsActive = false;
+	loader = ResourceLoader::get_singleton();
+	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
+	spawnTimer->connect("timeout", this, "SpawnEnemy");
+	threatPool = 5;
+	increment = 1;
+	waveCounter = 0;
+	currentHealth = 1;
+	maxHealth = 50;
+	currency = 60;
+	LoadEnemies();
+}
+
+void LevelManager::StartWave()
+{
+	if (waveIsActive == false)
+	{
+		waveCounter++;
+		waveIsActive = true;
+		waveThreat = threatPool;
+		spawnTimer->start();
+		Notify(Message::WAVE_STARTED);
+	}
+}
+
+void LevelManager::EndWave()
+{
+	waveIsActive = false;
+	threatPool += increment++;
+	spawnTimer->stop();
+	Notify(Message::WAVE_ENDED);
+}
+
+void LevelManager::SpawnEnemy()
+{
+	while (waveThreat > 0)
+	{
+		int randomNumber = rand() % enemyRefs.size();
+		int i = enemyThreat[enemyRefs[randomNumber]];
+		spawnTimer->set_wait_time(0.6f + (float)i / (3.0f + (float)waveCounter/2.0f));
+		if (i <= waveThreat)
+		{
+			waveThreat -= i;
+;
+			enemy = cast_to<PathFollow2D>(enemyRefs[randomNumber]->instance());
+			get_node("/root/main/Path2D")->add_child(enemy);
+			break;
+		}
+	}
+	if (waveThreat == 0)
+	{
+		EndWave();
+	}
+}
+
+void LevelManager::ChangeCurrency(int amount)
+{
+	currency += amount;
+	Notify(Message::GOLD_GAINED, currency);
+}
+
+void LevelManager::MobDefeated(int amount)
+{
+	currency += amount;
+	score += amount;
+	Notify(Message::SCORE_GAINED, score);
+	Notify(Message::GOLD_GAINED, currency);
+}
+
+void LevelManager::MobGotThrough(int damage)
+{
+	currentHealth -= damage;
+	Notify(Message::DAMAGE_TAKEN, currentHealth);
+	if (currentHealth <= 0)
+		LevelOver();
+}
+
+void LevelManager::LevelOver()
+{
+	Ref<PackedScene> scene = loader->load("res://UI/GameOverScreen.tscn");
+	Node2D* gameOver = cast_to<Node2D>(scene->instance());
+	gameOver->call("SetScore", score);
+	get_node("/root")->add_child(gameOver);
+	get_tree()->set_current_scene(gameOver);
+	get_node("/root")->remove_child(this);
+	queue_free();
 }
 
 void LevelManager::LoadEnemies()
@@ -69,101 +169,4 @@ void LevelManager::LoadEnemies()
 	enemyThreat[enemyRefs[15]] = (int)10;
 	enemyRefs.push_back(loader->load("res://TD/Enemies/Wasp.tscn"));
 	enemyThreat[enemyRefs[16]] = (int)80;
-
-
-}
-
-void LevelManager::SpawnEnemy()
-{
-	while (waveThreat > 0)
-	{
-		int randomNumber = rand() % enemyRefs.size();
-		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time(0.6f + (float)i / (3.0f + (float)waveCounter/2.0f));
-		if (i <= waveThreat)
-		{
-			waveThreat -= i;
-;
-			enemy = cast_to<PathFollow2D>(enemyRefs[randomNumber]->instance());
-			get_node("/root/main/Path2D")->add_child(enemy);
-			break;
-		}
-	}
-	if (waveThreat == 0)
-	{
-		EndWave();
-	}
-}
-
-void LevelManager::EndWave()
-{
-	waveIsActive = false;
-	threatPool += increment++;
-	spawnTimer->stop();
-	Notify(Message::WAVE_ENDED);
-}
-void LevelManager::StartWave()
-{
-	if (waveIsActive == false)
-	{	
-		waveCounter++;
-		waveIsActive = true;
-		waveThreat = threatPool;
-		spawnTimer->start();
-		Notify(Message::WAVE_STARTED);
-	}
-}
-void LevelManager::_ready()
-{
-	Godot::print("ready");
-	std::srand(time(0));
-	ui = cast_to<UI>(get_node("/root/main/UI"));
-	AttachObserver((IObserver*)ui);
-	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
-	startButton->connect("pressed", this, "StartWave");
-	waveIsActive = false;
-	loader = ResourceLoader::get_singleton();
-	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
-	spawnTimer->connect("timeout", this, "SpawnEnemy");
-	threatPool = 5;
-	increment = 1;
-	waveCounter = 0;
-	currentHealth = 50;
-	maxHealth = 50;
-	currency = 60;
-	LoadEnemies();
-}
-
-void LevelManager::AddCurrency(int amount)
-{
-	currency += amount;
-	score += amount;
-	Notify(Message::SCORE_GAINED, score);
-	Notify(Message::GOLD_GAINED, currency);
-}
-
-void LevelManager::MobGotThrough(int damage)
-{
-	currentHealth -= damage;
-	Notify(Message::DAMAGE_TAKEN, currentHealth);
-	if (currentHealth <= 0)
-		LevelOver();
-}
-void LevelManager::LevelOver()
-{
-	Ref<PackedScene> scene = loader->load("res://UI/GameOverScreen.tscn");
-	Node2D* gameOver = cast_to<Node2D>(scene->instance());
-	gameOver->call("SetScore", score);
-	get_node("/root")->add_child(gameOver);
-	get_tree()->set_current_scene(gameOver);
-	get_node("/root")->remove_child(this);
-	queue_free();
-}
-void LevelManager::_physics_process(float delta)
-{
-}
-
-void LevelManager::_init()
-{
-	_instance = this;
 }

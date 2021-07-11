@@ -1,5 +1,6 @@
 #pragma once
 #include <Godot.hpp>
+#include <Node.hpp>
 #include <Object.hpp>
 #include <Area2D.hpp>
 #include <Texture.hpp>
@@ -14,14 +15,15 @@ namespace godot {
 	{
 		// variables
 	private:
-		ResourceLoader* _loader;
+		ResourceLoader* loader;
 		
-		Area2D* _tower;
-		Ref<PackedScene> _towerPrefab;
+		Area2D* tower;
+		Ref<PackedScene> towerPrefab;
 		// methods
 	public:
 		TowerBuilder();
 		~TowerBuilder();
+
 		// set gun sprites
 		void SetGunSprite01();
 		void SetGunSprite02();
@@ -37,6 +39,9 @@ namespace godot {
 		// set tower ammo type
 		void SetAmmoTypeProjectile01();
 		void SetAmmoTypeProjectile02();
+
+		//set tower placement cost
+		void SetTowerPlacementCost30();
 
 		Area2D* Build();
 		void Reset();

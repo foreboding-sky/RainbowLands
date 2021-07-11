@@ -27,8 +27,8 @@ namespace godot
 	public:
 		LevelManager();
 		~LevelManager();
+		static LevelManager* get_singleton();
 
-		void _physics_process(float delta);
 		void _init();
 		void _ready();
 		static void _register_methods();
@@ -37,10 +37,10 @@ namespace godot
 		void EndWave();
 		void StartWave();
 		void LoadEnemies();
-		void AddCurrency(int amount);
+		void MobDefeated(int amount);
+		void ChangeCurrency(int amount);
 		void MobGotThrough(int damage);
 		void LevelOver();
-		static LevelManager* get_singleton();
 
 		int waveCounter;
 		Timer* spawnTimer;
@@ -50,9 +50,9 @@ namespace godot
 		int score;
 	private:
 		// singleton
-		UI* ui;
 		static	LevelManager* _instance;
 
+		UI* ui;
 		Button* startButton;
 		RandomNumberGenerator* random;
 		ResourceLoader* loader;
