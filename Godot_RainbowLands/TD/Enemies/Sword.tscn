@@ -11,8 +11,8 @@ position = Vector2( 17, 370 )
 rotation = -0.00892166
 loop = false
 script = ExtResource( 2 )
-Health = 15
-Speed = 220
+Health = 12
+Speed = 200
 Damage = 10
 
 [node name="Sprite" type="Sprite" parent="."]

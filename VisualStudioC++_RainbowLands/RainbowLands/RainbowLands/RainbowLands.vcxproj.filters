@@ -129,6 +129,24 @@
     <ClCompile Include="Arrow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Load.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Save.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrystalAngel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -190,6 +208,27 @@
     </ClInclude>
     <ClInclude Include="Arrow.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrystalAngel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Load.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@
 #include "TowerShop.h"
 #include "Projectile.h"
 #include "Arrow.h"
+#include "GameOver.h"
 
 using namespace godot;
 
@@ -43,4 +44,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<TowerShop>();
 	register_class<Projectile>();
 	register_class<Arrow>();
+	register_class<GameOver>();
 }

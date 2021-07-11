@@ -12,7 +12,7 @@ rotation = -0.00892166
 loop = false
 script = ExtResource( 2 )
 Health = 5
-Speed = 350
+Speed = 300
 Damage = 5
 
 [node name="Sprite" type="Sprite" parent="."]
