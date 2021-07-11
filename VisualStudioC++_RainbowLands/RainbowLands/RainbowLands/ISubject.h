@@ -9,8 +9,6 @@ enum Message
     GOLD_GAINED,
     DAMAGE_TAKEN,
     WAVE_STARTED,
-    TOWER_SPAWNED,
-    TOWER_DESPAWNED,
 	WAVE_ENDED
 };
 

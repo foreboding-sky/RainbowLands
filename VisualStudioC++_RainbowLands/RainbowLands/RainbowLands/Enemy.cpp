@@ -54,7 +54,7 @@ void Enemy::_on_Area2D_area_entered(Area2D* _other_area)
 		if (health <= 0)
 		{	
 			queue_free();
-			levelManager->AddCurrency(damage);
+			levelManager->MobDefeated(damage);
 		}
 	}
 }

@@ -18,26 +18,26 @@
 #include <SceneTree.hpp>
 #include "Projectile.h"
 #include <Texture.hpp>
+#include "LevelManager.h"
 
 namespace godot {
 	class Tower : public Area2D
 	{
-		// variables
-	public:
-		TileMap* tileMap;
-	private:
 		GODOT_CLASS(Tower, Area2D)
-
+		// variables
+	private:
 		//tower placing logic
 		bool isBuilding;
 		bool canBuild;
 		bool isColliding;
-		
+		TileMap* tileMap;
 		Input* input;
 		Vector2 cellSize;
 		Vector2 cellPosition;
 		int cellId;
 		String currentTile;
+		int placementCost;
+		LevelManager* levelManager;
 
 		//attack speed
 		double attackSpeed;
@@ -79,10 +79,11 @@ namespace godot {
 		void OnTowerAreaEntered(Area2D* _other_area);
 		void OnTowerAreaExited(Area2D* _other_area);
 
-		void SetProjectilePrefab(Ref<PackedScene> _projectile);
-		void SetGunPath(String _iamge_path);
-		void SetBasePath(String _iamge_path);
-		void SetAttackSpeed(double _attck_speed);
+		void SetProjectilePrefab(Ref<PackedScene> projectile);
+		void SetGunPath(String imagePath);
+		void SetBasePath(String imagePath);
+		void SetAttackSpeed(double atkSpeed);
+		void SetTowerCost(int cost);
 	};
 }
 

@@ -4,6 +4,7 @@ using namespace godot;
 
 Tower::Tower()
 {
+    placementCost = 0;
     canBuild = false;
     isBuilding = true;
     isColliding = false;
@@ -18,12 +19,23 @@ Tower::Tower()
 
 Tower::~Tower()
 {
+    attackTimer = nullptr;
+    input = nullptr;
     loader = nullptr;
     currentTarget = nullptr;
     tileMap = nullptr;
     gun = nullptr;
     base = nullptr;
     projectile = nullptr;
+
+    delete attackTimer;
+    delete input;
+    delete loader;
+    delete currentTarget;
+    delete tileMap;
+    delete gun;
+    delete base;
+    delete projectile;
 }
 
 void Tower::_register_methods()
@@ -51,8 +63,10 @@ void Tower::_init()
 
 void Tower::_ready()
 {
+    Godot::print("ready");
     loader = ResourceLoader::get_singleton();
     input = Input::get_singleton();
+    levelManager = LevelManager::get_singleton();
 
     //set gun texture
     gun = cast_to<Sprite>(get_node("Gun"));
@@ -108,10 +122,11 @@ void Tower::_physics_process(float delta)
             isBuilding = false;
             base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
-            //subtract money from the wallet (!)
+            levelManager->ChangeCurrency(placementCost * -1);
         }
         if (input->is_action_just_pressed("cancel_tower_build"))
         {
+            levelManager->ChangeCurrency(placementCost);
             queue_free();
         }
     }
@@ -138,6 +153,40 @@ void Tower::_physics_process(float delta)
             isAttacking = false;
         }
     }
+}
+
+//toewr follows mouse cursor in building mode and snaps to allowed tiles
+void Tower::FollowMouse()
+{
+    set_position(get_global_mouse_position());
+    cellPosition = Vector2(floor(get_position().x / cellSize.x),
+        floor(get_position().y / cellSize.y));
+    cellId = tileMap->get_cellv(cellPosition);
+    if (cellId != -1 && !isColliding)
+    {
+        currentTile = tileMap->get_tileset().ptr()->tile_get_name(cellId);
+        if (currentTile == "tower_base")
+        {
+            //snap tower to tile center
+            set_position(Vector2{ (cellPosition.x * cellSize.x + cellSize.x / 2),
+                                  (cellPosition.y * cellSize.y + cellSize.y / 2) });
+            canBuild = true;
+        }
+    }
+    else
+    {
+        canBuild = false;
+    }
+}
+
+//attack target, spawn bullets(projectiles)
+void Tower::OnAttackSpeedTimerTimeout()
+{
+    projectile = cast_to<Area2D>(projectilePrefab->instance());
+    projectileSpawnPosition = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
+    projectile->set_position(projectileSpawnPosition);
+    projectile->call("SetTarget", currentTarget);
+    get_node("/root/main/projectiles")->add_child(projectile);
 }
 
 //enemy enters aggro range
@@ -171,58 +220,29 @@ void Tower::OnTowerAreaExited(Area2D* _other_area)
         isColliding = false;
 }
 
-//attack target, spawn bullets(projectiles)
-void Tower::OnAttackSpeedTimerTimeout()
-{
-    projectile = cast_to<Area2D>(projectilePrefab->instance());
-    projectileSpawnPosition = cast_to<Node2D>(get_node("Gun/ShootPosition"))->get_global_transform().get_origin();
-    projectile->set_position(projectileSpawnPosition);
-    projectile->call("SetTarget", currentTarget);
-    get_node("/root/main/projectiles")->add_child(projectile);
-}
-
-//toewr follows mouse cursor in building mode and snaps to allowed tiles
-void Tower::FollowMouse()
-{
-    set_position(get_global_mouse_position());
-    cellPosition = Vector2(floor(get_position().x / cellSize.x),
-                             floor(get_position().y / cellSize.y));
-    cellId = tileMap->get_cellv(cellPosition);
-    if (cellId != -1 && !isColliding)
-    {
-        currentTile = tileMap->get_tileset().ptr()->tile_get_name(cellId);
-        if (currentTile == "tower_base")
-        {
-            //snap tower to tile center
-            set_position(Vector2{ (cellPosition.x * cellSize.x + cellSize.x / 2),
-                                  (cellPosition.y * cellSize.y + cellSize.y / 2) });
-            canBuild = true;
-        }
-    }
-    else
-    {
-        canBuild = false;
-    }
-}
-
 //Tower setters
 void Tower::SetProjectilePrefab(Ref<PackedScene> projectile)
 {
     projectilePrefab = projectile;
 }
 
-void Tower::SetGunPath(String _iamge_path)
+void Tower::SetGunPath(String imagePath)
 {
-    gunSpritePath = _iamge_path;
+    gunSpritePath = imagePath;
 }
 
-void Tower::SetBasePath(String _iamge_path)
+void Tower::SetBasePath(String imagePath)
 {
-    baseSpritePath = _iamge_path;
+    baseSpritePath = imagePath;
 }
 
-void godot::Tower::SetAttackSpeed(double _attck_speed)
+void Tower::SetAttackSpeed(double atkSpeed)
 {
-    attackSpeed = attackSpeed;
-    attackTimer->set_wait_time(attackSpeed);
+    Godot::print("SetAttackSpeed");
+    attackSpeed = atkSpeed;
+}
+
+void Tower::SetTowerCost(int cost)
+{
+    placementCost = cost;
 }

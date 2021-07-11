@@ -17,6 +17,7 @@ namespace godot
 	}
 	void SpawnTower::_ready()
 	{
+
 		loader = ResourceLoader::get_singleton();
 		_texture = this->get_button_icon();
 		_icon_size = _texture.ptr()->get_size();
@@ -50,6 +51,7 @@ namespace godot
 		builder.SetAttackSpeedHigh();
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
+		builder.SetTowerPlacementCost30();
 		get_node("/root/main/entities")->add_child(builder.Build());
 		builder.Reset();
 

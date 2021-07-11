@@ -8,6 +8,8 @@
 #include <Panel.hpp>
 #include <Texture.hpp>
 #include "TowerBuilder.h"
+#include "UI.h"
+#include "ISubject.h"
 
 namespace godot
 {

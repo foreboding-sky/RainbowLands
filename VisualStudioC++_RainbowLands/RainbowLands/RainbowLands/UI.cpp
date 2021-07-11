@@ -23,6 +23,11 @@ namespace godot
 				OnWaveStarted();
 				break;
 			}
+			case WAVE_ENDED:
+			{
+				OnWaveEnded();
+				break;
+			}
 			case DAMAGE_TAKEN:
 			{
 				OnHealthChanged(param);
@@ -36,11 +41,6 @@ namespace godot
 			case GOLD_GAINED:
 			{
 				OnCoinsChanged(param);
-				break;
-			}
-			case WAVE_ENDED:
-			{
-				OnWaveEnded();
 				break;
 			}
 			default:

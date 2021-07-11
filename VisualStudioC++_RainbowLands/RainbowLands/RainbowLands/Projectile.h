@@ -25,6 +25,7 @@ namespace godot {
 		// variables
 	private:
 		int speed;
+		NodePath targetPath;
 		PathFollow2D* target;
 		//std::weak_ptr<PathFollow2D> target_;
 		Vector2 velocity;

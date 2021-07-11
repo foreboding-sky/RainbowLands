@@ -32,28 +32,22 @@ void Projectile::_ready()
 
 void Projectile::_physics_process(float delta)
 {
-	try
+	if (target != nullptr && get_node_or_null(targetPath) != NULL)
 	{
-		if (target != nullptr && target->get_instance_id())
-		{
-			velocity = ((target->get_global_transform().get_origin() - get_position()).normalized() * speed);
-			set_position(get_position() + velocity * delta);
-			set_rotation(velocity.angle());
-		}
-		else
-		{
-			Godot::print("No target");
-			queue_free();
-		}
+		velocity = ((target->get_global_transform().get_origin() - get_position()).normalized() * speed);
+		set_position(get_position() + velocity * delta);
+		set_rotation(velocity.angle());
 	}
-	catch (const std::exception& e)
+	else
 	{
-		Godot::print(e.what());
+		Godot::print("No target");
+		queue_free();
 	}
-	
 }
 
 void Projectile::SetTarget(PathFollow2D* _target)
 {
 	target = _target;
+	if(target != nullptr)
+		targetPath = target->get_path();
 }
