@@ -7,9 +7,9 @@
 
 namespace godot
 {
-	class PauseOptions : public Button
+	class ReturnP : public Button
 	{
-		GODOT_CLASS(PauseOptions, Button);
+		GODOT_CLASS(ReturnP, Button);
 
 	public:
 		static void _register_methods();

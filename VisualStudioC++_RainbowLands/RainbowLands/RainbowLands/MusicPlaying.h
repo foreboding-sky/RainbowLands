@@ -1,15 +1,16 @@
 #pragma once
-#include <Button.hpp>
 #include <Godot.hpp>
 #include <ResourceLoader.hpp>
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
+#include <CheckButton.hpp>
+#include "Global.h"
 
 namespace godot
 {
-	class PauseOptions : public Button
+	class MusicPlaying : public CheckButton
 	{
-		GODOT_CLASS(PauseOptions, Button);
+		GODOT_CLASS(MusicPlaying, CheckButton);
 
 	public:
 		static void _register_methods();
@@ -18,5 +19,8 @@ namespace godot
 
 		void OnButtonPressed();
 
+
+	private:
+		Global* global;
 	};
 }

@@ -1,25 +1,26 @@
 #pragma once
-#include <Button.hpp>
 #include <Godot.hpp>
-#include <PackedScene.hpp>
 #include <ResourceLoader.hpp>
+#include <PackedScene.hpp>
 #include <SceneTree.hpp>
-#include "LevelManager.h"
+#include <CheckButton.hpp>
+#include "Global.h"
 
 namespace godot
 {
-	class StartWave : public Button
+	class Fullscreen : public CheckButton
 	{
-		GODOT_CLASS(StartWave, Button);
+		GODOT_CLASS(Fullscreen, CheckButton);
 
 	public:
 		static void _register_methods();
 		void _init();
 		void _ready();
 
-		void _on_button_pressed();
+		void OnButtonPressed();
+
 
 	private:
-		LevelManager* levelManager;
+		Global* global;
 	};
 }
