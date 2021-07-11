@@ -120,9 +120,6 @@
     <ClCompile Include="ToMain.cpp">
       <Filter>Source Files\PauseMenu\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="TowerBuilder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TowerShop.cpp">
       <Filter>Source Files\UI\Buttons</Filter>
     </ClCompile>
@@ -160,6 +157,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Healthbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerBuilder.cpp">
+      <Filter>Architecture-related\Sourse Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LunarProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -209,14 +212,8 @@
     <ClInclude Include="ToMain.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="TowerBuilder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TowerShop.h">
       <Filter>Header Files\UI\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="IObserver.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ISubject.h">
       <Filter>Architecture-related\Header Files</Filter>
@@ -258,6 +255,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Healthbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IObserver.h">
+      <Filter>Architecture-related\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerBuilder.h">
+      <Filter>Architecture-related\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LunarProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

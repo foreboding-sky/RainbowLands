@@ -9,6 +9,7 @@ Projectile::Projectile()
 Projectile::~Projectile()
 {
 	target = nullptr;
+	delete target;
 }
 
 void Projectile::_register_methods()
