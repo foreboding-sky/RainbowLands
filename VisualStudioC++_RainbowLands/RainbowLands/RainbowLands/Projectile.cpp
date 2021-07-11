@@ -17,6 +17,7 @@ void Projectile::_register_methods()
 	register_method((char*)"_init", &Projectile::_init);
 	register_method((char*)"_ready", &Projectile::_ready);
 
+	register_method((char*)"OnEnemyAreaEntered", &Projectile::OnEnemyAreaEntered);
 	register_method((char*)"SetTarget", &Projectile::SetTarget);
 }
 
@@ -27,7 +28,10 @@ void Projectile::_init()
 void Projectile::_ready()
 {
 	velocity = { 0, 0 };
-	speed = 300;
+	speed = 400;
+	damage = 1;
+	selfDestruct = cast_to<Timer>(get_node("SelfDestruct"));
+	selfDestruct->set_wait_time(5);
 }
 
 void Projectile::_physics_process(float delta)
@@ -41,6 +45,15 @@ void Projectile::_physics_process(float delta)
 	else
 	{
 		Godot::print("No target");
+		queue_free();
+	}
+}
+
+void godot::Projectile::OnEnemyAreaEntered(Area2D* otherArea)
+{
+	if (otherArea->is_in_group("Enemy"))
+	{
+		cast_to<Enemy>(otherArea->get_parent())->TakeDamage(damage);
 		queue_free();
 	}
 }
