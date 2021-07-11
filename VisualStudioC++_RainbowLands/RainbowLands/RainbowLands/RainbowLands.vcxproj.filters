@@ -70,33 +70,12 @@
     <Filter Include="Architecture-related\Sourse Files">
       <UniqueIdentifier>{53f70ecd-8899-4db9-9d98-1f05da535b7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Autoload">
-      <UniqueIdentifier>{f2707a85-9658-448c-a412-7e88f1288aab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Autoload">
-      <UniqueIdentifier>{cd260a51-750c-4fc4-993b-99897ec4209a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Options">
-      <UniqueIdentifier>{d1ecd9ff-ffe8-49d9-b077-85d894c345a9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Options">
-      <UniqueIdentifier>{3e64acf2-ea74-4b81-8c5f-32e9d47fbd4b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Options\PauseOptions">
-      <UniqueIdentifier>{13705734-473d-46bd-b317-df3e9c72d551}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Options\MainOptions">
-      <UniqueIdentifier>{9b126f04-c7c0-4b5f-bef3-670e2a261b04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Options\MainOptions">
-      <UniqueIdentifier>{3cd6d91d-07f9-47fd-bf73-e9792b48cb36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Options\PauseOptions">
-      <UniqueIdentifier>{ad760512-8d15-4aeb-8d69-98061ffc649e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Root.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exit.cpp">
@@ -106,6 +85,9 @@
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="Play.cpp">
+      <Filter>Source Files\MainMenu\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Return.cpp">
       <Filter>Source Files\MainMenu\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="PauseMenu.cpp">
@@ -147,41 +129,35 @@
     <ClCompile Include="Arrow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Load.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Save.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameOver.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="Global.cpp">
-      <Filter>Source Files\Autoload</Filter>
-    </ClCompile>
-    <ClCompile Include="Root.cpp">
-      <Filter>Source Files\Root</Filter>
-    </ClCompile>
-    <ClCompile Include="Return.cpp">
-      <Filter>Source Files\Options\MainOptions</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundPlaying.cpp">
-      <Filter>Source Files\Options</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundVolume.cpp">
-      <Filter>Source Files\Options</Filter>
-    </ClCompile>
-    <ClCompile Include="MusicPlaying.cpp">
-      <Filter>Source Files\Options</Filter>
-    </ClCompile>
-    <ClCompile Include="MusicVolume.cpp">
-      <Filter>Source Files\Options</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Fullscreen.cpp">
-      <Filter>Source Files\Options</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicPlaying.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicVolume.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ReturnP.cpp">
-      <Filter>Source Files\Options\PauseOptions</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPlaying.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundVolume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestNoLock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestWithLock.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +171,9 @@
       <Filter>Header Files\MainMenu\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="Play.h">
+      <Filter>Header Files\MainMenu\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Return.h">
       <Filter>Header Files\MainMenu\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="PauseMenu.h">
@@ -242,41 +221,38 @@
     <ClInclude Include="Arrow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Load.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Save.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameOver.h">
-      <Filter>Header Files\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="Global.h">
-      <Filter>Header Files\Autoload</Filter>
-    </ClInclude>
-    <ClInclude Include="Return.h">
-      <Filter>Header Files\Options\MainOptions</Filter>
-    </ClInclude>
-    <ClInclude Include="MusicPlaying.h">
-      <Filter>Header Files\Options</Filter>
-    </ClInclude>
-    <ClInclude Include="MusicVolume.h">
-      <Filter>Header Files\Options</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundPlaying.h">
-      <Filter>Header Files\Options</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundVolume.h">
-      <Filter>Header Files\Options</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Fullscreen.h">
-      <Filter>Header Files\Options</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicPlaying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicVolume.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ReturnP.h">
-      <Filter>Header Files\Options\PauseOptions</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPlaying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundVolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TagretingMethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClosestNoLock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClosestWithLock.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

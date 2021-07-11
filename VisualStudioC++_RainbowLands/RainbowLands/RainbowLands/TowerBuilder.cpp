@@ -33,7 +33,7 @@ void godot::TowerBuilder::Reset()
 // Gun sprites
 void godot::TowerBuilder::SetGunSprite01()
 {
-	Object::cast_to<Tower>(tower)->SetGunPath("res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png");
+	Object::cast_to<Tower>(tower)->SetGunPath("res://assets/!TOWER DEFENSE OPTIONS!/Towers/TD4_0029_Package-----------------.png");
 }
 
 void godot::TowerBuilder::SetGunSprite02()
@@ -44,7 +44,7 @@ void godot::TowerBuilder::SetGunSprite02()
 // Base platform sprites
 void godot::TowerBuilder::SetPlatformSprite01()
 {
-	Object::cast_to<Tower>(tower)->SetBasePath("res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png");
+	Object::cast_to<Tower>(tower)->SetBasePath("res://assets/!TOWER DEFENSE OPTIONS!/Towers/TD4_0037_Package-----------------.png");
 }
 
 void godot::TowerBuilder::SetPlatformSprite02()

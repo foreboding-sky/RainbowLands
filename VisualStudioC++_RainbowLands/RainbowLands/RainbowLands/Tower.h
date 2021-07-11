@@ -19,6 +19,8 @@
 #include "Projectile.h"
 #include <Texture.hpp>
 #include "LevelManager.h"
+#include "ClosestNoLock.h"
+#include "ClosestWithLock.h"
 
 namespace godot {
 	class Tower : public Area2D
@@ -55,6 +57,7 @@ namespace godot {
 		Area2D* projectile;
 		Vector2 projectileSpawnPosition;
 		bool isAttacking;
+		ClosestNoLock targeting;
 
 		//tower sprites
 		String baseSpritePath;
