@@ -19,10 +19,11 @@ namespace godot
 	{
 
 		loader = ResourceLoader::get_singleton();
-		_texture = this->get_button_icon();
-		_icon_size = _texture.ptr()->get_size();
+		levelManager = LevelManager::get_singleton();
+		texture = this->get_button_icon();
+		iconSize = texture.ptr()->get_size();
 		
-		//_size = Vector2((_icon_size.x/(_icon_size.x/)))
+		//size = Vector2((iconSize.x/(iconSize.x/)))
 		set_size(Vector2(300,200));
 		connect("pressed", this, "_on_button_pressed");
 		connect("mouse_entered", this, "_on_mouse_hovered");
@@ -52,9 +53,11 @@ namespace godot
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
 		builder.SetTowerPlacementCost30();
-		get_node("/root/main/entities")->add_child(builder.Build());
+		Area2D* tower = builder.Build();
 		builder.Reset();
 
+		if(levelManager->currency >= cast_to<Tower>(tower)->GetTowerPlacementCost())
+			get_node("/root/main/entities")->add_child(tower);
 	}
 }
 

@@ -79,11 +79,15 @@ namespace godot {
 		void OnTowerAreaEntered(Area2D* _other_area);
 		void OnTowerAreaExited(Area2D* _other_area);
 
+		// setters
 		void SetProjectilePrefab(Ref<PackedScene> projectile);
 		void SetGunPath(String imagePath);
 		void SetBasePath(String imagePath);
 		void SetAttackSpeed(double atkSpeed);
 		void SetTowerCost(int cost);
+
+		// getters
+		int GetTowerPlacementCost();
 	};
 }
 

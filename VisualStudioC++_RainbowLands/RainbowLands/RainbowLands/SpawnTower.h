@@ -8,6 +8,7 @@
 #include <Panel.hpp>
 #include <Texture.hpp>
 #include "TowerBuilder.h"
+#include "LevelManager.h"
 #include "UI.h"
 #include "ISubject.h"
 
@@ -31,9 +32,10 @@ namespace godot
 
 	
 	private:
-		Ref<Texture>_texture;
-		Vector2 _size;
+		Ref<Texture> texture;
+		Vector2 size;
 		Ref<PackedScene> prefab = nullptr;
-		Vector2 _icon_size;
+		Vector2 iconSize;
+		LevelManager* levelManager;
 	};
 }
