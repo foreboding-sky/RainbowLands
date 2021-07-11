@@ -74,6 +74,11 @@ bool godot::Global::GetFullscreen()
 	return fullscreen;
 }
 
+void godot::Global::SetBestScore(int value)
+{
+	bestScore = value;
+}
+
 Global* Global::get_singleton()
 {
 	if (!_instance) _instance = new Global();
