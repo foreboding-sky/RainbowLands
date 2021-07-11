@@ -1,59 +1,79 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MainMenu/fonts/InfoFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Space Background.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="Info" type="Panel"]
-visible = false
 margin_left = 1.0
-margin_right = 130.0
-margin_bottom = 121.0
+margin_right = 192.0
+margin_bottom = 152.0
 mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBox" type="VBoxContainer" parent="."]
-margin_right = 129.0
-margin_bottom = 120.0
+margin_right = 199.0
+margin_bottom = 121.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Damage" type="RichTextLabel" parent="VBox"]
-margin_top = 14.0
+[node name="Cost" type="Label" parent="VBox"]
+margin_left = 70.0
 margin_right = 129.0
-margin_bottom = 29.0
-mouse_filter = 2
+margin_bottom = 27.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Cost:"
+
+[node name="Damage" type="Label" parent="VBox"]
+margin_left = 46.0
+margin_top = 31.0
+margin_right = 152.0
+margin_bottom = 58.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
 text = "Damage:"
-fit_content_height = true
 
-[node name="ATKSPD" type="RichTextLabel" parent="VBox"]
-margin_top = 33.0
-margin_right = 129.0
-margin_bottom = 48.0
-mouse_filter = 2
+[node name="ATKSPD" type="Label" parent="VBox"]
+margin_left = 47.0
+margin_top = 62.0
+margin_right = 152.0
+margin_bottom = 89.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
 text = "ATK SPD:"
-fit_content_height = true
 
-[node name="Ammo" type="RichTextLabel" parent="VBox"]
-margin_top = 52.0
-margin_right = 129.0
-margin_bottom = 67.0
-mouse_filter = 2
+[node name="Ammo" type="Label" parent="VBox"]
+margin_left = 59.0
+margin_top = 93.0
+margin_right = 139.0
+margin_bottom = 120.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
 text = "Ammo:"
-fit_content_height = true
 
-[node name="Multishot" type="RichTextLabel" parent="VBox"]
-margin_top = 71.0
-margin_right = 129.0
-margin_bottom = 86.0
-mouse_filter = 2
+[node name="Multishot" type="Label" parent="VBox"]
+margin_left = 40.0
+margin_top = 124.0
+margin_right = 159.0
+margin_bottom = 151.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
 text = "Multishot:"
-fit_content_height = true
-
-[node name="Special" type="RichTextLabel" parent="VBox"]
-margin_top = 90.0
-margin_right = 129.0
-margin_bottom = 105.0
-mouse_filter = 2
-text = "Special:"
-fit_content_height = true

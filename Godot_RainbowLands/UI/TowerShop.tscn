@@ -1,78 +1,84 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png" type="Texture" id=1]
-[ext_resource path="res://assets/!TOWER DEFENSE OPTIONS!/Towers/TD3_0019_Package-----------------.png" type="Texture" id=2]
-[ext_resource path="res://assets/!TOWER DEFENSE OPTIONS!/Towers/TD3_0020_Package-----------------.png" type="Texture" id=3]
-[ext_resource path="res://assets/!TOWER DEFENSE OPTIONS!/Towers/TD4_0032_Package-----------------.png" type="Texture" id=4]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower4/Tower4.png" type="Texture" id=1]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower3/Tower3.png" type="Texture" id=2]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower6/Tower6.png" type="Texture" id=3]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower7/Tower7.png" type="Texture" id=4]
 [ext_resource path="res://UI/Info.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TD/tower.gdns" type="Script" id=6]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower5/Tower5.png" type="Texture" id=7]
 
-[node name="Control" type="Control"]
-visible = false
-anchor_right = 1.0
+[node name="TowerShop" type="Control"]
 anchor_bottom = 1.0
-margin_left = -5.25375
-margin_top = 11.6168
-margin_right = -5.25378
-margin_bottom = 11.6168
+margin_left = 4.09012
+margin_top = 3.60777
+margin_right = 4.09009
+margin_bottom = 3.60779
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 186.276
-margin_top = 90.332
-margin_right = 826.276
-margin_bottom = 305.332
+[node name="Panel" type="PanelContainer" parent="."]
+margin_right = 990.0
+margin_bottom = 200.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+[node name="HBox" type="HBoxContainer" parent="Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 633.0
-margin_bottom = 208.0
+margin_right = 983.0
+margin_bottom = 193.0
 alignment = 1
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer"]
-margin_left = 78.0
-margin_right = 162.0
-margin_bottom = 201.0
-icon = ExtResource( 3 )
-script = ExtResource( 6 )
-
-[node name="Info" parent="PanelContainer/HBoxContainer/Button" instance=ExtResource( 5 )]
-anchor_top = 1.0
-anchor_bottom = 1.0
-
-[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer"]
-margin_left = 166.0
-margin_right = 279.0
-margin_bottom = 201.0
-icon = ExtResource( 2 )
-script = ExtResource( 6 )
-
-[node name="Info" parent="PanelContainer/HBoxContainer/Button2" instance=ExtResource( 5 )]
-anchor_top = 1.0
-anchor_bottom = 1.0
-
-[node name="Button3" type="Button" parent="PanelContainer/HBoxContainer"]
-margin_left = 283.0
-margin_right = 389.0
-margin_bottom = 201.0
-icon = ExtResource( 4 )
-
-[node name="Info" parent="PanelContainer/HBoxContainer/Button3" instance=ExtResource( 5 )]
-anchor_top = 1.0
-anchor_bottom = 1.0
-
-[node name="Button4" type="Button" parent="PanelContainer/HBoxContainer"]
-margin_left = 393.0
-margin_right = 547.0
-margin_bottom = 201.0
+[node name="Tower1" type="Button" parent="Panel/HBox"]
+margin_right = 192.0
+margin_bottom = 186.0
 icon = ExtResource( 1 )
 
-[node name="Info" parent="PanelContainer/HBoxContainer/Button4" instance=ExtResource( 5 )]
+[node name="Info" parent="Panel/HBox/Tower1" instance=ExtResource( 5 )]
+margin_top = 186.0
+margin_bottom = 338.0
+
+[node name="Tower2" type="Button" parent="Panel/HBox"]
+margin_left = 196.0
+margin_right = 388.0
+margin_bottom = 186.0
+icon = ExtResource( 2 )
+
+[node name="Info" parent="Panel/HBox/Tower2" instance=ExtResource( 5 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="Tower3" type="Button" parent="Panel/HBox"]
+margin_left = 392.0
+margin_right = 584.0
+margin_bottom = 186.0
+icon = ExtResource( 7 )
+script = ExtResource( 6 )
+
+[node name="Info" parent="Panel/HBox/Tower3" instance=ExtResource( 5 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="Tower4" type="Button" parent="Panel/HBox"]
+margin_left = 588.0
+margin_right = 780.0
+margin_bottom = 186.0
+icon = ExtResource( 4 )
+script = ExtResource( 6 )
+
+[node name="Info" parent="Panel/HBox/Tower4" instance=ExtResource( 5 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="Tower5" type="Button" parent="Panel/HBox"]
+margin_left = 784.0
+margin_right = 976.0
+margin_bottom = 186.0
+icon = ExtResource( 3 )
+
+[node name="Info" parent="Panel/HBox/Tower5" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0

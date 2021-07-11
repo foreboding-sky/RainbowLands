@@ -23,14 +23,20 @@ namespace godot
 
 		void SetMusicPlaying(bool value);
 		bool GetMusicPlaying();
+
 		void SetMusicVolume(float value);
 		float GetMusicVolume();
+
 		void SetSoundPlaying(bool value);
 		bool GetSoundPlaying();
+
 		void SetSoundVolume(float value);
 		float GetSoundVolume();
+
 		void SetFullscreen(bool value);
 		bool GetFullscreen();
+
+		void SetBestScore(int value);
 
 		static Global* get_singleton();
 
@@ -46,6 +52,7 @@ namespace godot
 		float musicPlaying;
 		bool soundPlaying;
 		bool fullscreen;
+		int bestScore;
 
 	};
 }
