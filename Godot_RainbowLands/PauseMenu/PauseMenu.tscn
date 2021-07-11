@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://PauseMenu/PauseMenu.gdns" type="Script" id=2]
 [ext_resource path="res://PauseMenu/Resume.gdns" type="Script" id=3]
 [ext_resource path="res://PauseMenu/ToMain.gdns" type="Script" id=4]
+[ext_resource path="res://PauseMenu/PauseOptions.tscn" type="PackedScene" id=5]
+[ext_resource path="res://PauseMenu/PauseOptions.gdns" type="Script" id=6]
 
 [node name="PauseMenu" type="Control"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -43,9 +44,15 @@ margin_right = 256.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 1 )
 text = "Options"
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="VBoxContainer/Options"]
+layer = 2
+
+[node name="Node2D" parent="VBoxContainer/Options/CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="ToMain" type="Button" parent="VBoxContainer"]
 margin_top = 100.0

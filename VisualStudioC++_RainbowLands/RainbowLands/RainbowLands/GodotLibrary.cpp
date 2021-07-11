@@ -15,6 +15,14 @@
 #include "Projectile.h"
 #include "Arrow.h"
 #include "GameOver.h"
+#include "Global.h"
+#include "MusicPlaying.h"
+#include "MusicVolume.h"
+#include "SoundPlaying.h"
+#include "SoundVolume.h"
+#include "Fullscreen.h"
+#include "ReturnP.h"
+#include "PauseOptions.h"
 
 using namespace godot;
 
@@ -45,4 +53,12 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Projectile>();
 	register_class<Arrow>();
 	register_class<GameOver>();
+	register_class<Global>();
+	register_class<MusicPlaying>();
+	register_class<MusicVolume>();
+	register_class<SoundPlaying>();
+	register_class<SoundVolume>();
+	register_class<Fullscreen>();
+	register_class<ReturnP>();
+	register_class<PauseOptions>();
 }

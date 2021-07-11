@@ -245,6 +245,7 @@ __meta__ = {
 }
 
 [node name="PauseMenu" parent="UI" instance=ExtResource( 12 )]
+visible = false
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 0.6

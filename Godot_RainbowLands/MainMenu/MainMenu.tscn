@@ -34,7 +34,7 @@ margin_bottom = 119.0
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
 bbcode_text = "[rainbow 
-freq=0.1 sat =1 val=2]Rainbow Lands[/rainbow]"
+freq=1 sat =1 val=2]Rainbow Lands[/rainbow]"
 text = "Rainbow Lands"
 fit_content_height = true
 
