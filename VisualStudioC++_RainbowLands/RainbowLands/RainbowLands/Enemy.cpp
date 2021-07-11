@@ -20,7 +20,7 @@ void Enemy::_register_methods()
 	register_property<Enemy, int>("Health", &Enemy::health, 3);
 	register_property<Enemy, int>("Speed", &Enemy::speed, 100);
 	register_property<Enemy, int>("Damage", &Enemy::damage, 1);
-	register_method((char*)"_on_Area2D_area_entered", &Enemy::_on_Area2D_area_entered);
+	register_method((char*)"TakeDamage", &Enemy::TakeDamage);
 }
 
 void Enemy::_init()
@@ -30,7 +30,20 @@ void Enemy::_init()
 
 void Enemy::_ready()
 {
+	maxHealth = health;
+	healthbar = cast_to<Healthbar>(get_node("Healthbar"));
+}
 
+void godot::Enemy::TakeDamage(int damage)
+{
+	health -= damage;
+	healthbar->SetValue(health / maxHealth);
+	if (health <= 0)
+	{
+		levelManager->MobDefeated(damage);
+		queue_free();
+
+	}
 }
 
 void Enemy::_physics_process(float delta)
@@ -41,20 +54,5 @@ void Enemy::_physics_process(float delta)
 	{
 		levelManager->MobGotThrough(damage);
 			queue_free();
-	}
-}
-
-void Enemy::_on_Area2D_area_entered(Area2D* _other_area)
-{
-	if (_other_area->is_in_group("Projectile"))
-	{
-		Godot::print("Got hit by projectile");
-		_other_area->queue_free();
-		health -= 1;
-		if (health <= 0)
-		{	
-			queue_free();
-			levelManager->MobDefeated(damage);
-		}
 	}
 }

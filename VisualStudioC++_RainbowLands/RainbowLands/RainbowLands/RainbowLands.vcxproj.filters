@@ -183,6 +183,9 @@
     <ClCompile Include="ReturnP.cpp">
       <Filter>Source Files\Options\PauseOptions</Filter>
     </ClCompile>
+    <ClCompile Include="Healthbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -277,6 +280,9 @@
     </ClInclude>
     <ClInclude Include="ReturnP.h">
       <Filter>Header Files\Options\PauseOptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Healthbar.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

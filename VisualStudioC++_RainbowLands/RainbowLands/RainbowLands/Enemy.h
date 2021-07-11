@@ -1,13 +1,10 @@
 #pragma once
 #include <Godot.hpp>
-#include <Area2D.hpp>
-#include <TileMap.hpp>
 #include <Position2D.hpp>
-#include <AnimationPlayer.hpp>
 #include <Array.hpp>
-#include <RandomNumberGenerator.hpp>
 #include <PathFollow2D.hpp>
 #include "LevelManager.h"
+#include "Healthbar.h"
 
 namespace godot {
 	class Enemy : public PathFollow2D
@@ -21,17 +18,18 @@ namespace godot {
 		void _physics_process(float delta);
 		void _init();
 		void _ready();
+		void TakeDamage(int damage);
 		static void _register_methods();
-
-		void _on_Area2D_area_entered(Area2D* _other_area);
 
 		// variables
 	private:
 		
 		int speed;
 		int health;
+		int maxHealth;
 		int damage;
 		LevelManager* levelManager;
+		Healthbar* healthbar;
 		//animations
 		
 		//collision

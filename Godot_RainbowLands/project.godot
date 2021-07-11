@@ -20,6 +20,7 @@ Global="*res://Autoload/Global.tscn"
 
 [display]
 
+mouse_cursor/custom_image="res://assets/Arrow, Point, Select/MenuContent_0002_Path--------------------.png"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
