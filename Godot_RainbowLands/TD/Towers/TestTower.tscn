@@ -8,7 +8,7 @@
 radius = 31.2934
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 288.085
+radius = 218.897
 
 [node name="Tower" type="Area2D" groups=[
 "Tower",
