@@ -120,7 +120,7 @@ void godot::TowerBuilder::SetAmmoTypeProjectile01()
 
 void godot::TowerBuilder::SetAmmoTypeProjectile02()
 {
-	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/LunarProjectile.tscn");
 	Object::cast_to<Tower>(tower)->SetProjectilePrefab(projectilePrefab);
 }
 

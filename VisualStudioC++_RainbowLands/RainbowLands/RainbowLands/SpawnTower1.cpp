@@ -48,8 +48,8 @@ namespace godot
 	void SpawnTower1::BuildTower()
 	{
 		TowerBuilder builder;
-		builder.SetAmmoTypeProjectile01();
-		builder.SetAttackSpeedHigh();
+		builder.SetAmmoTypeProjectile02();
+		builder.SetAttackSpeedNormal();
 		builder.SetGunSprite01();
 		builder.SetPlatformSprite01();
 		builder.SetTowerPlacementCost30();

@@ -23,6 +23,7 @@
 #include "Fullscreen.h"
 #include "ReturnP.h"
 #include "PauseOptions.h"
+#include "LunarProjectile.h"
 
 using namespace godot;
 
@@ -51,6 +52,7 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<ToMain>();
 	register_class<TowerShop>();
 	register_class<Projectile>();
+	register_class<LunarProjectile>();
 	register_class<Arrow>();
 	register_class<GameOver>();
 	register_class<Global>();

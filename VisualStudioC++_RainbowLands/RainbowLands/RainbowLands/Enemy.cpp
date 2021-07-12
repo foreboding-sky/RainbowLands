@@ -30,19 +30,15 @@ void Enemy::_init()
 
 void Enemy::_ready()
 {
-	maxHealth = health;
-	healthbar = cast_to<Healthbar>(get_node("Healthbar"));
 }
 
 void godot::Enemy::TakeDamage(int damage)
 {
 	health -= damage;
-	healthbar->SetValue(health / maxHealth);
 	if (health <= 0)
 	{
 		levelManager->MobDefeated(damage);
 		queue_free();
-
 	}
 }
 

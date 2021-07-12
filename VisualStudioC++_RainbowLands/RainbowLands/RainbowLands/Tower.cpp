@@ -12,7 +12,6 @@ Tower::Tower()
     cellId = -1;
 
     attackSpeed = 1;
-    projectilePrefabPath = "res://TD/Projectiles/Projectile_1.tscn";
     baseSpritePath = "res://assets/MassiveMilitary/Images/tower_1_0002_Package-----------------.png";
     gunSpritePath = "res://assets/MassiveMilitary/Images/Turret_2_0004_Bitmap------------------.png";
 }
@@ -95,7 +94,6 @@ void Tower::_ready()
     enemyArray.clear();
    
     //set projectile
-    projectilePrefab = loader->load(projectilePrefabPath);
     projectileSpawnPosition = Vector2(0, 0);
 }
 
@@ -147,7 +145,7 @@ void Tower::_physics_process(float delta)
             if (!isAttacking)
             {
                 isAttacking = true;
-                attackTimer->start();
+                attackTimer->start(attackSpeed);
             }
         }
         else

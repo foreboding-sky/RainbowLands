@@ -8,19 +8,20 @@
 #include "Enemy.h"
 
 namespace godot {
-	class Projectile : public Area2D
+	class LunarProjectile : public Area2D
 	{
 		// methods
 	private:
-		GODOT_CLASS(Projectile, Area2D)
+		GODOT_CLASS(LunarProjectile, Area2D)
 	public:
-		Projectile();
-		~Projectile();
+		LunarProjectile();
+		~LunarProjectile();
 		void _physics_process(float delta);
 		void _init();
 		void _ready();
 		static void _register_methods();
 
+		void OnSelfDestructTimeout();
 		void OnEnemyAreaEntered(Area2D* otherArea);
 		void SetTarget(PathFollow2D* target);
 
@@ -28,8 +29,9 @@ namespace godot {
 	private:
 		int speed;
 		int damage;
-		NodePath targetPath;
+		Vector2 targetDirection;
 		PathFollow2D* target;
+
 		Timer* selfDestruct;
 		//std::weak_ptr<PathFollow2D> target_;
 		Vector2 velocity;
