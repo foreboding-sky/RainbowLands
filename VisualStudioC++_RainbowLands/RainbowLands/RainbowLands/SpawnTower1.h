@@ -14,9 +14,9 @@
 
 namespace godot
 {
-	class SpawnTower : public Button
+	class SpawnTower1 : public Button
 	{
-		GODOT_CLASS(SpawnTower, Button);
+		GODOT_CLASS(SpawnTower1, Button);
 		// variables
 	private:
 		ResourceLoader* loader;
