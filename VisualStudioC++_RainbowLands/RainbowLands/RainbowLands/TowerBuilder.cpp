@@ -27,7 +27,9 @@ Area2D* godot::TowerBuilder::Build()
 // Reset tower instance to default (create a new instance of an Tower object)
 void godot::TowerBuilder::Reset()
 {
+
 	tower = Object::cast_to<Area2D>(towerPrefab->instance());
+	
 }
 
 
@@ -35,7 +37,7 @@ void godot::TowerBuilder::Reset()
 // Gun sprites
 void godot::TowerBuilder::SetGunSprite01()
 {
-	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower1/Turret1.png");
+	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower5/Turret5.png");
 }
 
 void godot::TowerBuilder::SetGunSprite02()
@@ -50,12 +52,12 @@ void godot::TowerBuilder::SetGunSprite03()
 
 void godot::TowerBuilder::SetGunSprite04()
 {
-	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower4/Turret4.png");
+	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower7/Turret7.png");
 }
 
 void godot::TowerBuilder::SetGunSprite05()
 {
-	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower5/Turret5.png");
+	Object::cast_to<Tower>(tower)->SetGunPath("res://TD/Towers/TowerSprites/Tower6/Turret6.png");
 }
 
 
@@ -63,7 +65,7 @@ void godot::TowerBuilder::SetGunSprite05()
 // Base platform sprites
 void godot::TowerBuilder::SetPlatformSprite01()
 {
-	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower1/Base1.png");
+	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower5/Base5.png");
 }
 
 void godot::TowerBuilder::SetPlatformSprite02()
@@ -78,20 +80,25 @@ void godot::TowerBuilder::SetPlatformSprite03()
 
 void godot::TowerBuilder::SetPlatformSprite04()
 {
-	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower4/Base4.png");
+	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower7/Base7.png");
 }
 
 void godot::TowerBuilder::SetPlatformSprite05()
 {
-	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower5/Base5.png");
+	Object::cast_to<Tower>(tower)->SetBasePath("res://TD/Towers/TowerSprites/Tower6/Base6.png");
 }
 
 
 
 // Attack speed
-void godot::TowerBuilder::SetAttackSpeedLow()
+void godot::TowerBuilder::SetAttackSpeedVeryLow()
 {
 	Object::cast_to<Tower>(tower)->SetAttackSpeed(3);
+}
+
+void godot::TowerBuilder::SetAttackSpeedLow()
+{
+	Object::cast_to<Tower>(tower)->SetAttackSpeed(2);
 }
 
 void godot::TowerBuilder::SetAttackSpeedNormal()
@@ -106,7 +113,7 @@ void godot::TowerBuilder::SetAttackSpeedHigh()
 
 void godot::TowerBuilder::SetAttackSpeedVeryHigh()
 {
-	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.3);
+	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.25);
 }
 
 
@@ -163,6 +170,13 @@ void godot::TowerBuilder::SetShootingRangeLong()
 {
 	Ref<CircleShape2D> shape = CircleShape2D::_new();
 	shape.ptr()->set_radius(500);
+	Object::cast_to<Tower>(tower)->SetCollisionShape(shape);
+}
+
+void godot::TowerBuilder::SetShootingRangeVeryLong()
+{
+	Ref<CircleShape2D> shape = CircleShape2D::_new();
+	shape.ptr()->set_radius(700);
 	Object::cast_to<Tower>(tower)->SetCollisionShape(shape);
 }
 

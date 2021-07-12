@@ -48,18 +48,20 @@ namespace godot
 	void SpawnTower1::BuildTower()
 	{
 		TowerBuilder builder;
-		builder.SetAmmoTypeProjectile02();
-		builder.SetAttackSpeedNormal();
-		builder.SetGunSprite01();
-		builder.SetPlatformSprite01();
+		builder.SetAmmoTypeProjectile01();
+		builder.SetAttackSpeedHigh();
+		builder.SetGunSprite02();
+		builder.SetPlatformSprite02();
 		builder.SetTowerPlacementCost30();
 		builder.SetTargetingClosestNoLock();
 		builder.SetShootingRangeNormal();
 		Area2D* tower = builder.Build();
-		builder.Reset();
+
 
 		if(levelManager->currency >= cast_to<Tower>(tower)->GetTowerPlacementCost())
 			get_node("/root/main/entities")->add_child(tower);
+		builder.Reset();
+
 	}
 }
 

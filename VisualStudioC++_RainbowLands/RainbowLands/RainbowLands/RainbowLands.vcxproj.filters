@@ -162,12 +162,6 @@
     <ClCompile Include="Healthbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Load.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Save.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ClosestNoLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -197,6 +191,9 @@
     </ClCompile>
     <ClCompile Include="SpawnTower5.cpp">
       <Filter>Source Files\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="LunarProjectile.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -275,12 +272,6 @@
     <ClInclude Include="Healthbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Load.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Save.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -316,6 +307,9 @@
     </ClInclude>
     <ClInclude Include="SpawnTower5.h">
       <Filter>Header Files\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="LunarProjectile.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

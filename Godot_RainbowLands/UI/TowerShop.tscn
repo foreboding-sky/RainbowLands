@@ -1,12 +1,47 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TD/Towers/TowerSprites/Tower4/Tower4.png" type="Texture" id=1]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower3/Tower3.png" type="Texture" id=2]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower6/Tower6.png" type="Texture" id=3]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower7/Tower7.png" type="Texture" id=4]
 [ext_resource path="res://UI/Info.tscn" type="PackedScene" id=5]
-[ext_resource path="res://TD/tower.gdns" type="Script" id=6]
+[ext_resource path="res://UI/SpawnTower1.gdns" type="Script" id=6]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower5/Tower5.png" type="Texture" id=7]
+[ext_resource path="res://UI/SpawnTower2.gdns" type="Script" id=8]
+[ext_resource path="res://UI/assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://UI/SpawnTower3.gdns" type="Script" id=10]
+[ext_resource path="res://UI/SpawnTower4.gdns" type="Script" id=11]
+[ext_resource path="res://UI/SpawnTower5.gdns" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
 
 [node name="TowerShop" type="Control"]
 anchor_bottom = 1.0
@@ -36,49 +71,158 @@ alignment = 1
 margin_right = 192.0
 margin_bottom = 186.0
 icon = ExtResource( 1 )
+script = ExtResource( 6 )
 
 [node name="Info" parent="Panel/HBox/Tower1" instance=ExtResource( 5 )]
 margin_top = 186.0
 margin_bottom = 338.0
+
+[node name="Cost" parent="Panel/HBox/Tower1/Info/VBox" index="0"]
+custom_fonts/font = SubResource( 1 )
+text = "Cost: 30"
+
+[node name="Damage" parent="Panel/HBox/Tower1/Info/VBox" index="1"]
+custom_fonts/font = SubResource( 1 )
+text = "Damage: 1"
+
+[node name="ATKSPD" parent="Panel/HBox/Tower1/Info/VBox" index="2"]
+custom_fonts/font = SubResource( 1 )
+text = "ATK SPD: 0.5"
+
+[node name="Ammo" parent="Panel/HBox/Tower1/Info/VBox" index="3"]
+custom_fonts/font = SubResource( 1 )
+text = "Ammo: Normal"
+
+[node name="Multishot" parent="Panel/HBox/Tower1/Info/VBox" index="4"]
+custom_fonts/font = SubResource( 1 )
+text = "Multishot: 1"
 
 [node name="Tower2" type="Button" parent="Panel/HBox"]
 margin_left = 196.0
 margin_right = 388.0
 margin_bottom = 186.0
 icon = ExtResource( 2 )
+script = ExtResource( 8 )
 
 [node name="Info" parent="Panel/HBox/Tower2" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
+
+[node name="Cost" parent="Panel/HBox/Tower2/Info/VBox" index="0"]
+custom_fonts/font = SubResource( 2 )
+text = "Cost: 50"
+
+[node name="Damage" parent="Panel/HBox/Tower2/Info/VBox" index="1"]
+custom_fonts/font = SubResource( 2 )
+text = "Damage: 2"
+
+[node name="ATKSPD" parent="Panel/HBox/Tower2/Info/VBox" index="2"]
+custom_fonts/font = SubResource( 2 )
+text = "ATK SPD: 1"
+
+[node name="Ammo" parent="Panel/HBox/Tower2/Info/VBox" index="3"]
+custom_fonts/font = SubResource( 2 )
+text = "Ammo: Piercing"
+
+[node name="Multishot" parent="Panel/HBox/Tower2/Info/VBox" index="4"]
+custom_fonts/font = SubResource( 2 )
+text = "Multishot: 1"
 
 [node name="Tower3" type="Button" parent="Panel/HBox"]
 margin_left = 392.0
 margin_right = 584.0
 margin_bottom = 186.0
 icon = ExtResource( 7 )
-script = ExtResource( 6 )
+script = ExtResource( 10 )
 
 [node name="Info" parent="Panel/HBox/Tower3" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
+
+[node name="Cost" parent="Panel/HBox/Tower3/Info/VBox" index="0"]
+custom_fonts/font = SubResource( 3 )
+text = "Cost: 70"
+
+[node name="Damage" parent="Panel/HBox/Tower3/Info/VBox" index="1"]
+custom_fonts/font = SubResource( 3 )
+text = "Damage: 1"
+
+[node name="ATKSPD" parent="Panel/HBox/Tower3/Info/VBox" index="2"]
+custom_fonts/font = SubResource( 3 )
+text = "ATK SPD: 0.25"
+
+[node name="Ammo" parent="Panel/HBox/Tower3/Info/VBox" index="3"]
+custom_fonts/font = SubResource( 3 )
+text = "Ammo: Normal"
+
+[node name="Multishot" parent="Panel/HBox/Tower3/Info/VBox" index="4"]
+custom_fonts/font = SubResource( 3 )
+text = "Multishot: 1"
 
 [node name="Tower4" type="Button" parent="Panel/HBox"]
 margin_left = 588.0
 margin_right = 780.0
 margin_bottom = 186.0
 icon = ExtResource( 4 )
-script = ExtResource( 6 )
+script = ExtResource( 11 )
 
 [node name="Info" parent="Panel/HBox/Tower4" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
+
+[node name="Cost" parent="Panel/HBox/Tower4/Info/VBox" index="0"]
+custom_fonts/font = SubResource( 4 )
+text = "Cost: 120"
+
+[node name="Damage" parent="Panel/HBox/Tower4/Info/VBox" index="1"]
+custom_fonts/font = SubResource( 4 )
+text = "Damage: 30"
+
+[node name="ATKSPD" parent="Panel/HBox/Tower4/Info/VBox" index="2"]
+custom_fonts/font = SubResource( 4 )
+text = "ATK SPD: 3"
+
+[node name="Ammo" parent="Panel/HBox/Tower4/Info/VBox" index="3"]
+custom_fonts/font = SubResource( 4 )
+text = "Ammo: Normal"
+
+[node name="Multishot" parent="Panel/HBox/Tower4/Info/VBox" index="4"]
+custom_fonts/font = SubResource( 4 )
+text = "Multishot: 1"
 
 [node name="Tower5" type="Button" parent="Panel/HBox"]
 margin_left = 784.0
 margin_right = 976.0
 margin_bottom = 186.0
 icon = ExtResource( 3 )
+script = ExtResource( 12 )
 
 [node name="Info" parent="Panel/HBox/Tower5" instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
+
+[node name="Cost" parent="Panel/HBox/Tower5/Info/VBox" index="0"]
+custom_fonts/font = SubResource( 5 )
+text = "Cost: 200"
+
+[node name="Damage" parent="Panel/HBox/Tower5/Info/VBox" index="1"]
+custom_fonts/font = SubResource( 5 )
+text = "Damage: 1"
+
+[node name="ATKSPD" parent="Panel/HBox/Tower5/Info/VBox" index="2"]
+custom_fonts/font = SubResource( 5 )
+text = "ATK SPD: 2"
+
+[node name="Ammo" parent="Panel/HBox/Tower5/Info/VBox" index="3"]
+custom_fonts/font = SubResource( 5 )
+text = "Ammo: Blade"
+
+[node name="Multishot" parent="Panel/HBox/Tower5/Info/VBox" index="4"]
+custom_fonts/font = SubResource( 5 )
+text = "Multishot: 1"
+
+[editable path="Panel/HBox/Tower1/Info"]
+[editable path="Panel/HBox/Tower2/Info"]
+[editable path="Panel/HBox/Tower3/Info"]
+[editable path="Panel/HBox/Tower4/Info"]
+[editable path="Panel/HBox/Tower5/Info"]

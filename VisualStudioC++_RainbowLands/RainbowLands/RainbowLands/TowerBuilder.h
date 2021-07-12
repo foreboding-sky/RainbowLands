@@ -41,6 +41,7 @@ namespace godot {
 		void SetPlatformSprite05();
 
 		// set tower attack speed
+		void SetAttackSpeedVeryLow();
 		void SetAttackSpeedLow();
 		void SetAttackSpeedNormal();
 		void SetAttackSpeedHigh();
@@ -57,6 +58,7 @@ namespace godot {
 		void SetShootingRangeShort();
 		void SetShootingRangeNormal();
 		void SetShootingRangeLong();
+		void SetShootingRangeVeryLong();
 
 		// set tower placement cost
 		void SetTowerPlacementCost30();

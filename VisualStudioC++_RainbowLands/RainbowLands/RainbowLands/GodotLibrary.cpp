@@ -7,7 +7,11 @@
 #include "LevelManager.h"
 #include "Enemy.h"
 #include "Tower.h"
-#include "SpawnTower.h"
+#include "SpawnTower1.h"
+#include "SpawnTower2.h"
+#include "SpawnTower3.h"
+#include "SpawnTower4.h"
+#include "SpawnTower5.h"
 #include "UI.h"
 #include "Resume.h"
 #include "ToMain.h"
@@ -47,7 +51,11 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<LevelManager>();
 	register_class<UI>();
 	register_class<Tower>();
-	register_class<SpawnTower>();
+	register_class<SpawnTower1>();
+	register_class<SpawnTower2>();
+	register_class<SpawnTower3>();
+	register_class<SpawnTower4>();
+	register_class<SpawnTower5>();
 	register_class<Resume>();
 	register_class<ToMain>();
 	register_class<TowerShop>();

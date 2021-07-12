@@ -84,7 +84,7 @@ void LevelManager::SpawnEnemy()
 	{
 		int randomNumber = rand() % enemyRefs.size();
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time(0.6f + (float)i / (3.0f + (float)waveCounter/2.0f));
+		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 2.0f) + (float)i / (3.0f + (float)waveCounter/2.0f));
 		if (i <= waveThreat)
 		{
 			waveThreat -= i;

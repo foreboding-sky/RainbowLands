@@ -37,7 +37,7 @@ void godot::Enemy::TakeDamage(int damage)
 	health -= damage;
 	if (health <= 0)
 	{
-		levelManager->MobDefeated(damage);
+		levelManager->MobDefeated(this->damage);
 		queue_free();
 	}
 }

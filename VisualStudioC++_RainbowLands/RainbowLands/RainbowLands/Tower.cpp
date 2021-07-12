@@ -127,7 +127,7 @@ void Tower::_physics_process(float delta)
         }
         if (input->is_action_just_pressed("cancel_tower_build"))
         {
-            levelManager->ChangeCurrency(placementCost);
+            //levelManager->ChangeCurrency(placementCost);
             queue_free();
         }
     }
