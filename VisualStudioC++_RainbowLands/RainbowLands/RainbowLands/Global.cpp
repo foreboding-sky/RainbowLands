@@ -76,7 +76,34 @@ bool godot::Global::GetFullscreen()
 
 void godot::Global::SetBestScore(int value)
 {
-	bestScore = value;
+	if(bestScore < value) bestScore = value;
+	Save();
+}
+
+int godot::Global::GetBestScore()
+{
+	return bestScore;
+}
+
+void godot::Global::Save()
+{
+	File* saveGame = File::_new();
+		saveGame->open("user://save_game.dat", File::WRITE);
+		saveGame->store_32(bestScore);
+		saveGame->close();
+}
+
+void godot::Global::Load()
+{
+	bestScore = 0;
+	File* saveGame = File::_new();
+	if (saveGame->file_exists("user://save_game.dat"))
+	{
+		saveGame->open("user://save_game.dat", File::READ);
+		bestScore = saveGame->get_32();
+		saveGame->close();
+	}
+	else Godot::print("Save file does not exist");
 }
 
 Global* Global::get_singleton()
@@ -88,8 +115,10 @@ Global* Global::get_singleton()
 
 void Global::_ready()
 {
+	
 	musicPlayer = cast_to<AudioStreamPlayer>(get_node("/root/Global/Music"));
 	os = OS::get_singleton();
+	Load();
 }
 
 void Global::_physics_process(float delta)
@@ -98,5 +127,6 @@ void Global::_physics_process(float delta)
 
 void Global::_init()
 {
+
 	_instance = this;
 }

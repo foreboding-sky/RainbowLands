@@ -52,7 +52,7 @@ void LevelManager::_ready()
 	threatPool = 5;
 	increment = 1;
 	waveCounter = 0;
-	currentHealth = 50;
+	currentHealth = 1;
 	maxHealth = 50;
 	currency = 60;
 	LoadEnemies();

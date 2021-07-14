@@ -14,7 +14,8 @@ namespace godot
 		static void _register_methods();
 		void _init();
 		void _ready();
-
+		
+	private:
 		void OnButtonPressed();
 	};
 }

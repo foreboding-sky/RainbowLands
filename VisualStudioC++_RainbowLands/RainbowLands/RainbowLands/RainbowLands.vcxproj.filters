@@ -195,6 +195,9 @@
     <ClCompile Include="LunarProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files\SaveSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -310,6 +313,9 @@
     </ClInclude>
     <ClInclude Include="LunarProjectile.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files\SaveSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

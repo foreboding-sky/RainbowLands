@@ -15,6 +15,7 @@ namespace godot
 	}
 	void GameOver::_ready()
 	{
+		Godot::print("Game over");
 		levelManager = LevelManager::get_singleton();
 		timer = cast_to<Timer>(get_node("/root/Node2D/Timer"));
 		timer->connect("timeout", this, "OnTimerFinish");
@@ -26,14 +27,18 @@ namespace godot
 	}
 	void GameOver::SetScore(int value)
 	{
+		global = Global::get_singleton();
 		score = value;
+		global->SetBestScore(score);
 	}
 	void GameOver::ShowScore()
 	{
 		std::string converter ="Final Score: " + std::to_string(score);
 		String text = String(converter.c_str());
 		this->get_node("/root/Node2D/BG/VBox/Score")->set("text", text);
-		
+		converter = "Best Score: " + std::to_string(global->GetBestScore());
+		text = String(converter.c_str());
+		this->get_node("/root/Node2D/BG/VBox/BestScore")->set("text", text);
 	}
 }
 

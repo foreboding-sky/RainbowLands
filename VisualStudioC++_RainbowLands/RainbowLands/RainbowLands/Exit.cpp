@@ -18,6 +18,7 @@ namespace godot
 	}
 	void Exit::OnButtonPressed()
 	{
+
 		get_tree()->quit();
 	}
 }
