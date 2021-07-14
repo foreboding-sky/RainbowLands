@@ -3,7 +3,7 @@
 using namespace godot;
 Arrow::Arrow()
 {
-	_speed = 100;
+	_speed = 400;
 }
 
 Arrow::~Arrow()
@@ -15,7 +15,7 @@ void Arrow::_register_methods()
 	register_method((char*)"_physics_process", &Arrow::_physics_process);
 	register_method((char*)"_init", &Arrow::_init);
 	register_method((char*)"_ready", &Arrow::_ready);
-	register_property<Arrow, int>("Speed", &Arrow::_speed, 100);
+	register_property<Arrow, int>("Speed", &Arrow::_speed, 400);
 }
 
 void Arrow::_init() {}

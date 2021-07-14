@@ -62,4 +62,6 @@ void LunarProjectile::SetTarget(PathFollow2D* _target)
 	target = _target;
 	if (target != nullptr)
 		targetDirection = (target->get_global_transform().get_origin() - get_position()).normalized();
+	if (targetDirection == Vector2::ZERO)
+		targetDirection = Vector2::UP;
 }
