@@ -77,7 +77,7 @@ bool godot::Global::GetFullscreen()
 void godot::Global::SetBestScore(int value)
 {
 	if(bestScore < value) bestScore = value;
-	Save();
+	SaveScore();
 }
 
 int godot::Global::GetBestScore()
@@ -85,22 +85,55 @@ int godot::Global::GetBestScore()
 	return bestScore;
 }
 
-void godot::Global::Save()
+void godot::Global::SaveScore()
 {
 	File* saveGame = File::_new();
-		saveGame->open("user://save_game.dat", File::WRITE);
-		saveGame->store_32(bestScore);
-		saveGame->close();
+	saveGame->open("user://save_game.json", File::WRITE);
+
+	Dictionary saveData;
+	saveData["bestScore"] = bestScore;
+
+	saveGame->store_string(saveData.to_json());
+	saveGame->close();
+}
+
+void godot::Global::SaveSettings()
+{
+	File* saveGame = File::_new();
+	saveGame->open("user://save_game.json", File::WRITE);
+
+	Dictionary saveData;
+	saveData["musicPlaying"] = musicPlaying;
+	saveData["musicVolume"] = musicVolume;
+
+	saveData["soundPlaying"] = soundPlaying;
+	saveData["soundVolume"] = soundVolume;
+
+	saveData["fullscreen"] = fullscreen;
+
+	saveGame->store_string(saveData.to_json());
+	saveGame->close();
 }
 
 void godot::Global::Load()
 {
 	bestScore = 0;
 	File* saveGame = File::_new();
-	if (saveGame->file_exists("user://save_game.dat"))
+	if (saveGame->file_exists("user://save_game.json"))
 	{
-		saveGame->open("user://save_game.dat", File::READ);
-		bestScore = saveGame->get_32();
+		saveGame->open("user://save_game.json", File::READ);
+		Dictionary saveData = JSON::get_singleton()->parse(saveGame->get_as_text())->get_result();
+
+		musicPlaying = saveData["musicPlaying"];
+		musicVolume = saveData["musicVolume"];
+
+		soundPlaying = saveData["soundPlaying"];
+		soundVolume = saveData["soundVolume"];
+
+		fullscreen = saveData["fullscreen"];
+
+		bestScore = saveData["bestScore"];
+
 		saveGame->close();
 	}
 	else Godot::print("Save file does not exist");
@@ -111,7 +144,6 @@ Global* Global::get_singleton()
 	if (!_instance) _instance = new Global();
 	return _instance;
 }
-
 
 void Global::_ready()
 {

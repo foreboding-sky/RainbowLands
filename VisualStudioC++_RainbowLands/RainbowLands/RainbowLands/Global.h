@@ -11,6 +11,8 @@
 #include <Array.hpp>
 #include <File.hpp>
 #include <JSON.hpp>
+#include <JSONParseResult.hpp>
+
 namespace godot
 {
 	class Global : public Node
@@ -45,7 +47,9 @@ namespace godot
 		void SetBestScore(int value);
 		int GetBestScore();
 
-		void Save();
+		void SaveScore();
+		void SaveSettings();
+
 		void Load();
 		
 		static Global* get_singleton();
