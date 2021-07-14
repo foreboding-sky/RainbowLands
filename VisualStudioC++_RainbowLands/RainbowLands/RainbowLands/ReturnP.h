@@ -4,6 +4,7 @@
 #include <ResourceLoader.hpp>
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
+#include "Global.h"
 
 namespace godot
 {
@@ -18,5 +19,8 @@ namespace godot
 
 		void OnButtonPressed();
 
+	private:
+		Global* global;
+		
 	};
 }

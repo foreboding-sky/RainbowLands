@@ -16,6 +16,7 @@
 #include <time.h>
 #include "UI.h"
 #include <SceneTree.hpp>
+#include "Global.h"
 
 namespace godot 
 {
@@ -56,6 +57,7 @@ namespace godot
 		Button* startButton;
 		RandomNumberGenerator* random;
 		ResourceLoader* loader;
+		Global* global;
 		std::vector<Ref<PackedScene>> enemyRefs;
 		PathFollow2D* enemy;
 		Dictionary enemyThreat;

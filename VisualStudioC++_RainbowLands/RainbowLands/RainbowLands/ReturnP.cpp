@@ -14,12 +14,15 @@ namespace godot
 	}
 	void ReturnP::_ready()
 	{
+		global = Global::get_singleton();
 		connect("pressed", this, "_on_button_pressed");
 
 	}
 	void ReturnP::OnButtonPressed()
 	{
+		global->SaveSettings();
 		get_parent()->get_parent()->set("visible", false);
+
 	}
 }
 

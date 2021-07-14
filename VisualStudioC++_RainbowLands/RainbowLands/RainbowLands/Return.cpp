@@ -14,11 +14,13 @@ namespace godot
 	}
 	void Return::_ready()
 	{
+		global = Global::get_singleton();
 		connect("pressed", this, "_on_button_pressed");
 		_resource_loader = ResourceLoader::get_singleton();
 	}
 	void Return::OnButtonPressed()
 	{
+		global->SaveSettings();
 		get_tree()->change_scene("res://MainMenu/MainMenu.tscn");
 	}
 }

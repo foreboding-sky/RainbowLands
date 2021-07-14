@@ -30,6 +30,13 @@ void Enemy::_init()
 
 void Enemy::_ready()
 {
+	ScaleStats(1.0f + levelManager->waveCounter / 10.0f);
+}
+
+void godot::Enemy::ScaleStats(float value)
+{
+	health *= value;
+	speed *= value/3.0f;
 }
 
 void godot::Enemy::TakeDamage(int damage)

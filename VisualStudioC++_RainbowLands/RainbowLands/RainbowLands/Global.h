@@ -44,8 +44,12 @@ namespace godot
 		void SetFullscreen(bool value);
 		bool GetFullscreen();
 
-		void SetBestScore(int value);
+		void SetAllSettings();
+
+		void SetScore(int value);
+
 		int GetBestScore();
+		int GetCurrentScore();
 
 		void SaveScore();
 		void SaveSettings();
@@ -67,6 +71,7 @@ namespace godot
 		bool soundPlaying;
 		bool fullscreen;
 		int bestScore = 0;
+		int currentScore = 0;
 
 	};
 }

@@ -40,6 +40,7 @@ void LevelManager::_init()
 void LevelManager::_ready()
 {
 	//Godot::print("ready");
+	global = Global::get_singleton();
 	std::srand(time(0));
 	ui = cast_to<UI>(get_node("/root/main/UI"));
 	AttachObserver((IObserver*)ui);
@@ -124,13 +125,8 @@ void LevelManager::MobGotThrough(int damage)
 
 void LevelManager::LevelOver()
 {
-	Ref<PackedScene> scene = loader->load("res://UI/GameOverScreen.tscn");
-	Node2D* gameOver = cast_to<Node2D>(scene->instance());
-	gameOver->call("SetScore", score);
-	get_node("/root")->add_child(gameOver);
-	get_tree()->set_current_scene(gameOver);
-	get_node("/root")->remove_child(this);
-	queue_free();
+	global->SetScore(score);
+	get_tree()->change_scene("res://UI/GameOverScreen.tscn");
 }
 
 void LevelManager::LoadEnemies()

@@ -74,15 +74,31 @@ bool godot::Global::GetFullscreen()
 	return fullscreen;
 }
 
-void godot::Global::SetBestScore(int value)
+void godot::Global::SetAllSettings()
 {
+	SetFullscreen(fullscreen);
+	SetMusicPlaying(musicPlaying);
+	SetMusicVolume(musicVolume);
+	SetSoundPlaying(soundPlaying);
+	SetSoundVolume(soundVolume);
+}
+
+void godot::Global::SetScore(int value)
+{
+	currentScore = value;
 	if(bestScore < value) bestScore = value;
 	SaveScore();
 }
 
+
 int godot::Global::GetBestScore()
 {
 	return bestScore;
+}
+
+int godot::Global::GetCurrentScore()
+{
+	return currentScore;
 }
 
 void godot::Global::SaveScore()
@@ -151,6 +167,7 @@ void Global::_ready()
 	musicPlayer = cast_to<AudioStreamPlayer>(get_node("/root/Global/Music"));
 	os = OS::get_singleton();
 	Load();
+	SetAllSettings();
 }
 
 void Global::_physics_process(float delta)

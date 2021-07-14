@@ -4,6 +4,7 @@
 #include <ResourceLoader.hpp>
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
+#include "Global.h"
 
 namespace godot
 {
@@ -21,5 +22,6 @@ namespace godot
 
 	private:
 		ResourceLoader* _resource_loader = nullptr;
+		Global* global;
 	};
 }

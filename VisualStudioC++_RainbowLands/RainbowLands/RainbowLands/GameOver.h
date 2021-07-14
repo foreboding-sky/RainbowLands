@@ -22,12 +22,10 @@ namespace godot
 		void _ready();
 
 		void OnTimerFinish();
-		void SetScore(int value);
 		void ShowScore();
 		
 	private:
 		Global* global;
-		LevelManager* levelManager;
 		Timer* timer;
 		int score;
 	};

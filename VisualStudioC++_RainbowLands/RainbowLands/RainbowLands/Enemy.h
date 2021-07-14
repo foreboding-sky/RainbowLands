@@ -20,6 +20,7 @@ namespace godot {
 		void _init();
 		void _ready();
 
+		void ScaleStats(float value);
 		void TakeDamage(int damage);
 		// variables
 	private:
