@@ -70,24 +70,6 @@
     <Filter Include="Architecture-related\Sourse Files">
       <UniqueIdentifier>{53f70ecd-8899-4db9-9d98-1f05da535b7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Projectiles">
-      <UniqueIdentifier>{e53035f9-1fa6-4b7a-ade6-093fb57be219}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Projectiles">
-      <UniqueIdentifier>{4039d69d-c99d-4023-914d-ed0050650005}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Towers">
-      <UniqueIdentifier>{e9728be7-0fba-4986-a105-756514820909}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Towers">
-      <UniqueIdentifier>{962968ee-73ee-4429-ab3e-68a90e3dc0d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Towers\Logic">
-      <UniqueIdentifier>{affee1d4-d8a8-43c0-8d7d-d8b2ad560689}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Towers\Logic">
-      <UniqueIdentifier>{7d4250f9-54ae-434c-b69c-380c99ce9be5}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GodotLibrary.cpp">
@@ -118,6 +100,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tower.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Resume.cpp">
@@ -159,40 +147,34 @@
     <ClCompile Include="SoundVolume.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Healthbar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ClosestNoLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ClosestWithLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Source Files\Projectiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Tower.cpp">
-      <Filter>Source Files\Towers\Logic</Filter>
+    <ClCompile Include="Healthbar.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TowerBuilder.cpp">
-      <Filter>Source Files\Towers\Logic</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnTower1.cpp">
-      <Filter>Source Files\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnTower2.cpp">
-      <Filter>Source Files\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnTower3.cpp">
-      <Filter>Source Files\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnTower4.cpp">
-      <Filter>Source Files\Towers</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnTower5.cpp">
-      <Filter>Source Files\Towers</Filter>
+      <Filter>Architecture-related\Sourse Files</Filter>
     </ClCompile>
     <ClCompile Include="LunarProjectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTower5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
@@ -227,6 +209,12 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Resume.h">
       <Filter>Header Files\PauseMenu\Buttons</Filter>
     </ClInclude>
@@ -238,9 +226,6 @@
     </ClInclude>
     <ClInclude Include="TowerShop.h">
       <Filter>Header Files\UI\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="IObserver.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ISubject.h">
       <Filter>Architecture-related\Header Files</Filter>
@@ -272,10 +257,7 @@
     <ClInclude Include="SoundVolume.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Healthbar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="TagretingMethod.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ClosestNoLock.h">
@@ -284,34 +266,31 @@
     <ClInclude Include="ClosestWithLock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TagretingMethod.h">
+    <ClInclude Include="Healthbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Header Files\Projectiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Header Files\Towers\Logic</Filter>
+    <ClInclude Include="IObserver.h">
+      <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TowerBuilder.h">
-      <Filter>Header Files\Towers\Logic</Filter>
-    </ClInclude>
-    <ClInclude Include="SpawnTower1.h">
-      <Filter>Header Files\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="SpawnTower2.h">
-      <Filter>Header Files\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="SpawnTower3.h">
-      <Filter>Header Files\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="SpawnTower4.h">
-      <Filter>Header Files\Towers</Filter>
-    </ClInclude>
-    <ClInclude Include="SpawnTower5.h">
-      <Filter>Header Files\Towers</Filter>
+      <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LunarProjectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTower5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Header.h">
