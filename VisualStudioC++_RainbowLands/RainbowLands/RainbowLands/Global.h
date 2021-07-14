@@ -4,7 +4,13 @@
 #include <SceneTree.hpp>
 #include <AudioStreamPlayer.hpp>
 #include <OS.hpp>
-
+#include <Dictionary.hpp>
+#include <Object.hpp>
+#include <String.hpp>
+#include <Variant.hpp>
+#include <Array.hpp>
+#include <File.hpp>
+#include <JSON.hpp>
 namespace godot
 {
 	class Global : public Node
@@ -37,7 +43,11 @@ namespace godot
 		bool GetFullscreen();
 
 		void SetBestScore(int value);
+		int GetBestScore();
 
+		void Save();
+		void Load();
+		
 		static Global* get_singleton();
 
 	private:
@@ -52,7 +62,7 @@ namespace godot
 		float musicPlaying;
 		bool soundPlaying;
 		bool fullscreen;
-		int bestScore;
+		int bestScore = 0;
 
 	};
 }

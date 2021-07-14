@@ -8,6 +8,7 @@
 #include <Timer.hpp>
 #include <string>
 #include <String.hpp>
+#include "Global.h"
 
 namespace godot
 {
@@ -25,6 +26,7 @@ namespace godot
 		void ShowScore();
 		
 	private:
+		Global* global;
 		LevelManager* levelManager;
 		Timer* timer;
 		int score;
