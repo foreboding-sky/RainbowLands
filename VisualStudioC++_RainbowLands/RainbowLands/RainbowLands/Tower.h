@@ -45,6 +45,7 @@ namespace godot {
 
 		//attack speed
 		double attackSpeed;
+		float cooldownTimePassed;
 		Timer* attackTimer;
 
 		//enemies

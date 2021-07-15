@@ -36,7 +36,7 @@ void Enemy::_ready()
 void godot::Enemy::ScaleStats(float value)
 {
 	health *= value;
-	speed *= value/3.0f;
+	speed *= 0.5 + (value/4.0f);
 }
 
 void godot::Enemy::TakeDamage(int damage)

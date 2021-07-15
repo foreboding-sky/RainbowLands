@@ -8,14 +8,14 @@
 #include "Enemy.h"
 
 namespace godot {
-	class LunarProjectile : public Area2D
+	class PiercingProjectile : public Area2D
 	{
 		// methods
 	private:
-		GODOT_CLASS(LunarProjectile, Area2D)
+		GODOT_CLASS(PiercingProjectile, Area2D)
 	public:
-		LunarProjectile();
-		~LunarProjectile();
+		PiercingProjectile();
+		~PiercingProjectile();
 		void _physics_process(float delta);
 		void _init();
 		void _ready();

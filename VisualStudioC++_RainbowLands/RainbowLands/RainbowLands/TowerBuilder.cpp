@@ -139,7 +139,7 @@ void godot::TowerBuilder::SetAmmoTypeProjectile03()
 
 void godot::TowerBuilder::SetAmmoTypeProjectile04()
 {
-	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/SniperProjetile.tscn");
 	Object::cast_to<Tower>(tower)->SetProjectilePrefab(projectilePrefab);
 }
 
