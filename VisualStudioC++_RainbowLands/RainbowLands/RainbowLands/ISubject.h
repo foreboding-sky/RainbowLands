@@ -9,7 +9,8 @@ enum Message
     GOLD_GAINED,
     DAMAGE_TAKEN,
     WAVE_STARTED,
-	WAVE_ENDED
+	WAVE_ENDED,
+	ENEMY_DAMAGED
 };
 
 class ISubject

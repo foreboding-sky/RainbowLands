@@ -8,10 +8,9 @@ radius = 37.4405
 
 [node name="PathFollow2D" type="PathFollow2D"]
 position = Vector2( 17, 370 )
-rotation = -0.00892166
 loop = false
 script = ExtResource( 2 )
-Health = 12
+MaxHealth = 12
 Speed = 50
 Damage = 3
 
@@ -26,3 +25,13 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="HP" type="Label" parent="."]
+margin_left = -40.0
+margin_top = -26.0
+margin_right = 37.0
+margin_bottom = 30.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

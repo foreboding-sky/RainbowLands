@@ -21,6 +21,9 @@ curve = SubResource( 1 )
 position = Vector2( 0.242844, -0.928497 )
 rotation = -0.00881032
 script = ExtResource( 2 )
+MaxHealth = null
+Speed = null
+Damage = null
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
 scale = Vector2( 0.5, 0.5 )

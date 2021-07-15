@@ -28,6 +28,7 @@
 #include "ReturnP.h"
 #include "PauseOptions.h"
 #include "LunarProjectile.h"
+#include "Healthbar.h"
 
 using namespace godot;
 
@@ -71,4 +72,5 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Fullscreen>();
 	register_class<ReturnP>();
 	register_class<PauseOptions>();
+	register_class<Healthbar>();
 }
