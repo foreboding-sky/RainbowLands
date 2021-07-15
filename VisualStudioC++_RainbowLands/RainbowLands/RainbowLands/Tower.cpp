@@ -82,6 +82,7 @@ void Tower::_ready()
     //set tower attack speed
     attackTimer = cast_to<Timer>(get_node("AttackSpeedTimer"));
     attackTimer->set_wait_time(attackSpeed);
+    cooldownTimePassed = attackSpeed;
 
     //set collider radius
     collisionShape = cast_to<CollisionShape2D>(get_node("Aggro")->get_child(0));
@@ -143,8 +144,13 @@ void Tower::_physics_process(float delta)
     }
     else
     {
+        if(cooldownTimePassed <= attackSpeed)
+            cooldownTimePassed += delta;
+
         if (enemyArray.size() > 0)
         {
+            
+
             targeting->SetEnemies(enemyArray);
             currentTarget = targeting->GetTarget();
 
@@ -161,7 +167,6 @@ void Tower::_physics_process(float delta)
             }
             else 
             {
-                cooldownTimePassed += delta;
                 if (cooldownTimePassed >= attackSpeed)
                 {
                     OnAttackSpeedTimerTimeout();
@@ -175,7 +180,7 @@ void Tower::_physics_process(float delta)
             
             //reset timer to attackSpeed value so it spawns projectile
             // as soon as an enemy enters attack(aggro) range
-            cooldownTimePassed = attackSpeed;
+            //cooldownTimePassed = attackSpeed;
             isAttacking = false;
         }
     }
