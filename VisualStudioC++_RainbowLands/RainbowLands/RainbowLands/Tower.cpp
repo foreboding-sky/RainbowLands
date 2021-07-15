@@ -26,7 +26,9 @@ Tower::~Tower()
     gun = nullptr;
     base = nullptr;
     projectile = nullptr;
+    attackRange = nullptr;
 
+    delete attackRange;
     delete attackTimer;
     delete input;
     delete loader;
@@ -85,6 +87,13 @@ void Tower::_ready()
     collisionShape = cast_to<CollisionShape2D>(get_node("Aggro")->get_child(0));
     collisionShape->set_shape((Ref<Shape2D>)circleShape);
 
+    //set attack range sprite size
+    attackRange = cast_to<Sprite>(get_node("AttackRange"));
+    auto texture = attackRange->get_texture().ptr()->get_size();
+    int diameter = circleShape.ptr()->get_radius() * 2;
+    auto scale = Vector2(diameter / texture.x, diameter / texture.y);
+    attackRange->set_scale(scale);
+
     //get tilemap
     tileMap = cast_to<TileMap>(get_node("/root/main/tower_placement"));
 
@@ -122,6 +131,7 @@ void Tower::_physics_process(float delta)
             isBuilding = false;
             base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
+            attackRange->set_visible(false);
             levelManager->ChangeCurrency(placementCost * -1);
             targeting->SetTowerPosition(get_global_position());
         }

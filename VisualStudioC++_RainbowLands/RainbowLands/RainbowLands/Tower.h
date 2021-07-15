@@ -68,6 +68,7 @@ namespace godot {
 		Sprite* base;
 		String gunSpritePath;
 		Sprite* gun;
+		Sprite* attackRange;
 
 		// methods
 	public:
