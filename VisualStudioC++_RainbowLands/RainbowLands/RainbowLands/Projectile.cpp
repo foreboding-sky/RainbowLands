@@ -4,6 +4,8 @@ using namespace godot;
 Projectile::Projectile()
 {
 	target = nullptr;
+	speed = 400;
+	damage = 1;
 }
 
 Projectile::~Projectile()
@@ -19,7 +21,10 @@ void Projectile::_register_methods()
 	register_method((char*)"_ready", &Projectile::_ready);
 
 	register_method((char*)"OnEnemyAreaEntered", &Projectile::OnEnemyAreaEntered);
-	register_method((char*)"SetTarget", &Projectile::SetTarget);
+	register_method((char*)"SetTarget", &Projectile::SetTarget);	
+
+	register_property<Projectile, int>("Speed", &Projectile::speed, 400);
+	register_property<Projectile, int>("Damage", &Projectile::damage, 1);
 }
 
 void Projectile::_init()
@@ -29,8 +34,6 @@ void Projectile::_init()
 void Projectile::_ready()
 {
 	velocity = { 0, 0 };
-	speed = 400;
-	damage = 1;
 	selfDestruct = cast_to<Timer>(get_node("SelfDestruct"));
 	selfDestruct->set_wait_time(5);
 }

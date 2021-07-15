@@ -45,6 +45,7 @@ namespace godot {
 
 		//attack speed
 		double attackSpeed;
+		float cooldownTimePassed;
 		Timer* attackTimer;
 
 		//enemies
@@ -68,6 +69,7 @@ namespace godot {
 		Sprite* base;
 		String gunSpritePath;
 		Sprite* gun;
+		Sprite* attackRange;
 
 		// methods
 	public:

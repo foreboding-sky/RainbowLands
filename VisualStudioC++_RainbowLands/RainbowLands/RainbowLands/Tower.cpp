@@ -26,7 +26,9 @@ Tower::~Tower()
     gun = nullptr;
     base = nullptr;
     projectile = nullptr;
+    attackRange = nullptr;
 
+    delete attackRange;
     delete attackTimer;
     delete input;
     delete loader;
@@ -80,10 +82,18 @@ void Tower::_ready()
     //set tower attack speed
     attackTimer = cast_to<Timer>(get_node("AttackSpeedTimer"));
     attackTimer->set_wait_time(attackSpeed);
+    cooldownTimePassed = attackSpeed;
 
     //set collider radius
     collisionShape = cast_to<CollisionShape2D>(get_node("Aggro")->get_child(0));
     collisionShape->set_shape((Ref<Shape2D>)circleShape);
+
+    //set attack range sprite size
+    attackRange = cast_to<Sprite>(get_node("AttackRange"));
+    auto texture = attackRange->get_texture().ptr()->get_size();
+    int diameter = circleShape.ptr()->get_radius() * 2;
+    auto scale = Vector2(diameter / texture.x, diameter / texture.y);
+    attackRange->set_scale(scale);
 
     //get tilemap
     tileMap = cast_to<TileMap>(get_node("/root/main/tower_placement"));
@@ -122,6 +132,7 @@ void Tower::_physics_process(float delta)
             isBuilding = false;
             base->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
             gun->set_modulate(Color{ 1.0, 1.0, 1.0, 1.0 });
+            attackRange->set_visible(false);
             levelManager->ChangeCurrency(placementCost * -1);
             targeting->SetTowerPosition(get_global_position());
         }
@@ -133,25 +144,43 @@ void Tower::_physics_process(float delta)
     }
     else
     {
+        if(cooldownTimePassed <= attackSpeed)
+            cooldownTimePassed += delta;
+
         if (enemyArray.size() > 0)
         {
+            
+
             targeting->SetEnemies(enemyArray);
             currentTarget = targeting->GetTarget();
+
             //getting target's global transform
             targetPosition = currentTarget->get_global_transform().get_origin();
 
             //rotation of the gun
             gun->set_rotation((targetPosition - get_position()).angle() + 1.5708);
+            
             if (!isAttacking)
             {
                 isAttacking = true;
-                attackTimer->start(attackSpeed);
+                //attackTimer->start(attackSpeed);
+            }
+            else 
+            {
+                if (cooldownTimePassed >= attackSpeed)
+                {
+                    OnAttackSpeedTimerTimeout();
+                    cooldownTimePassed = 0;
+                }
             }
         }
         else
         {
-            //stop the attack timer, so the tower stops to attack
-            attackTimer->stop();
+            //attackTimer->stop();
+            
+            //reset timer to attackSpeed value so it spawns projectile
+            // as soon as an enemy enters attack(aggro) range
+            //cooldownTimePassed = attackSpeed;
             isAttacking = false;
         }
     }
@@ -189,6 +218,8 @@ void Tower::OnAttackSpeedTimerTimeout()
     projectile->set_position(projectileSpawnPosition);
     projectile->call("SetTarget", currentTarget);
     get_node("/root/main/projectiles")->add_child(projectile);
+
+    cooldownTimePassed = 0;
 }
 
 //enemy enters aggro range
