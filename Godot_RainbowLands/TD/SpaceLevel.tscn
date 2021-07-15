@@ -142,6 +142,7 @@ margin_left = 48.0
 margin_top = 525.0
 margin_right = 148.0
 margin_bottom = 578.0
+hint_tooltip = "xD"
 
 [node name="level" type="Label" parent="UI"]
 margin_left = 29.0
