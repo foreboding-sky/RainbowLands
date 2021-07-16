@@ -22,10 +22,12 @@ namespace godot {
 		static void _register_methods();
 
 		void OnEnemyAreaEntered(Area2D* otherArea);
+		void OnSelfDestructTimeout();
 		void SetTarget(PathFollow2D* target);
 
 		// variables
 	private:
+		bool hasTarget;
 		int speed;
 		int damage;
 		NodePath targetPath;

@@ -21,9 +21,6 @@ namespace godot
 	void TowerShop::OnButtonPressed()
 	{
 		visible = cast_to<CanvasItem>(get_child(0))->is_visible();
-
-		if(visible == true) Godot::print("True");
-		else Godot::print("Not True");
 		get_child(0)->set("visible", !visible);
 	}
 }

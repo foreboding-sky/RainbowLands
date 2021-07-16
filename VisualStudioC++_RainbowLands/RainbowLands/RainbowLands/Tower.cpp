@@ -120,8 +120,6 @@ void Tower::_ready()
 void Tower::_physics_process(float delta)
 {
     //debug
-    //std::string str = std::to_string(_enemy_array.size());
-    //Godot::print(str.c_str());
 
      
     if (isBuilding)
@@ -289,7 +287,6 @@ void Tower::SetBasePath(String imagePath)
 
 void Tower::SetAttackSpeed(double atkSpeed)
 {
-    Godot::print("SetAttackSpeed");
     attackSpeed = atkSpeed;
 }
 

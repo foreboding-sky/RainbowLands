@@ -20,7 +20,6 @@ namespace godot
 	{
 		if (event->is_action_pressed("pause"))
 		{
-			Godot::print("Pause");
 			isPaused = !get_tree()->is_paused();
 			get_tree()->set_pause(isPaused);
 			set_visible(isPaused);
