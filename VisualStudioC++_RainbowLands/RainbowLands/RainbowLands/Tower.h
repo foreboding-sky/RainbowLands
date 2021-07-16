@@ -82,6 +82,7 @@ namespace godot {
 		void _ready();
 
 		void FollowMouse();
+		void DeleteTower();
 		void OnAttackSpeedTimerTimeout();
 		void OnAggroAreaEntered(Area2D* _other_area);
 		void OnAggroAreaExited(Area2D* _other_area);
