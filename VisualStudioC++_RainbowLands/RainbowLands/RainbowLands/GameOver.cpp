@@ -15,7 +15,6 @@ namespace godot
 	void GameOver::_ready()
 	{
 		global = Global::get_singleton();
-		Godot::print("Game over");
 		timer = cast_to<Timer>(get_node("/root/Node2D/Timer"));
 		timer->connect("timeout", this, "OnTimerFinish");
 		ShowScore();

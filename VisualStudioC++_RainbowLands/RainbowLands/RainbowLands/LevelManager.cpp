@@ -39,7 +39,6 @@ void LevelManager::_init()
 
 void LevelManager::_ready()
 {
-	//Godot::print("ready");
 	global = Global::get_singleton();
 	std::srand(time(0));
 	ui = cast_to<UI>(get_node("/root/main/UI"));

@@ -23,7 +23,6 @@ namespace godot
 		texture = this->get_button_icon();
 		iconSize = texture.ptr()->get_size();
 
-		//size = Vector2((iconSize.x/(iconSize.x/)))
 		set_size(Vector2(300, 200));
 		connect("pressed", this, "_on_button_pressed");
 		connect("mouse_entered", this, "_on_mouse_hovered");
@@ -32,17 +31,15 @@ namespace godot
 	void SpawnTower5::OnButtonPressed()
 	{
 		BuildTower();
+		get_child(0)->set("visible", false);
 		get_parent()->get_parent()->get_parent()->set("visible", false);
 	}
 	void SpawnTower5::OnMouseHovered()
 	{
-		Godot::print("visivle");
 		get_child(0)->set("visible", true);
 	}
 	void SpawnTower5::OnMouseLeft()
 	{
-		Godot::print("unvisivle");
-		//set_visible(false);
 		get_child(0)->set("visible", false);
 	}
 	void SpawnTower5::BuildTower()

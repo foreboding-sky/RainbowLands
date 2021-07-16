@@ -180,6 +180,9 @@
     <ClCompile Include="AreaDamage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PiercingProjectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Root.h">
@@ -294,6 +297,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AreaDamage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PiercingProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -31,6 +31,8 @@ namespace godot {
 		// variables
 	private:
 		//tower placing logic
+		bool hudVisible;
+		bool isMouseHovered;
 		bool isBuilding;
 		bool canBuild;
 		bool isColliding;
@@ -88,6 +90,9 @@ namespace godot {
 		void OnAggroAreaExited(Area2D* _other_area);
 		void OnTowerAreaEntered(Area2D* _other_area);
 		void OnTowerAreaExited(Area2D* _other_area);
+
+		void OnMouseHovered();
+		void OnMouseLeft();
 
 		// setters
 		void SetProjectilePrefab(Ref<PackedScene> projectile);

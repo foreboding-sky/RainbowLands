@@ -43,8 +43,6 @@ void Enemy::_ready()
 
 void godot::Enemy::OnMouseHovered()
 {
-	Godot::print("yesyesyes");
-
 	healthbar = cast_to<Healthbar>(cast_to<Label>(healthbarRef->instance()));
 	healthbar->SetMaxHealth(maxHealth);
 	AttachObserver(healthbar);
@@ -55,7 +53,6 @@ void godot::Enemy::OnMouseHovered()
 
 void godot::Enemy::OnMouseLeft()
 {
-	Godot::print("nonono");
 	DetachObserver(healthbar);
 	healthbar->queue_free();
 	healthbar = nullptr;
@@ -72,7 +69,6 @@ void godot::Enemy::TakeDamage(int damage)
 	health -= damage;
 	if (healthbar)
 	{
-		Godot::print(":)");
 		Notify(ENEMY_DAMAGED, health);
 	}
 	if (health <= 0)

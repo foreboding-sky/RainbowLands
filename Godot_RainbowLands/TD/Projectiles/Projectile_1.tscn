@@ -21,3 +21,4 @@ shape = SubResource( 1 )
 [node name="SelfDestruct" type="Timer" parent="."]
 
 [connection signal="area_entered" from="." to="." method="OnEnemyAreaEntered"]
+[connection signal="timeout" from="SelfDestruct" to="." method="OnSelfDestructTimeout"]
