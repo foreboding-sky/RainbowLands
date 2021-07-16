@@ -4,9 +4,17 @@
 #include <Array.hpp>
 #include <PathFollow2D.hpp>
 #include "LevelManager.h"
+#include <Label.hpp>
+#include "ISubject.h"
+#include <ResourceLoader.hpp>
+#include <PackedScene.hpp>
+#include "Healthbar.h"
+#include <SceneTree.hpp>
+#include "ISubject.h"
+#include <Area2D.hpp>
 
 namespace godot {
-	class Enemy : public PathFollow2D
+	class Enemy : public PathFollow2D, public ISubject
 	{
 		// methods
 	private:
@@ -20,6 +28,8 @@ namespace godot {
 		void _init();
 		void _ready();
 
+		void OnMouseHovered();
+		void OnMouseLeft();
 		void ScaleStats(float value);
 		void TakeDamage(int damage);
 		// variables
@@ -27,7 +37,12 @@ namespace godot {
 		
 		int speed;
 		int health;
+		int maxHealth = 0;
 		int damage;
 		LevelManager* levelManager;
+		ResourceLoader* loader;
+		Ref<PackedScene> healthbarRef;
+		Healthbar* healthbar;
+
 	};
 }

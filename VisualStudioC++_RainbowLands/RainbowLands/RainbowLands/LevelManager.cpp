@@ -77,6 +77,7 @@ void LevelManager::EndWave()
 	threatPool += increment++;
 	spawnTimer->stop();
 	Notify(Message::WAVE_ENDED);
+
 }
 
 void LevelManager::SpawnEnemy()
@@ -85,7 +86,7 @@ void LevelManager::SpawnEnemy()
 	{
 		int randomNumber = rand() % enemyRefs.size();
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 2.0f) + (float)i / (3.0f + (float)waveCounter/2.0f));
+		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 4.0f) + (float)i / (3.0f + (float)waveCounter/4.0f));
 		if (i <= waveThreat)
 		{
 			waveThreat -= i;

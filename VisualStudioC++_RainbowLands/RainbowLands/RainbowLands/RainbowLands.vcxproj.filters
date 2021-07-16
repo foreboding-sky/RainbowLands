@@ -159,7 +159,7 @@
     <ClCompile Include="TowerBuilder.cpp">
       <Filter>Architecture-related\Sourse Files</Filter>
     </ClCompile>
-    <ClCompile Include="PiercingProjectile.cpp">
+    <ClCompile Include="LunarProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SpawnTower1.cpp">
@@ -176,6 +176,9 @@
     </ClCompile>
     <ClCompile Include="SpawnTower5.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files\SaveSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -272,7 +275,7 @@
     <ClInclude Include="TowerBuilder.h">
       <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PiercingProjectile.h">
+    <ClInclude Include="LunarProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SpawnTower1.h">
@@ -288,6 +291,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SpawnTower5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
