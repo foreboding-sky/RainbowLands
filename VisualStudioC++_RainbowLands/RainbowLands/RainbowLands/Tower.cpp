@@ -210,6 +210,12 @@ void Tower::FollowMouse()
     }
 }
 
+void Tower::DeleteTower()
+{
+    levelManager->ChangeCurrency(placementCost * 0.5);
+    queue_free();
+}
+
 //attack target, spawn bullets(projectiles)
 void Tower::OnAttackSpeedTimerTimeout()
 {
