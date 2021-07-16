@@ -41,11 +41,23 @@ shape = SubResource( 2 )
 
 [node name="AttackSpeedTimer" type="Timer" parent="."]
 
+[node name="MouseTriger" type="Control" parent="."]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="THud" type="HSplitContainer" parent="."]
-margin_left = -80.0
-margin_top = -43.654
-margin_right = 81.0
-margin_bottom = -19.654
+visible = false
+margin_left = -48.0
+margin_top = -32.0
+margin_right = 48.0
+margin_bottom = -8.0
+mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -61,8 +73,8 @@ __meta__ = {
 }
 
 [node name="SellButton" type="Button" parent="THud"]
-margin_left = 122.0
-margin_right = 161.0
+margin_left = 57.0
+margin_right = 96.0
 margin_bottom = 24.0
 size_flags_horizontal = 12
 custom_fonts/font = ExtResource( 5 )

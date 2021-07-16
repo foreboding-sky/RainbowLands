@@ -5,6 +5,8 @@ using namespace godot;
 Tower::Tower()
 {
     placementCost = 0;
+	hudVisible = false;
+	isMouseHovered = false;
     canBuild = false;
     isBuilding = true;
     isColliding = false;
@@ -56,6 +58,10 @@ void Tower::_register_methods()
     register_method((char*)"_set_gun_path", &Tower::SetGunPath);
     register_method((char*)"_set_base_path", &Tower::SetBasePath);
     register_method((char*)"_set_attack_speed", &Tower::SetAttackSpeed);
+	register_method("_hovered", &Tower::OnMouseHovered);
+	register_method("_left", &Tower::OnMouseLeft);
+	register_method("_delete_button", &Tower::DeleteTower);
+
 }
 
 void Tower::_init()
@@ -105,6 +111,10 @@ void Tower::_ready()
    
     //set projectile
     projectileSpawnPosition = Vector2(0, 0);
+
+	get_node("MouseTriger")->connect("mouse_entered", this, "_hovered");
+	get_node("MouseTriger")->connect("mouse_exited", this, "_left");
+	get_node("THud/SellButton")->connect("pressed", this, "_delete_button");
 }
 
 void Tower::_physics_process(float delta)
@@ -142,6 +152,13 @@ void Tower::_physics_process(float delta)
             queue_free();
         }
     }
+	if (isMouseHovered)
+	{
+		if (input->is_action_just_pressed("tower_menu"))
+		{
+			get_node_or_null("THud")->set("visible", hudVisible = !hudVisible);
+		}
+	}
     else
     {
         if(cooldownTimePassed <= attackSpeed)
@@ -210,11 +227,6 @@ void Tower::FollowMouse()
     }
 }
 
-void Tower::DeleteTower()
-{
-    levelManager->ChangeCurrency(placementCost * 0.5);
-    queue_free();
-}
 
 //attack target, spawn bullets(projectiles)
 void Tower::OnAttackSpeedTimerTimeout()
@@ -299,4 +311,21 @@ void Tower::SetCollisionShape(Ref<CircleShape2D> shape)
 int Tower::GetTowerPlacementCost()
 {
     return placementCost;
+}
+
+//tower ui
+void godot::Tower::OnMouseHovered()
+{
+	isMouseHovered = true;
+}
+
+void godot::Tower::OnMouseLeft()
+{
+	isMouseHovered = false;
+}
+
+void Tower::DeleteTower()
+{
+	levelManager->ChangeCurrency(placementCost * 0.5);
+	queue_free();
 }

@@ -32,17 +32,15 @@ namespace godot
 	void SpawnTower1::OnButtonPressed()
 	{
 		BuildTower();
+		get_child(0)->set("visible", false);
 		get_parent()->get_parent()->get_parent()->set("visible", false);
 	}
 	void SpawnTower1::OnMouseHovered()
 	{
-		Godot::print("visivle");
 		get_child(0)->set("visible", true);
 	}
 	void SpawnTower1::OnMouseLeft()
 	{
-		Godot::print("unvisivle");
-		//set_visible(false);
 		get_child(0)->set("visible", false);
 	}
 	void SpawnTower1::BuildTower()
