@@ -47,6 +47,7 @@ namespace godot
 		int waveStartCounter;
 		int waveCounter;
 		Timer* spawnTimer;
+		float currencyScaler;
 		int currentHealth;
 		int maxHealth;
 		int currency;

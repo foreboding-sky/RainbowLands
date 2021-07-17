@@ -54,8 +54,9 @@ void LevelManager::_ready()
 	increment = 1;
 	waveCounter = 0;
 	waveStartCounter = 0;
-	currentHealth = 50;
-	maxHealth = 50;
+	currentHealth = 150;
+	currencyScaler = 1;
+	maxHealth = 150;
 	currency = 60;
 	LoadEnemies();
 }
@@ -98,7 +99,7 @@ void LevelManager::SpawnEnemy()
 	{
 		int randomNumber = rand() % enemyRefs.size();
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 4.0f) + (float)i / (3.0f + (float)waveCounter/4.0f));
+		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 4.0f) + (float)i / (3.0f + (float)waveCounter/3.0f));
 		if (i <= waveThreat)
 		{
 			waveThreat -= i;
@@ -116,13 +117,13 @@ void LevelManager::SpawnEnemy()
 
 void LevelManager::ChangeCurrency(int amount)
 {
-	currency += (amount * (0.3 + 1.5/ (waveCounter/10)));
+	currency += amount;
 	Notify(Message::GOLD_GAINED, currency);
 }
 
 void LevelManager::MobDefeated(int amount)
 {
-	currency += amount;
+	currency += (int)ceil(amount * (0.1 + 1.9 /( currencyScaler += 0.1f)));
 	score += amount;
 	Notify(Message::SCORE_GAINED, score);
 	Notify(Message::GOLD_GAINED, currency);
@@ -131,6 +132,7 @@ void LevelManager::MobDefeated(int amount)
 void LevelManager::MobGotThrough(int damage)
 {
 	currentHealth -= damage;
+	ChangeCurrency(damage);
 	Notify(Message::DAMAGE_TAKEN, currentHealth);
 	if (currentHealth <= 0)
 		LevelOver();
