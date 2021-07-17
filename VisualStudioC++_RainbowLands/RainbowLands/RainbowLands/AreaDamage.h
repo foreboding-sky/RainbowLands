@@ -23,6 +23,7 @@ namespace godot {
 		static void _register_methods();
 
 		void OnEnemyAreaEntered(Area2D* otherArea);
+		void OnSelfDestructTimeout();
 		void SetTarget(PathFollow2D* target);
 
 		// variables
@@ -37,10 +38,12 @@ namespace godot {
 
 		double tickTime;
 		double cooldownTimePassed;
+		double selfDestructTime;
 
 		Array enemies;
 		NodePath targetPath;
 		PathFollow2D* target;
+		Vector2 targetPosition;
 		Timer* selfDestruct;
 		//std::weak_ptr<PathFollow2D> target_;
 		Vector2 velocity;
