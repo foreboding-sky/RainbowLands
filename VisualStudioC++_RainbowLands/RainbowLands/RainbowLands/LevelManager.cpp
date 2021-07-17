@@ -28,6 +28,7 @@ void LevelManager::_register_methods()
 	register_method((char*)"_level_over", &LevelManager::LevelOver);
 	register_method("SpawnEnemy", &LevelManager::SpawnEnemy);
 	register_method("LoadEnemies", &LevelManager::LoadEnemies);
+	register_method("ButtonStartWave", &LevelManager::ButtonStartWave);
 	register_method("StartWave", &LevelManager::StartWave);
 	register_method("EndWave", &LevelManager::EndWave);
 }
@@ -44,7 +45,7 @@ void LevelManager::_ready()
 	ui = cast_to<UI>(get_node("/root/main/UI"));
 	AttachObserver((IObserver*)ui);
 	startButton = cast_to<Button>(get_node("/root/main/UI/StartWave"));
-	startButton->connect("pressed", this, "StartWave");
+	startButton->connect("pressed", this, "ButtonStartWave");
 	waveIsActive = false;
 	loader = ResourceLoader::get_singleton();
 	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
@@ -52,17 +53,27 @@ void LevelManager::_ready()
 	threatPool = 5;
 	increment = 1;
 	waveCounter = 0;
+	waveStartCounter = 0;
 	currentHealth = 50;
 	maxHealth = 50;
 	currency = 200;
 	LoadEnemies();
 }
 
+void LevelManager::ButtonStartWave()
+{
+	if(waveStartCounter <= 5 || waveCounter == 0)
+	{
+		waveStartCounter = 0;
+		StartWave();
+	}
+}
 void LevelManager::StartWave()
 {
 	if (waveIsActive == false)
 	{
 		waveCounter++;
+		waveStartCounter++;
 		waveIsActive = true;
 		waveThreat = threatPool;
 		spawnTimer->start();
@@ -76,6 +87,8 @@ void LevelManager::EndWave()
 	threatPool += increment++;
 	spawnTimer->stop();
 	Notify(Message::WAVE_ENDED);
+	if (waveStartCounter < 5) StartWave();
+
 
 }
 

@@ -36,6 +36,7 @@ namespace godot
 
 		void SpawnEnemy();
 		void EndWave();
+		void ButtonStartWave();
 		void StartWave();
 		void LoadEnemies();
 		void MobDefeated(int amount);
@@ -43,6 +44,7 @@ namespace godot
 		void MobGotThrough(int damage);
 		void LevelOver();
 
+		int waveStartCounter;
 		int waveCounter;
 		Timer* spawnTimer;
 		int currentHealth;

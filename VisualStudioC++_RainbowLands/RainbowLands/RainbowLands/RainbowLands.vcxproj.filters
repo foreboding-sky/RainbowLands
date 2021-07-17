@@ -177,10 +177,13 @@
     <ClCompile Include="PiercingProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AreaDamage.cpp">
+    <ClCompile Include="PiercingProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PiercingProjectile.cpp">
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaDamage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -296,10 +299,16 @@
     <ClInclude Include="PiercingProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AreaDamage.h">
+    <ClInclude Include="PiercingProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PiercingProjectile.h">
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaDamage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
