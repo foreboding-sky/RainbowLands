@@ -82,6 +82,4 @@ text = "sell"
 
 [connection signal="area_entered" from="." to="." method="_on_tower_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_tower_area_exited"]
-[connection signal="area_entered" from="Aggro" to="." method="_on_aggro_area_entered"]
-[connection signal="area_exited" from="Aggro" to="." method="_on_aggro_area_exited"]
 [connection signal="timeout" from="AttackSpeedTimer" to="." method="_on_AttackSpeedTimer_timeout"]

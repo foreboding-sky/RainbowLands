@@ -112,9 +112,12 @@ void Tower::_ready()
     //set projectile
     projectileSpawnPosition = Vector2(0, 0);
 
-	get_node("MouseTriger")->connect("mouse_entered", this, "_hovered");
-	get_node("MouseTriger")->connect("mouse_exited", this, "_left");
-	get_node("THud/SellButton")->connect("pressed", this, "_delete_button");
+    get_node("Aggro")->connect("area_entered", this, "_on_aggro_area_entered");
+    get_node("Aggro")->connect("area_exited", this, "_on_aggro_area_exited");
+    get_node("MouseTriger")->connect("mouse_entered", this, "_hovered");
+    get_node("MouseTriger")->connect("mouse_exited", this, "_left");
+    get_node("THud/SellButton")->connect("pressed", this, "_delete_button");
+
 }
 
 void Tower::_physics_process(float delta)
@@ -149,18 +152,20 @@ void Tower::_physics_process(float delta)
             //levelManager->ChangeCurrency(placementCost);
             queue_free();
         }
-    }
-	if (isMouseHovered)
-	{
-		if (input->is_action_just_pressed("tower_menu"))
-		{
-			get_node_or_null("THud")->set("visible", hudVisible = !hudVisible);
-		}
-	}
+        
+    }    
     else
     {
-        if(cooldownTimePassed <= attackSpeed)
+        if (cooldownTimePassed <= attackSpeed)
             cooldownTimePassed += delta;
+
+        if (isMouseHovered)
+        {
+            if (input->is_action_just_pressed("tower_menu"))
+            {
+                get_node_or_null("THud")->set("visible", hudVisible = !hudVisible);
+            }
+        }
 
         if (enemyArray.size() > 0)
         {

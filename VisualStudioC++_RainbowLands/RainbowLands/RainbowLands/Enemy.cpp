@@ -61,7 +61,7 @@ void godot::Enemy::OnMouseLeft()
 void godot::Enemy::ScaleStats(float value)
 {
 	maxHealth *= value;
-	speed *= value/3.0f;
+	speed *= 0.5 + value/4.0f;
 }
 
 void godot::Enemy::TakeDamage(int damage)

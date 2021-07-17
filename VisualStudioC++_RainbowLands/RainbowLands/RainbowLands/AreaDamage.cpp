@@ -10,7 +10,6 @@ AreaDamage::AreaDamage()
 	tickTime = 0.2;
 	selfDestructTime = 3;
 
-	canDealDamage = false;
 	canMove = true;
 }
 
@@ -26,7 +25,6 @@ void AreaDamage::_register_methods()
 	register_method((char*)"_init", &AreaDamage::_init);
 	register_method((char*)"_ready", &AreaDamage::_ready);
 
-	register_method((char*)"OnEnemyAreaEntered", &AreaDamage::OnEnemyAreaEntered);
 	register_method((char*)"OnSelfDestructTimeout", &AreaDamage::OnSelfDestructTimeout);
 	register_method((char*)"SetTarget", &AreaDamage::SetTarget);
 
@@ -51,20 +49,20 @@ void AreaDamage::_ready()
 
 void AreaDamage::_physics_process(float delta)
 {
-	set_rotation(get_rotation() + (360 * (pi/180) * delta));
+	set_rotation(get_rotation() + (900 * (pi/180) * delta));
 
 	if (cooldownTimePassed <= tickTime)
 		cooldownTimePassed += delta;
 
 	if (canMove)
 	{
-		velocity = ((targetPosition - get_position()).normalized() * speed);
-		if (get_position() - targetPosition <= Vector2::ONE)
+		velocity = ((targetPosition - get_position()).normalized() * speed) * delta;
+		if ((get_position() - targetPosition).length() < velocity.length()) // <= Vector2::ONE
 		{
 			canMove = false;
 		}
 
-		set_position(get_position() + velocity * delta);
+		set_position(get_position() + velocity);
 	}
 
 	enemies = get_overlapping_areas();
@@ -82,14 +80,6 @@ void AreaDamage::_physics_process(float delta)
 				}
 			}
 		}
-	}
-}
-
-void AreaDamage::OnEnemyAreaEntered(Area2D* otherArea)
-{
-	if (otherArea->is_in_group("Enemy"))
-	{
-		canDealDamage = true;
 	}
 }
 

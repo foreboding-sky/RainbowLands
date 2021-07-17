@@ -34,7 +34,6 @@ namespace godot {
 		int damage;
 
 		bool canMove;
-		bool canDealDamage;
 
 		double tickTime;
 		double cooldownTimePassed;
