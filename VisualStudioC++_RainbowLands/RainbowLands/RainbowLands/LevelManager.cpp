@@ -50,13 +50,13 @@ void LevelManager::_ready()
 	loader = ResourceLoader::get_singleton();
 	spawnTimer = cast_to<Timer>(get_node("/root/main/SpawnTimer"));
 	spawnTimer->connect("timeout", this, "SpawnEnemy");
-	threatPool = 5;
+	threatPool = 1;
 	increment = 1;
 	waveCounter = 0;
 	waveStartCounter = 0;
 	currentHealth = 50;
 	maxHealth = 50;
-	currency = 200;
+	currency = 60;
 	LoadEnemies();
 }
 
@@ -116,7 +116,7 @@ void LevelManager::SpawnEnemy()
 
 void LevelManager::ChangeCurrency(int amount)
 {
-	currency += amount;
+	currency += (amount * (0.3 + 1.5/ (waveCounter/10)));
 	Notify(Message::GOLD_GAINED, currency);
 }
 
