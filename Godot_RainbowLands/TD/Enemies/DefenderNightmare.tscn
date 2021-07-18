@@ -10,8 +10,7 @@ radius = 57.9191
 position = Vector2( 17, 370 )
 loop = false
 script = ExtResource( 2 )
-MaxHealth = 180
-Speed = 120
+MaxHealth = 160
 Damage = 120
 
 [node name="Sprite" type="Sprite" parent="."]
