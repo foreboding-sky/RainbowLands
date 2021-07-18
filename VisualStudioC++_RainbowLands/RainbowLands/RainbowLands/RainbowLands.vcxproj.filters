@@ -150,9 +150,6 @@
     <ClCompile Include="ClosestNoLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClosestWithLock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Healthbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -178,9 +175,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PiercingProjectile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AreaDamage.cpp">
@@ -269,9 +263,6 @@
     <ClInclude Include="ClosestNoLock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ClosestWithLock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Healthbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -302,14 +293,14 @@
     <ClInclude Include="PiercingProjectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AreaDamage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpawnTowerDiagram.cd" />
+    <None Include="UIDiagram.cd" />
+    <None Include="EnemyHealthbar.cd" />
+    <None Include="DefeatingEnemiesDiagram.cd" />
   </ItemGroup>
 </Project>

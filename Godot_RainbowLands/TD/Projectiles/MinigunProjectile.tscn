@@ -11,7 +11,7 @@ height = 12.828
 "Projectile",
 ]]
 script = ExtResource( 2 )
-Speed = 600
+Speed = 1000
 Damage = 2
 
 [node name="Sprite" type="Sprite" parent="."]

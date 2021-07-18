@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="godot::UI">
+    <Position X="1.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAIIYAgAAAAgBAAAgEAAAAAIQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IObserver">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>IObserver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="godot::Global">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABFgYQIACAAAAAgAAhIAIEAEAQAgACBCAkiACKABEE=</HashCode>
+      <FileName>Global.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISubject">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAEAIAAAAEABAAAAQAAAAAAA=</HashCode>
+      <FileName>ISubject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="godot::LevelManager">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEEgMAAgAgAEhAAgAgIQCEA0gYAAgABKAYAUBAwAAM=</HashCode>
+      <FileName>LevelManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="global" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="godot::Enemy">
+    <Position X="7" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QgBAAIAIAAIAgAABAAgAAAAAAAQQAQAAAhAAgAAABAg=</HashCode>
+      <FileName>Enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
