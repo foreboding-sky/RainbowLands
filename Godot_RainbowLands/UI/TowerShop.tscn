@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://TD/Towers/TowerSprites/Tower4/Tower4.png" type="Texture" id=1]
+[ext_resource path="res://TD/Towers/TowerSprites/Tower2/Tower2.png" type="Texture" id=1]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower3/Tower3.png" type="Texture" id=2]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower6/Tower6.png" type="Texture" id=3]
 [ext_resource path="res://TD/Towers/TowerSprites/Tower7/Tower7.png" type="Texture" id=4]
@@ -81,7 +81,7 @@ margin_bottom = 338.0
 margin_left = 53.0
 margin_right = 146.0
 custom_fonts/font = SubResource( 1 )
-text = "Cost: 30"
+text = "Cost: 20"
 
 [node name="Damage" parent="Panel/HBox/Tower1/Info/VBox" index="1"]
 margin_left = 38.0
@@ -93,7 +93,7 @@ text = "Damage: 1"
 margin_left = 27.0
 margin_right = 171.0
 custom_fonts/font = SubResource( 1 )
-text = "ATK SPD: 0.5"
+text = "ATK SPD: 0.4"
 
 [node name="Ammo" parent="Panel/HBox/Tower1/Info/VBox" index="3"]
 margin_left = 10.0
@@ -105,7 +105,7 @@ text = "Ammo: Normal"
 margin_left = 32.0
 margin_right = 167.0
 custom_fonts/font = SubResource( 1 )
-text = "Multishot: 1"
+text = "Range: Long"
 
 [node name="Tower2" type="Button" parent="Panel/HBox"]
 margin_left = 196.0
@@ -128,7 +128,7 @@ text = "Cost: 50"
 margin_left = 36.0
 margin_right = 163.0
 custom_fonts/font = SubResource( 2 )
-text = "Damage: 2"
+text = "Damage: 3"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower2/Info/VBox" index="2"]
 margin_left = 39.0
@@ -146,7 +146,7 @@ text = "Ammo: Piercing"
 margin_left = 32.0
 margin_right = 167.0
 custom_fonts/font = SubResource( 2 )
-text = "Multishot: 1"
+text = "Range: Medium"
 
 [node name="Tower3" type="Button" parent="Panel/HBox"]
 margin_left = 392.0
@@ -163,19 +163,19 @@ anchor_bottom = 1.0
 margin_left = 53.0
 margin_right = 145.0
 custom_fonts/font = SubResource( 3 )
-text = "Cost: 70"
+text = "Cost: 100"
 
 [node name="Damage" parent="Panel/HBox/Tower3/Info/VBox" index="1"]
 margin_left = 38.0
 margin_right = 160.0
 custom_fonts/font = SubResource( 3 )
-text = "Damage: 1"
+text = "Damage: 2"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower3/Info/VBox" index="2"]
 margin_left = 20.0
 margin_right = 178.0
 custom_fonts/font = SubResource( 3 )
-text = "ATK SPD: 0.25"
+text = "ATK SPD: 0.15"
 
 [node name="Ammo" parent="Panel/HBox/Tower3/Info/VBox" index="3"]
 margin_left = 10.0
@@ -187,7 +187,7 @@ text = "Ammo: Normal"
 margin_left = 32.0
 margin_right = 167.0
 custom_fonts/font = SubResource( 3 )
-text = "Multishot: 1"
+text = "Range: Short"
 
 [node name="Tower4" type="Button" parent="Panel/HBox"]
 margin_left = 588.0
@@ -204,7 +204,7 @@ anchor_bottom = 1.0
 margin_left = 48.0
 margin_right = 150.0
 custom_fonts/font = SubResource( 4 )
-text = "Cost: 120"
+text = "Cost: 150"
 
 [node name="Damage" parent="Panel/HBox/Tower4/Info/VBox" index="1"]
 margin_left = 29.0
@@ -228,7 +228,7 @@ text = "Ammo: Normal"
 margin_left = 32.0
 margin_right = 167.0
 custom_fonts/font = SubResource( 4 )
-text = "Multishot: 1"
+text = "Range: Very long"
 
 [node name="Tower5" type="Button" parent="Panel/HBox"]
 margin_left = 784.0
@@ -245,7 +245,7 @@ anchor_bottom = 1.0
 margin_left = 46.0
 margin_right = 152.0
 custom_fonts/font = SubResource( 5 )
-text = "Cost: 200"
+text = "Cost: 250"
 
 [node name="Damage" parent="Panel/HBox/Tower5/Info/VBox" index="1"]
 margin_left = 38.0
@@ -269,7 +269,7 @@ text = "Ammo: Blade"
 margin_left = 32.0
 margin_right = 167.0
 custom_fonts/font = SubResource( 5 )
-text = "Multishot: 1"
+text = "Range: Short"
 
 [editable path="Panel/HBox/Tower1/Info"]
 [editable path="Panel/HBox/Tower2/Info"]

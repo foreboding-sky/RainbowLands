@@ -108,12 +108,12 @@ void godot::TowerBuilder::SetAttackSpeedNormal()
 
 void godot::TowerBuilder::SetAttackSpeedHigh()
 {
-	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.5);
+	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.4);
 }
 
 void godot::TowerBuilder::SetAttackSpeedVeryHigh()
 {
-	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.25);
+	Object::cast_to<Tower>(tower)->SetAttackSpeed(0.15);
 }
 
 
@@ -133,7 +133,7 @@ void godot::TowerBuilder::SetAmmoTypeProjectile02()
 
 void godot::TowerBuilder::SetAmmoTypeProjectile03()
 {
-	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/Projectile_1.tscn");
+	Ref<PackedScene> projectilePrefab = loader->load("res://TD/Projectiles/MinigunProjectile.tscn");
 	Object::cast_to<Tower>(tower)->SetProjectilePrefab(projectilePrefab);
 }
 
@@ -162,21 +162,21 @@ void godot::TowerBuilder::SetShootingRangeShort()
 void godot::TowerBuilder::SetShootingRangeNormal()
 {
 	Ref<CircleShape2D> shape = CircleShape2D::_new();
-	shape.ptr()->set_radius(300);
+	shape.ptr()->set_radius(250);
 	Object::cast_to<Tower>(tower)->SetCollisionShape(shape);
 }
 
 void godot::TowerBuilder::SetShootingRangeLong()
 {
 	Ref<CircleShape2D> shape = CircleShape2D::_new();
-	shape.ptr()->set_radius(500);
+	shape.ptr()->set_radius(350);
 	Object::cast_to<Tower>(tower)->SetCollisionShape(shape);
 }
 
 void godot::TowerBuilder::SetShootingRangeVeryLong()
 {
 	Ref<CircleShape2D> shape = CircleShape2D::_new();
-	shape.ptr()->set_radius(700);
+	shape.ptr()->set_radius(500);
 	Object::cast_to<Tower>(tower)->SetCollisionShape(shape);
 }
 
@@ -185,7 +185,7 @@ void godot::TowerBuilder::SetShootingRangeVeryLong()
 // Projectiles
 void godot::TowerBuilder::SetTowerPlacementCost30()
 {
-	Object::cast_to<Tower>(tower)->SetTowerCost(30);
+	Object::cast_to<Tower>(tower)->SetTowerCost(20);
 }
 
 void godot::TowerBuilder::SetTowerPlacementCost50()
@@ -195,17 +195,17 @@ void godot::TowerBuilder::SetTowerPlacementCost50()
 
 void godot::TowerBuilder::SetTowerPlacementCost70()
 {
-	Object::cast_to<Tower>(tower)->SetTowerCost(70);
+	Object::cast_to<Tower>(tower)->SetTowerCost(100);
 }
 
 void godot::TowerBuilder::SetTowerPlacementCost120()
 {
-	Object::cast_to<Tower>(tower)->SetTowerCost(120);
+	Object::cast_to<Tower>(tower)->SetTowerCost(150);
 }
 
 void godot::TowerBuilder::SetTowerPlacementCost200()
 {
-	Object::cast_to<Tower>(tower)->SetTowerCost(200);
+	Object::cast_to<Tower>(tower)->SetTowerCost(250);
 }
 
 

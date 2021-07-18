@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TD/Enemies/Enemy.gdns" type="Script" id=1]
+[ext_resource path="res://assets/Top Down SpaceShips/Galactica_Ranger_Extreme.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 37.4405
+
+[node name="PathFollow2D" type="PathFollow2D"]
+position = Vector2( 17, 370 )
+loop = false
+script = ExtResource( 1 )
+MaxHealth = 20
+Speed = 70
+Damage = 9
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"Enemy",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="HP" type="Label" parent="."]
+margin_left = -37.0
+margin_top = -27.0
+margin_right = 38.0
+margin_bottom = 30.0
+mouse_filter = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}

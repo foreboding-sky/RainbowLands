@@ -56,6 +56,7 @@ void LevelManager::_ready()
 	waveStartCounter = 0;
 	currentHealth = 150;
 	currencyScaler = 1;
+	currencyScalerIncrement = 0.05f;
 	maxHealth = 150;
 	currency = 60;
 	LoadEnemies();
@@ -75,6 +76,8 @@ void LevelManager::StartWave()
 	{
 		waveCounter++;
 		waveStartCounter++;
+		currencyScaler +=  currencyScalerIncrement;
+		currencyScalerIncrement += 0.02f;
 		waveIsActive = true;
 		waveThreat = threatPool;
 		spawnTimer->start();
@@ -99,7 +102,7 @@ void LevelManager::SpawnEnemy()
 	{
 		int randomNumber = rand() % enemyRefs.size();
 		int i = enemyThreat[enemyRefs[randomNumber]];
-		spawnTimer->set_wait_time(0.6f/((float)waveCounter / 4.0f) + (float)i / (3.0f + (float)waveCounter/3.0f));
+		spawnTimer->set_wait_time(0.2f + (float)i / (3.0f + (float)waveCounter));
 		if (i <= waveThreat)
 		{
 			waveThreat -= i;
@@ -123,7 +126,7 @@ void LevelManager::ChangeCurrency(int amount)
 
 void LevelManager::MobDefeated(int amount)
 {
-	currency += (int)ceil(amount * (0.1 + 1.9 /( currencyScaler += 0.1f)));
+	currency += (int)ceil(amount * (0.05 + 1.9 /(currencyScaler)));
 	score += amount;
 	Notify(Message::SCORE_GAINED, score);
 	Notify(Message::GOLD_GAINED, currency);
@@ -164,7 +167,7 @@ void LevelManager::LoadEnemies()
 	enemyThreat[enemyRefs[7]] = (int)20;
 	enemyRefs.push_back(loader->load("res://TD/Enemies/Goliath.tscn"));
 	enemyThreat[enemyRefs[8]] = (int)3;
-	enemyRefs.push_back(loader->load("res://TD/Enemies/MagmaGoliath.tscn"));
+	enemyRefs.push_back(loader->load("res://TD/Enemies/GoliathMagma.tscn"));
 	enemyThreat[enemyRefs[9]] = (int)9;
 	enemyRefs.push_back(loader->load("res://TD/Enemies/Moth.tscn"));
 	enemyThreat[enemyRefs[10]] = (int)35;
@@ -180,4 +183,16 @@ void LevelManager::LoadEnemies()
 	enemyThreat[enemyRefs[15]] = (int)10;
 	enemyRefs.push_back(loader->load("res://TD/Enemies/Wasp.tscn"));
 	enemyThreat[enemyRefs[16]] = (int)80;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/AncientFrozen.tscn"));
+	enemyThreat[enemyRefs[17]] = (int)180;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/DefenderFrozen.tscn"));
+	enemyThreat[enemyRefs[18]] = (int)150;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/DefenderNightmare.tscn"));
+	enemyThreat[enemyRefs[19]] = (int)120;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/GoliathFrozen.tscn"));
+	enemyThreat[enemyRefs[20]] = (int)50;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/OverlordFrozen.tscn"));
+	enemyThreat[enemyRefs[21]] = (int)200;
+	enemyRefs.push_back(loader->load("res://TD/Enemies/WaspNightmare.tscn"));
+	enemyThreat[enemyRefs[22]] = (int)250;
 }

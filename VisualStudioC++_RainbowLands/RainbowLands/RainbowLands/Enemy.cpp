@@ -37,7 +37,7 @@ void Enemy::_ready()
 	healthbarRef = loader->load("res://UI/Healthbar.tscn");
 	get_node_or_null("HP")->connect("mouse_entered", this, "_hovered");
 	get_node_or_null("HP")->connect("mouse_exited", this, "_left");
-	ScaleStats(1.0f + levelManager->waveCounter / 20.0f);
+	ScaleStats(1.0f + levelManager->waveCounter / 15.0f);
 	health = maxHealth;
 }
 
@@ -61,7 +61,7 @@ void godot::Enemy::OnMouseLeft()
 void godot::Enemy::ScaleStats(float value)
 {
 	maxHealth *= value;
-	speed *= 0.5 + value/4.0f;
+	speed *= 0.5 + value/3.0f;
 }
 
 void godot::Enemy::TakeDamage(int damage)

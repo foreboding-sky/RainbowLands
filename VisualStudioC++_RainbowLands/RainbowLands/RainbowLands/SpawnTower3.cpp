@@ -51,7 +51,7 @@ namespace godot
 		builder.SetPlatformSprite01();
 		builder.SetTowerPlacementCost70();
 		builder.SetTargetingClosestNoLock();
-		builder.SetShootingRangeLong();
+		builder.SetShootingRangeShort();
 		Area2D* tower = builder.Build();
 
 		if (levelManager->currency >= cast_to<Tower>(tower)->GetTowerPlacementCost())

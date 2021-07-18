@@ -18,7 +18,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 16, 352, 0, 0, 0, 0, 224, 352, 0, 0, 0, 0, 224, 96, 0, 0, 0, 0, 352, 96, 0, 0, 0, 0, 480, 96, 0, 0, 0, 0, 480, 416, 0, 0, 0, 0, 224, 416, 0, 0, 0, 0, 224, 544, 0, 0, 0, 0, 608, 544, 0, 0, 0, 0, 608, 32, 0, 0, 0, 0, 992, 32, 0, 0, 0, 0, 992, 288, 0, 0, 0, 0, 864, 288, 0, 0, 0, 0, 864, 224, 0, 0, 0, 0, 864, 160, 0, 0, 0, 0, 736, 160, 0, 0, 0, 0, 736, 224, 0, 0, 0, 0, 736, 480, 0, 0, 0, 0, 1024, 480 )
+"points": PoolVector2Array( 0, 0, 0, 0, -16, 352, 0, 0, 0, 0, 224, 352, 0, 0, 0, 0, 224, 96, 0, 0, 0, 0, 352, 96, 0, 0, 0, 0, 480, 96, 0, 0, 0, 0, 480, 416, 0, 0, 0, 0, 224, 416, 0, 0, 0, 0, 224, 544, 0, 0, 0, 0, 608, 544, 0, 0, 0, 0, 608, 32, 0, 0, 0, 0, 992, 32, 0, 0, 0, 0, 992, 288, 0, 0, 0, 0, 864, 288, 0, 0, 0, 0, 864, 224, 0, 0, 0, 0, 864, 160, 0, 0, 0, 0, 736, 160, 0, 0, 0, 0, 736, 224, 0, 0, 0, 0, 736, 480, 0, 0, 0, 0, 1056, 480 )
 }
 
 [node name="main" type="Node"]
@@ -67,7 +67,7 @@ one_shot = true
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 16, 352 )
+position = Vector2( -16, 352 )
 script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
@@ -76,7 +76,7 @@ scale = Vector2( 0.0524199, 0.0511551 )
 texture = ExtResource( 1 )
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 166.047, 352 )
+position = Vector2( 133.865, 352 )
 offset = 150.0
 script = ExtResource( 6 )
 
@@ -86,8 +86,8 @@ scale = Vector2( 0.0524199, 0.0511551 )
 texture = ExtResource( 1 )
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 224, 258.092 )
-rotation = -1.57079
+position = Vector2( 224, 291.996 )
+rotation = -1.5708
 offset = 300.0
 script = ExtResource( 6 )
 
@@ -97,7 +97,7 @@ scale = Vector2( 0.0524199, 0.0511551 )
 texture = ExtResource( 1 )
 
 [node name="PathFollow2D4" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 224, 107.987 )
+position = Vector2( 224, 141.901 )
 rotation = -1.5708
 offset = 450.0
 script = ExtResource( 6 )
@@ -108,7 +108,7 @@ scale = Vector2( 0.0524199, 0.0511551 )
 texture = ExtResource( 1 )
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 363.585, 96 )
+position = Vector2( 328.894, 96 )
 offset = 600.0
 script = ExtResource( 6 )
 
@@ -118,8 +118,8 @@ scale = Vector2( 0.0524199, 0.0511551 )
 texture = ExtResource( 1 )
 
 [node name="PathFollow2D6" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 480, 130.794 )
-rotation = 1.57079
+position = Vector2( 478.915, 96 )
+rotation = 1.31488
 offset = 750.0
 script = ExtResource( 6 )
 
@@ -228,6 +228,7 @@ margin_top = 401.0
 margin_right = 166.0
 margin_bottom = 424.0
 custom_fonts/font = ExtResource( 2 )
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

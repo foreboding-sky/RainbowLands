@@ -89,12 +89,14 @@ namespace godot
 		std::string converter = "Wave: " + std::to_string(waveCouner);
 		String text = String(converter.c_str());
 		this->get_node("/root/main/UI/level")->set("text", text);
-		converter = "Cannot start";
+		get_node("/root/main/UI/StartWave")->set("visible", false);
+		converter = "In progress";
 		text = String(converter.c_str());
 		this->get_node("/root/main/UI/CanStart")->set("text", text);
 	}
 	void UI::OnWaveEnded()
 	{
+		get_node("/root/main/UI/StartWave")->set("visible", true);
 		std::string converter = "Can Start";
 		String text = String(converter.c_str());
 		this->get_node("/root/main/UI/CanStart")->set("text", text);
