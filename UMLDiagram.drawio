@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T20:38:01.865Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="ACuuNkTmib-LsauGdQS6" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-19T20:56:15.099Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="Ca0euC3VVLntd-hbBJbs" version="14.9.0" type="github">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -72,6 +72,27 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="330" y="390" as="sourcePoint" />
             <mxPoint x="490" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-6" value="LevelManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="780" y="210" width="270" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-7" value="+ waveCounter: int &#xa;+ currency: int&#xa;- instance: static LevelManager*&#xa;- ui: UI*&#xa;- startButton: Button*&#xa;- random: RandomNumberGenerator*&#xa;- loader: ResourceLoader*&#xa;- global: Global*&#xa;- enemyRefs: vector&lt;Ref&lt;PackedScene&gt;&gt;&#xa;- enemy: PathFollow2D*&#xa;- enemyThreat: Dictionary&#xa;- threatPool: int&#xa;		- waveThreat: int&#xa;		- increment: int&#xa;- waveIsActive: bool&#xa;- spawnTimer: Timer*&#xa;- currencyScaler: float&#xa;- currencyScalerIncrement: float &#xa;- currentHealth: int &#xa;- maxHealth: int &#xa;- score: int &#xa;- waveStartCounter: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+          <mxGeometry y="26" width="270" height="324" as="geometry" />
+        </mxCell>
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+          <mxGeometry y="350" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-9" value="+ LevelManager&#xa;+ ~LevelManager&#xa;+ get_singleton(): static LevelManager*&#xa;+ _init(): void &#xa;+ _ready(): void &#xa;+ _register_methods(): static void&#xa;+ SpawnEnemy(): void &#xa;+ EndWave(): void &#xa;+ ButtonStartWave(): void &#xa;+ StartWave(): void &#xa;+ LoadEnemies(): void &#xa;+ MobDefeated(int amount): void &#xa;+ ChangeCurrency(int amount): void &#xa;+ MobGotThrough(int damage): void &#xa;+ LevelOver(): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+          <mxGeometry y="358" width="270" height="262" as="geometry" />
+        </mxCell>
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-10" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="4cQQ3AmGW_2L6S3uU12_-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="390" as="sourcePoint" />
+            <mxPoint x="620" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="915" y="105" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
