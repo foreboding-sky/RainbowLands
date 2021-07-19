@@ -4,7 +4,7 @@
 [ext_resource path="res://TD/Enemies/Enemy.gdns" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 28.0029
+radius = 25.0157
 
 [node name="PathFollow2D" type="PathFollow2D"]
 position = Vector2( 17, 370 )

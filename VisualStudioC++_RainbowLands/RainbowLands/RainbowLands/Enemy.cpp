@@ -34,7 +34,7 @@ void Enemy::_init()
 void Enemy::_ready()
 {
 	loader = ResourceLoader::get_singleton();
-	healthbarRef = loader->load("res://UI/Healthbar.tscn");
+	healthbarRef = loader->load("res://UI/EnemyHealthbar.tscn");
 	get_node_or_null("HP")->connect("mouse_entered", this, "_hovered");
 	get_node_or_null("HP")->connect("mouse_exited", this, "_left");
 	ScaleStats(1.0f + levelManager->waveCounter / 15.0f);
@@ -43,7 +43,7 @@ void Enemy::_ready()
 
 void godot::Enemy::OnMouseHovered()
 {
-	healthbar = cast_to<Healthbar>(cast_to<Label>(healthbarRef->instance()));
+	healthbar = cast_to<EnemyHealthbar>(cast_to<Label>(healthbarRef->instance()));
 	healthbar->SetMaxHealth(maxHealth);
 	AttachObserver(healthbar);
 

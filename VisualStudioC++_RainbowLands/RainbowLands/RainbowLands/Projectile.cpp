@@ -7,6 +7,7 @@ Projectile::Projectile()
 	hasTarget = false;
 	speed = 400;
 	damage = 1;
+	pathVFX = "res://TD/Projectiles/particles/PlasmaExplosion.tscn";
 }
 
 Projectile::~Projectile()
@@ -27,6 +28,7 @@ void Projectile::_register_methods()
 
 	register_property<Projectile, int>("Speed", &Projectile::speed, 400);
 	register_property<Projectile, int>("Damage", &Projectile::damage, 1);
+	register_property<Projectile, String>("pathVFX", &Projectile::pathVFX, "res://TD/Projectiles/particles/PlasmaExplosion.tscn");
 }
 
 void Projectile::_init()
@@ -35,6 +37,8 @@ void Projectile::_init()
 
 void Projectile::_ready()
 {
+	loader = ResourceLoader::get_singleton();
+	refVFX = loader->load(pathVFX);
 	velocity = { 0, 0 };
 	selfDestruct = cast_to<Timer>(get_node("SelfDestruct"));
 	selfDestruct->set_wait_time(5);
@@ -56,7 +60,15 @@ void godot::Projectile::OnEnemyAreaEntered(Area2D* otherArea)
 {
 	if (otherArea->is_in_group("Enemy"))
 	{
+
 		cast_to<Enemy>(otherArea->get_parent())->TakeDamage(damage);
+
+		VFX = cast_to<Particles2D>(refVFX->instance());
+		VFX->set_position(this->get_position());
+		VFX->set_rotation(this->get_rotation());
+		get_node("/root/main/particles")->add_child(VFX);
+		VFX->set_emitting(true);
+
 		queue_free();
 	}
 }

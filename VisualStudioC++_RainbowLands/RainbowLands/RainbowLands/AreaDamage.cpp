@@ -11,6 +11,8 @@ AreaDamage::AreaDamage()
 	selfDestructTime = 3;
 
 	canMove = true;
+
+	pathVFX = "res://TD/Projectiles/particles/BladeSparks.tscn";
 }
 
 AreaDamage::~AreaDamage()
@@ -32,6 +34,7 @@ void AreaDamage::_register_methods()
 	register_property<AreaDamage, int>("Damage", &AreaDamage::damage, 1);
 	register_property<AreaDamage, double>("TickTime", &AreaDamage::tickTime, 0.2);
 	register_property<AreaDamage, double>("SelfDestructTime", &AreaDamage::selfDestructTime, 3);
+	register_property<AreaDamage, String>("pathVFX", &AreaDamage::pathVFX, "res://TD/Projectiles/particles/BladeSparks.tscn");
 }
 
 void AreaDamage::_init()
@@ -40,6 +43,8 @@ void AreaDamage::_init()
 
 void AreaDamage::_ready()
 {
+	loader = ResourceLoader::get_singleton();
+	refVFX = loader->load(pathVFX);
 	velocity = { 0, 0 };
 	selfDestruct = cast_to<Timer>(get_node("SelfDestruct"));
 	selfDestruct->set_wait_time(selfDestructTime);
@@ -77,6 +82,12 @@ void AreaDamage::_physics_process(float delta)
 				if (cast_to<Area2D>(enemies[i])->is_in_group("Enemy"))
 				{
 					cast_to<Enemy>(cast_to<Area2D>(enemies[i])->get_parent())->TakeDamage(damage);
+
+					VFX = cast_to<Particles2D>(refVFX->instance());
+					VFX->set_position(cast_to<Area2D>(enemies[i])->get_global_transform().get_origin());
+					VFX->set_rotation(this->get_rotation());
+					get_node("/root/main/particles")->add_child(VFX);
+					VFX->set_emitting(true);
 				}
 			}
 		}

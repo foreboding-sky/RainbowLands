@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/PNG (Transparent)/flare_01.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.268657, 0.604478, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 0, 1, 0.648438, 1, 0.361404, 1, 0.805428, 1, 1, 0.960784, 0.960784, 0.133333 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.8
+color_ramp = SubResource( 3 )
+
+[node name="Particles2D" type="Particles2D"]
+emitting = false
+amount = 1
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 1 )
+texture = ExtResource( 1 )

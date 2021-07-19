@@ -13,6 +13,7 @@ height = 12.828
 script = ExtResource( 2 )
 Speed = 600
 Damage = 2
+pathVFX = "res://TD/Projectiles/particles/Spark.tscn"
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708

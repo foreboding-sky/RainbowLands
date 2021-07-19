@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Top Down SpaceShips/Galactica_Ranger_Extreme.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 37.4405
+radius = 31.1841
 
 [node name="PathFollow2D" type="PathFollow2D"]
 position = Vector2( 17, 370 )
@@ -24,6 +24,7 @@ texture = ExtResource( 2 )
 ]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -4.45451, 0 )
 shape = SubResource( 1 )
 
 [node name="HP" type="Label" parent="."]

@@ -153,9 +153,6 @@
     <ClCompile Include="ClosestWithLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Healthbar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TowerBuilder.cpp">
       <Filter>Architecture-related\Sourse Files</Filter>
     </ClCompile>
@@ -184,6 +181,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AreaDamage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyHealthbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -272,9 +272,6 @@
     <ClInclude Include="ClosestWithLock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Healthbar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IObserver.h">
       <Filter>Architecture-related\Header Files</Filter>
     </ClInclude>
@@ -309,6 +306,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AreaDamage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyHealthbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

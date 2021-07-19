@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Arrow.png" type="Texture" id=1]
 [ext_resource path="res://MainMenu/fonts/MainMenuFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://UI/prefabs/LifeBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/prefabs/EmeraldCounter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tilesets/Space/TowerSpots.tres" type="TileSet" id=5]
 [ext_resource path="res://Arrow.gdns" type="Script" id=6]
@@ -15,11 +15,18 @@
 [ext_resource path="res://TD/LevelManager.gdns" type="Script" id=13]
 [ext_resource path="res://TD/UI.gdns" type="Script" id=14]
 [ext_resource path="res://MainMenu/fonts/Counter.tres" type="DynamicFont" id=15]
+[ext_resource path="res://UI/assets/GUI/label_HP.png" type="Texture" id=16]
+[ext_resource path="res://UI/assets/GUI/label_HP_bg.png" type="Texture" id=17]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -16, 352, 0, 0, 0, 0, 224, 352, 0, 0, 0, 0, 224, 96, 0, 0, 0, 0, 352, 96, 0, 0, 0, 0, 480, 96, 0, 0, 0, 0, 480, 416, 0, 0, 0, 0, 224, 416, 0, 0, 0, 0, 224, 544, 0, 0, 0, 0, 608, 544, 0, 0, 0, 0, 608, 32, 0, 0, 0, 0, 992, 32, 0, 0, 0, 0, 992, 288, 0, 0, 0, 0, 864, 288, 0, 0, 0, 0, 864, 224, 0, 0, 0, 0, 864, 160, 0, 0, 0, 0, 736, 160, 0, 0, 0, 0, 736, 224, 0, 0, 0, 0, 736, 480, 0, 0, 0, 0, 1056, 480 )
 }
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+extra_spacing_bottom = 2
+font_data = ExtResource( 3 )
 
 [node name="main" type="Node"]
 script = ExtResource( 13 )
@@ -58,6 +65,8 @@ position = Vector2( 928, 576 )
 
 [node name="mob_spawn_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="particles" type="YSort" parent="."]
 
 [node name="entities" type="YSort" parent="."]
 
@@ -137,17 +146,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LifeBar" parent="UI" instance=ExtResource( 3 )]
-margin_left = 48.0
+[node name="LifeBar" type="HBoxContainer" parent="UI"]
+margin_left = 34.0
 margin_top = 525.0
-margin_right = 148.0
+margin_right = 152.0
 margin_bottom = 578.0
 hint_tooltip = "Your health"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="MarginContainer" parent="UI/LifeBar"]
+margin_right = 100.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 100, 40 )
+custom_constants/margin_left = 0
+
+[node name="Background" type="NinePatchRect" parent="UI/LifeBar/Count"]
+margin_right = 100.0
+margin_bottom = 53.0
+texture = ExtResource( 17 )
+
+[node name="Title" type="TextureRect" parent="UI/LifeBar/Count/Background"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -20.5
+margin_right = 49.0
+margin_bottom = 19.5
+texture = ExtResource( 16 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="UI/LifeBar/Count/Background"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -20.5
+margin_right = -9.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 2 )
+text = "10"
+align = 2
+valign = 2
 
 [node name="level" type="Label" parent="UI"]
-margin_left = 29.0
+margin_left = 24.0
 margin_top = 472.0
-margin_right = 166.0
+margin_right = 148.0
 margin_bottom = 495.0
 custom_fonts/font = ExtResource( 2 )
 text = "Wave: 0"
@@ -158,9 +208,9 @@ __meta__ = {
 }
 
 [node name="points" type="Label" parent="UI"]
-margin_left = 58.0
+margin_left = 24.0
 margin_top = 159.0
-margin_right = 139.0
+margin_right = 148.0
 margin_bottom = 191.0
 custom_fonts/font = ExtResource( 2 )
 text = "Score: "
@@ -171,12 +221,12 @@ __meta__ = {
 }
 
 [node name="lives" type="Label" parent="UI"]
-margin_left = 67.5951
-margin_top = 537.5
-margin_right = 166.595
-margin_bottom = 570.5
+margin_left = 64.0
+margin_top = 538.0
+margin_right = 144.0
+margin_bottom = 571.0
 custom_fonts/font = ExtResource( 15 )
-text = "50"
+text = "150"
 align = 1
 valign = 1
 __meta__ = {
@@ -184,18 +234,21 @@ __meta__ = {
 }
 
 [node name="EmeraldCounter" parent="UI" instance=ExtResource( 4 )]
-margin_left = 8.0
+margin_left = -16.0
 margin_top = -20.0
 margin_right = 108.0
 margin_bottom = 60.0
 
+[node name="Background" parent="UI/EmeraldCounter" index="0"]
+margin_right = 124.0
+
 [node name="gold" type="Label" parent="UI"]
 margin_left = 24.0
-margin_top = 27.7798
-margin_right = 120.0
-margin_bottom = 59.7798
+margin_top = 28.0
+margin_right = 112.0
+margin_bottom = 60.0
 custom_fonts/font = ExtResource( 15 )
-text = "60"
+text = "80"
 align = 1
 valign = 1
 __meta__ = {
@@ -203,9 +256,9 @@ __meta__ = {
 }
 
 [node name="tower" type="Button" parent="UI"]
-margin_left = 58.0
+margin_left = 40.0
 margin_top = 91.0
-margin_right = 137.0
+margin_right = 128.0
 margin_bottom = 120.0
 custom_fonts/font = ExtResource( 2 )
 text = "Tower"
@@ -225,7 +278,7 @@ rect_scale = Vector2( 0.88, 0.88 )
 [node name="CanStart" type="Label" parent="UI"]
 margin_left = 29.0
 margin_top = 401.0
-margin_right = 166.0
+margin_right = 139.0
 margin_bottom = 424.0
 custom_fonts/font = ExtResource( 2 )
 align = 1
@@ -234,10 +287,10 @@ __meta__ = {
 }
 
 [node name="StartWave" type="Button" parent="UI"]
-margin_left = 29.137
-margin_top = 428.633
-margin_right = 166.137
-margin_bottom = 461.633
+margin_left = 29.0
+margin_top = 424.0
+margin_right = 139.0
+margin_bottom = 457.0
 custom_fonts/font = ExtResource( 2 )
 text = "Start"
 __meta__ = {
@@ -251,3 +304,5 @@ visible = false
 wait_time = 0.6
 
 [connection signal="timeout" from="mob_spawn_timer" to="." method="_on_mob_spawn_timer_timeout"]
+
+[editable path="UI/EmeraldCounter"]

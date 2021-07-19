@@ -8,7 +8,7 @@
 #include "ISubject.h"
 #include <ResourceLoader.hpp>
 #include <PackedScene.hpp>
-#include "Healthbar.h"
+#include "EnemyHealthbar.h"
 #include <SceneTree.hpp>
 #include "ISubject.h"
 #include <Area2D.hpp>
@@ -42,7 +42,7 @@ namespace godot {
 		LevelManager* levelManager;
 		ResourceLoader* loader;
 		Ref<PackedScene> healthbarRef;
-		Healthbar* healthbar;
+		EnemyHealthbar* healthbar;
 
 	};
 }

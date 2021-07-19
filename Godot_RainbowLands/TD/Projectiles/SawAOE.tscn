@@ -4,14 +4,15 @@
 [ext_resource path="res://TD/Projectiles/SawAOE.gdns" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 53.9551
+radius = 64.0
 
 [node name="Area2D" type="Area2D" groups=[
 "Projectile",
 ]]
 script = ExtResource( 2 )
 Speed = 800
-SelfDestructTime = 6.0
+Damage = 2
+SelfDestructTime = 4.0
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
