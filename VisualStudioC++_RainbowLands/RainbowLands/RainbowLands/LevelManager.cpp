@@ -200,5 +200,5 @@ void LevelManager::LoadEnemies()
 	enemyRefs.push_back(loader->load("res://TD/Enemies/OverlordFrozen.tscn"));
 	enemyThreat[enemyRefs[21]] = (int)200;
 	enemyRefs.push_back(loader->load("res://TD/Enemies/WaspNightmare.tscn"));
-	enemyThreat[enemyRefs[22]] = (int)250;
+	enemyThreat[enemyRefs[22]] = (int)400;
 }

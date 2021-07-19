@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="godot::Tower" HideInheritanceLine="true">
+    <Position X="1.5" Y="3.5" Width="3.25" />
+    <InheritanceLine Type="godot::Area2D" IsHidden="true" />
+    <TypeIdentifier>
+      <HashCode>YgBDAIYAlZACAAAgCAwIUQAAwESQQhACgQ6MQQEAiQg=</HashCode>
+      <FileName>Tower.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_projectile" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="godot::Projectile">
+    <Position X="6.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAIAAAAAAwACAIggAAAAAAAQEAQAEAAQAAAAIAAI=</HashCode>
+      <FileName>Projectile.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="godot::PiercingProjectile">
+    <Position X="8.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAIBAAAAAgACAIAgAAAAAAgQAAQAEAAQAAAAIAAI=</HashCode>
+      <FileName>PiercingProjectile.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="godot::AreaDamage">
+    <Position X="10.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAEIAAAAAgwAKAIAoAEIAAAAQAAQAFAAQAAAAIAAM=</HashCode>
+      <FileName>AreaDamage.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="godot::Enemy">
+    <Position X="15.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QgBAAIAIAAIAgAABAAgAAAAAAAQQAQAAAhAAgAAABAg=</HashCode>
+      <FileName>Enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="godot::Area2D" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>eYAAgmRACIOAAAAAglgRzAGBIRIEBAAAIBQgQAAiFCA=</HashCode>
+      <FileName>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen\Area2D.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="godot::PathFollow2D" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIEBIQAAAAIQBQBAQBIAAgRAEBAAAIAAAAAAQACg=</HashCode>
+      <FileName>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen\PathFollow2D.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
