@@ -6,6 +6,10 @@
 #include <WeakRef.hpp>
 #include <Reference.hpp>
 #include "Enemy.h"
+#include <Particles2D.hpp>
+#include <ResourceLoader.hpp>
+#include <PackedScene.hpp>
+
 
 namespace godot {
 	class PiercingProjectile : public Area2D
@@ -29,8 +33,14 @@ namespace godot {
 	private:
 		int speed;
 		int damage;
+		ResourceLoader* loader;
 		Vector2 targetDirection;
 		PathFollow2D* target;
+
+		//VFX
+		Ref<PackedScene> refVFX;
+		String pathVFX;
+		Particles2D* VFX;
 
 		Timer* selfDestruct;
 		//std::weak_ptr<PathFollow2D> target_;

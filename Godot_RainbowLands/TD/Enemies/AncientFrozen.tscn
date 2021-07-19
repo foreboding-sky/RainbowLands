@@ -4,14 +4,14 @@
 [ext_resource path="res://TD/Enemies/Enemy.gdns" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 56.8732
+radius = 47.256
 
 [node name="PathFollow2D" type="PathFollow2D"]
 position = Vector2( 17, 370 )
 loop = false
 script = ExtResource( 2 )
-MaxHealth = 600
-Speed = 50
+MaxHealth = 450
+Speed = 45
 Damage = 180
 
 [node name="Sprite" type="Sprite" parent="."]

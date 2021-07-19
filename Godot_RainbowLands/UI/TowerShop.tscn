@@ -77,33 +77,37 @@ script = ExtResource( 6 )
 margin_top = 186.0
 margin_bottom = 338.0
 
+[node name="VBox" parent="Panel/HBox/Tower1/Info" index="0"]
+margin_right = 191.0
+margin_bottom = 151.0
+
 [node name="Cost" parent="Panel/HBox/Tower1/Info/VBox" index="0"]
-margin_left = 53.0
-margin_right = 146.0
+margin_left = 49.0
+margin_right = 142.0
 custom_fonts/font = SubResource( 1 )
 text = "Cost: 20"
 
 [node name="Damage" parent="Panel/HBox/Tower1/Info/VBox" index="1"]
-margin_left = 38.0
-margin_right = 160.0
+margin_left = 34.0
+margin_right = 156.0
 custom_fonts/font = SubResource( 1 )
 text = "Damage: 1"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower1/Info/VBox" index="2"]
-margin_left = 27.0
-margin_right = 171.0
+margin_left = 7.0
+margin_right = 183.0
 custom_fonts/font = SubResource( 1 )
-text = "ATK SPD: 0.4"
+text = "Attack SPD: 2.5"
 
 [node name="Ammo" parent="Panel/HBox/Tower1/Info/VBox" index="3"]
-margin_left = 10.0
-margin_right = 188.0
+margin_left = 6.0
+margin_right = 184.0
 custom_fonts/font = SubResource( 1 )
 text = "Ammo: Normal"
 
 [node name="Multishot" parent="Panel/HBox/Tower1/Info/VBox" index="4"]
-margin_left = 32.0
-margin_right = 167.0
+margin_left = 20.0
+margin_right = 171.0
 custom_fonts/font = SubResource( 1 )
 text = "Range: Long"
 
@@ -118,33 +122,37 @@ script = ExtResource( 8 )
 anchor_top = 1.0
 anchor_bottom = 1.0
 
+[node name="VBox" parent="Panel/HBox/Tower2/Info" index="0"]
+margin_right = 191.0
+margin_bottom = 151.0
+
 [node name="Cost" parent="Panel/HBox/Tower2/Info/VBox" index="0"]
-margin_left = 53.0
-margin_right = 146.0
+margin_left = 49.0
+margin_right = 142.0
 custom_fonts/font = SubResource( 2 )
 text = "Cost: 50"
 
 [node name="Damage" parent="Panel/HBox/Tower2/Info/VBox" index="1"]
-margin_left = 36.0
-margin_right = 163.0
+margin_left = 32.0
+margin_right = 159.0
 custom_fonts/font = SubResource( 2 )
 text = "Damage: 3"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower2/Info/VBox" index="2"]
-margin_left = 39.0
-margin_right = 160.0
+margin_left = 19.0
+margin_right = 171.0
 custom_fonts/font = SubResource( 2 )
-text = "ATK SPD: 1"
+text = "Attack SPD: 1"
 
 [node name="Ammo" parent="Panel/HBox/Tower2/Info/VBox" index="3"]
-margin_left = 6.0
-margin_right = 192.0
+margin_left = 2.0
+margin_right = 188.0
 custom_fonts/font = SubResource( 2 )
 text = "Ammo: Piercing"
 
 [node name="Multishot" parent="Panel/HBox/Tower2/Info/VBox" index="4"]
-margin_left = 32.0
-margin_right = 167.0
+margin_left = 2.0
+margin_right = 188.0
 custom_fonts/font = SubResource( 2 )
 text = "Range: Medium"
 
@@ -159,33 +167,37 @@ script = ExtResource( 10 )
 anchor_top = 1.0
 anchor_bottom = 1.0
 
+[node name="VBox" parent="Panel/HBox/Tower3/Info" index="0"]
+margin_right = 191.0
+margin_bottom = 151.0
+
 [node name="Cost" parent="Panel/HBox/Tower3/Info/VBox" index="0"]
-margin_left = 53.0
-margin_right = 145.0
+margin_left = 45.0
+margin_right = 146.0
 custom_fonts/font = SubResource( 3 )
 text = "Cost: 100"
 
 [node name="Damage" parent="Panel/HBox/Tower3/Info/VBox" index="1"]
-margin_left = 38.0
-margin_right = 160.0
+margin_left = 32.0
+margin_right = 159.0
 custom_fonts/font = SubResource( 3 )
 text = "Damage: 2"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower3/Info/VBox" index="2"]
-margin_left = 20.0
-margin_right = 178.0
+margin_left = 8.0
+margin_right = 182.0
 custom_fonts/font = SubResource( 3 )
-text = "ATK SPD: 0.15"
+text = "Attack SPD: 6.7"
 
 [node name="Ammo" parent="Panel/HBox/Tower3/Info/VBox" index="3"]
-margin_left = 10.0
-margin_right = 188.0
+margin_left = 6.0
+margin_right = 184.0
 custom_fonts/font = SubResource( 3 )
 text = "Ammo: Normal"
 
 [node name="Multishot" parent="Panel/HBox/Tower3/Info/VBox" index="4"]
-margin_left = 32.0
-margin_right = 167.0
+margin_left = 17.0
+margin_right = 173.0
 custom_fonts/font = SubResource( 3 )
 text = "Range: Short"
 
@@ -200,35 +212,39 @@ script = ExtResource( 11 )
 anchor_top = 1.0
 anchor_bottom = 1.0
 
+[node name="VBox" parent="Panel/HBox/Tower4/Info" index="0"]
+margin_right = 191.0
+margin_bottom = 151.0
+
 [node name="Cost" parent="Panel/HBox/Tower4/Info/VBox" index="0"]
-margin_left = 48.0
-margin_right = 150.0
+margin_left = 44.0
+margin_right = 146.0
 custom_fonts/font = SubResource( 4 )
 text = "Cost: 150"
 
 [node name="Damage" parent="Panel/HBox/Tower4/Info/VBox" index="1"]
-margin_left = 29.0
-margin_right = 169.0
+margin_left = 25.0
+margin_right = 165.0
 custom_fonts/font = SubResource( 4 )
 text = "Damage: 30"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower4/Info/VBox" index="2"]
-margin_left = 36.0
-margin_right = 162.0
+margin_left = 8.0
+margin_right = 183.0
 custom_fonts/font = SubResource( 4 )
-text = "ATK SPD: 3"
+text = "Attack SPD: 0.3"
 
 [node name="Ammo" parent="Panel/HBox/Tower4/Info/VBox" index="3"]
-margin_left = 10.0
-margin_right = 188.0
+margin_left = 6.0
+margin_right = 184.0
 custom_fonts/font = SubResource( 4 )
 text = "Ammo: Normal"
 
 [node name="Multishot" parent="Panel/HBox/Tower4/Info/VBox" index="4"]
-margin_left = 32.0
-margin_right = 167.0
+margin_left = 11.0
+margin_right = 179.0
 custom_fonts/font = SubResource( 4 )
-text = "Range: Very long"
+text = "Range: Sniper"
 
 [node name="Tower5" type="Button" parent="Panel/HBox"]
 margin_left = 784.0
@@ -241,33 +257,37 @@ script = ExtResource( 12 )
 anchor_top = 1.0
 anchor_bottom = 1.0
 
+[node name="VBox" parent="Panel/HBox/Tower5/Info" index="0"]
+margin_right = 191.0
+margin_bottom = 151.0
+
 [node name="Cost" parent="Panel/HBox/Tower5/Info/VBox" index="0"]
-margin_left = 46.0
-margin_right = 152.0
+margin_left = 42.0
+margin_right = 149.0
 custom_fonts/font = SubResource( 5 )
 text = "Cost: 250"
 
 [node name="Damage" parent="Panel/HBox/Tower5/Info/VBox" index="1"]
-margin_left = 38.0
-margin_right = 160.0
+margin_left = 12.0
+margin_right = 179.0
 custom_fonts/font = SubResource( 5 )
-text = "Damage: 1"
+text = "Damage: 2x20"
 
 [node name="ATKSPD" parent="Panel/HBox/Tower5/Info/VBox" index="2"]
-margin_left = 36.0
-margin_right = 162.0
+margin_left = 8.0
+margin_right = 183.0
 custom_fonts/font = SubResource( 5 )
-text = "ATK SPD: 2"
+text = "Attack SPD: 0.5"
 
 [node name="Ammo" parent="Panel/HBox/Tower5/Info/VBox" index="3"]
-margin_left = 21.0
-margin_right = 178.0
+margin_left = 17.0
+margin_right = 174.0
 custom_fonts/font = SubResource( 5 )
 text = "Ammo: Blade"
 
 [node name="Multishot" parent="Panel/HBox/Tower5/Info/VBox" index="4"]
-margin_left = 32.0
-margin_right = 167.0
+margin_left = 17.0
+margin_right = 173.0
 custom_fonts/font = SubResource( 5 )
 text = "Range: Short"
 

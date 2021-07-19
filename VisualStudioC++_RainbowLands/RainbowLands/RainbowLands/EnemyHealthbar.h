@@ -7,14 +7,14 @@
 #include <string>
 
 namespace godot {
-	class Healthbar : public Label, public IObserver
+	class EnemyHealthbar : public Label, public IObserver
 	{
 		// methods
 	private:
-		GODOT_CLASS(Healthbar, Label)
+		GODOT_CLASS(EnemyHealthbar, Label)
 	public:
-		Healthbar();
-		~Healthbar();
+		EnemyHealthbar();
+		~EnemyHealthbar();
 
 		void _init();
 		void _ready();

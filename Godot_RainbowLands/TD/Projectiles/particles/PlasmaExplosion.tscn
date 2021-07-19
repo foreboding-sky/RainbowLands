@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/PNG (Transparent)/light_01.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.298507, 0.731343, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0, 1, 0.835294, 1, 0.0901961, 0.85098, 1, 0.905882, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.3
+color_ramp = SubResource( 3 )
+
+[node name="Particles2D" type="Particles2D"]
+scale = Vector2( 0.2, 0.2 )
+emitting = false
+amount = 1
+lifetime = 0.3
+one_shot = true
+visibility_rect = Rect2( -100.006, -100, 200, 200 )
+process_material = SubResource( 1 )
+texture = ExtResource( 1 )

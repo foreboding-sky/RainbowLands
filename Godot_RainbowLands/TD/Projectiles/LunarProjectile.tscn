@@ -4,7 +4,7 @@
 [ext_resource path="res://TD/Projectiles/LunarProjectile.gdns" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 18.9792
+radius = 25.5727
 
 [node name="Area2D" type="Area2D" groups=[
 "Projectile",

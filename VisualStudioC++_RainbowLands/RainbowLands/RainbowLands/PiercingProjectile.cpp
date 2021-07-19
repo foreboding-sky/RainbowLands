@@ -6,6 +6,7 @@ PiercingProjectile::PiercingProjectile()
 	target = nullptr;
 	speed = 600;
 	damage = 2;
+	pathVFX = "res://TD/Projectiles/particles/Slash.tscn";
 }
 
 PiercingProjectile::~PiercingProjectile()
@@ -26,6 +27,7 @@ void PiercingProjectile::_register_methods()
 
 	register_property<PiercingProjectile, int>("Speed", &PiercingProjectile::speed, 600);
 	register_property<PiercingProjectile, int>("Damage", &PiercingProjectile::damage, 2);
+	register_property<PiercingProjectile, String>("pathVFX", &PiercingProjectile::pathVFX, "res://TD/Projectiles/particles/Slash.tscn");
 }
 
 void PiercingProjectile::_init()
@@ -34,6 +36,8 @@ void PiercingProjectile::_init()
 
 void PiercingProjectile::_ready()
 {
+	loader = ResourceLoader::get_singleton();
+	refVFX = loader->load(pathVFX);
 	velocity = { 0, 0 };
 	selfDestruct = cast_to<Timer>(get_node("SelfDestruct"));
 	selfDestruct->set_wait_time(2);
@@ -57,6 +61,12 @@ void godot::PiercingProjectile::OnEnemyAreaEntered(Area2D* otherArea)
 	if (otherArea->is_in_group("Enemy"))
 	{
 		cast_to<Enemy>(otherArea->get_parent())->TakeDamage(damage);
+
+		VFX = cast_to<Particles2D>(refVFX->instance());
+		VFX->set_position(otherArea->get_global_transform().get_origin());
+		VFX->set_rotation(this->get_rotation() + 1.5708);
+		get_node("/root/main/particles")->add_child(VFX);
+		VFX->set_emitting(true);
 	}
 }
 

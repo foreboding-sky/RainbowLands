@@ -28,7 +28,7 @@
 #include "ReturnP.h"
 #include "PauseOptions.h"
 #include "PiercingProjectile.h"
-#include "Healthbar.h"
+#include "EnemyHealthbar.h"
 #include "AreaDamage.h"
 
 using namespace godot;
@@ -73,6 +73,6 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	register_class<Fullscreen>();
 	register_class<ReturnP>();
 	register_class<PauseOptions>();
-	register_class<Healthbar>();
+	register_class<EnemyHealthbar>();
 	register_class<AreaDamage>();
 }

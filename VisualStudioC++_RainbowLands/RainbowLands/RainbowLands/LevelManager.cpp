@@ -58,7 +58,7 @@ void LevelManager::_ready()
 	currencyScaler = 1;
 	currencyScalerIncrement = 0.05f;
 	maxHealth = 150;
-	currency = 60;
+	currency = 80;
 	LoadEnemies();
 }
 
@@ -66,6 +66,12 @@ void LevelManager::ButtonStartWave()
 {
 	if(waveStartCounter <= 5 || waveCounter == 0)
 	{
+		Array particles = get_node("/root/main/particles")->get_children();
+		for (int i = 0; i < particles.size(); i++)
+		{
+			cast_to<Node2D>(particles[i])->queue_free();
+		}
+		particles.clear();
 		waveStartCounter = 0;
 		StartWave();
 	}
