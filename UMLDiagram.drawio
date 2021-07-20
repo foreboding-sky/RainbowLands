@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T00:42:03.871Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="BiTaHctAKSrkg68yyC3V" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T00:57:15.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="IuqjHa3c6YUN-dkaAoB4" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
     <mxGraphModel dx="1027" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -141,7 +141,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="J0qoBGg9B1jh1cY9QHln" name="Spawn Tower">
-    <mxGraphModel dx="1027" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1232" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-0" />
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-1" parent="Ky8npWYbQMKd_BJdHoTF-0" />
@@ -205,11 +205,17 @@
         <mxCell id="_1J2j0mqziqEBVNtrnYV-3" value="+ Tower&#xa;+ ~Tower&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready(): void &#xa;+ FollowMouse: void &#xa;+ DeleteTower: void &#xa;+ OnAttackSpeedTimerTimeout: void &#xa;+ OnAggroAreaEntered(_other_area: Area2D*): void &#xa;+ OnAggroAreaExited(_other_area: Area2D*): void &#xa;+ OnTowerAreaEntered(_other_area: Area2D*): void &#xa;+ OnTowerAreaExited(_other_area: Area2D*): void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ SetProjectilePrefab(projectile: Ref&lt;PackedScene&gt;): void &#xa;+ SetGunPath(imagePath: String): void &#xa;+ SetBasePath(imagePath: String): void &#xa;+ SetAttackSpeed(atkSpeed: double): void &#xa;+ SetTowerCost(cost: int): void &#xa;+ SetTargetingMethod(method: TargetingMethod*): void &#xa;+ SetCollisionShape(shape: Ref&lt;CircleShape2D&gt;): void &#xa;+ GetTowerPlacementCost: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_1J2j0mqziqEBVNtrnYV-0">
           <mxGeometry y="508" width="330" height="342" as="geometry" />
         </mxCell>
+        <mxCell id="5_z0jkHObF8iYPCNEaeq-0" value="Creates" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="Ky8npWYbQMKd_BJdHoTF-1" source="Q7mKakz5-gDfTAcLu7Hm-1" target="_1J2j0mqziqEBVNtrnYV-0">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="830" y="510" as="sourcePoint" />
+            <mxPoint x="990" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="JNNif7zrpmLhEzQgErth" name="Damaging Enemy">
-    <mxGraphModel dx="1027" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1232" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-0" />
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-1" parent="xldX4Cvg0qP5i-FT3kWv-0" />
