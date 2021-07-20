@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T00:40:49.198Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="eOKVbaZ6nc_RJOCWT_J4" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T00:42:03.871Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="BiTaHctAKSrkg68yyC3V" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
     <mxGraphModel dx="1027" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -296,7 +296,7 @@
         <mxCell id="qy_0e1KS69q0UYPoxw_k-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
           <mxGeometry y="66" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-5" value="+ ISubject&#xa;+ ~ISubject&#xa;+ AttachObserver: void&#xa;+ DetachObserver: void&#xa;+ Notify(Message msg, int param): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-5" value="+ ISubject&#xa;+ ~ISubject&#xa;+ AttachObserver: void&#xa;+ DetachObserver: void&#xa;+ Notify(msg: Message, param: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
           <mxGeometry y="74" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="qy_0e1KS69q0UYPoxw_k-6" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
@@ -308,11 +308,11 @@
         <mxCell id="qy_0e1KS69q0UYPoxw_k-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
           <mxGeometry y="150" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-9" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods(): static void &#xa;+ _physics_process(float delta): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(float value): void &#xa;+ TakeDamage(int damage):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-9" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
           <mxGeometry y="158" width="250" height="152" as="geometry" />
         </mxCell>
         <mxCell id="qy_0e1KS69q0UYPoxw_k-10" value="EnemyHealthbar" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
-          <mxGeometry x="245" y="550" width="290" height="220" as="geometry" />
+          <mxGeometry x="245" y="550" width="290" height="190" as="geometry" />
         </mxCell>
         <mxCell id="qy_0e1KS69q0UYPoxw_k-11" value="- maxHealth: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-10">
           <mxGeometry y="26" width="290" height="26" as="geometry" />
@@ -321,7 +321,7 @@
           <mxGeometry y="52" width="290" height="8" as="geometry" />
         </mxCell>
         <mxCell id="qy_0e1KS69q0UYPoxw_k-13" value="+ EnemyHealthbar&#xa;+ ~EnemyHealthbar&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ UpdateHealth(health: int): void &#xa;+ SetMaxHealth(value: int): void &#xa;+ Update(msg: Message&amp;, param: int&amp;): virtual void&#xa;+ _register_methods: static void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-10">
-          <mxGeometry y="60" width="290" height="160" as="geometry" />
+          <mxGeometry y="60" width="290" height="130" as="geometry" />
         </mxCell>
         <mxCell id="bZRlDc5nMoD8sh0h13_V-0" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-10" target="qy_0e1KS69q0UYPoxw_k-0">
           <mxGeometry width="160" relative="1" as="geometry">
