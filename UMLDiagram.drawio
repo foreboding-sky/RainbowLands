@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T00:57:15.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="IuqjHa3c6YUN-dkaAoB4" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T05:15:40.714Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="1JoFRPlhYjHGfMhhr21F" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
-    <mxGraphModel dx="1027" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,71 +34,66 @@
         <mxCell id="qCKfydWW07gDqBEyt4T1-4" value="+ _init: void&#xa;+ _ready: void&#xa;+ _process: void&#xa;+ OnCoinsChanged(value: int): void&#xa;+ OnScoreChanged(value: int): void&#xa;+ OnHealthChanged(value: int): void&#xa;+ OnWaveStarted: void&#xa;+ OnWaveEnded: void&#xa;+ Update(msg: Message&amp;, param: int&amp;): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qCKfydWW07gDqBEyt4T1-1" vertex="1">
           <mxGeometry y="60" width="290" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-1" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-1" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="470" y="513" width="250" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-2" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-2" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-1" vertex="1">
           <mxGeometry y="26" width="250" height="124" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-1" vertex="1">
           <mxGeometry y="150" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-4" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-4" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-1" vertex="1">
           <mxGeometry y="158" width="250" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-6" value="LevelManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-6" value="LevelManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="780" y="448" width="270" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-7" value="+ waveCounter: int &#xa;+ currency: int&#xa;- instance: static LevelManager*&#xa;- ui: UI*&#xa;- startButton: Button*&#xa;- random: RandomNumberGenerator*&#xa;- loader: ResourceLoader*&#xa;- global: Global*&#xa;- enemyRefs: vector&lt;Ref&lt;PackedScene&gt;&gt;&#xa;- enemy: PathFollow2D*&#xa;- enemyThreat: Dictionary&#xa;- threatPool: int&#xa;		- waveThreat: int&#xa;		- increment: int&#xa;- waveIsActive: bool&#xa;- spawnTimer: Timer*&#xa;- currencyScaler: float&#xa;- currencyScalerIncrement: float &#xa;- currentHealth: int &#xa;- maxHealth: int &#xa;- score: int &#xa;- waveStartCounter: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-7" value="+ waveCounter: int &#xa;+ currency: int&#xa;- instance: static LevelManager*&#xa;- ui: UI*&#xa;- startButton: Button*&#xa;- random: RandomNumberGenerator*&#xa;- loader: ResourceLoader*&#xa;- global: Global*&#xa;- enemyRefs: vector&lt;Ref&lt;PackedScene&gt;&gt;&#xa;- enemy: PathFollow2D*&#xa;- enemyThreat: Dictionary&#xa;- threatPool: int&#xa;  - waveThreat: int&#xa;  - increment: int&#xa;- waveIsActive: bool&#xa;- spawnTimer: Timer*&#xa;- currencyScaler: float&#xa;- currencyScalerIncrement: float &#xa;- currentHealth: int &#xa;- maxHealth: int &#xa;- score: int &#xa;- waveStartCounter: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-6" vertex="1">
           <mxGeometry y="26" width="270" height="324" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-6" vertex="1">
           <mxGeometry y="350" width="270" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-9" value="+ LevelManager&#xa;+ ~LevelManager&#xa;+ get_singleton: static LevelManager*&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ SpawnEnemy: void &#xa;+ EndWave: void &#xa;+ ButtonStartWave: void &#xa;+ StartWave: void &#xa;+ LoadEnemies: void &#xa;+ MobDefeated(amount: int): void &#xa;+ ChangeCurrency(amount: int): void &#xa;+ MobGotThrough(damage: int): void &#xa;+ LevelOver: void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-6">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-9" value="+ LevelManager&#xa;+ ~LevelManager&#xa;+ get_singleton: static LevelManager*&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ SpawnEnemy: void &#xa;+ EndWave: void &#xa;+ ButtonStartWave: void &#xa;+ StartWave: void &#xa;+ LoadEnemies: void &#xa;+ MobDefeated(amount: int): void &#xa;+ ChangeCurrency(amount: int): void &#xa;+ MobGotThrough(damage: int): void &#xa;+ LevelOver: void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-6" vertex="1">
           <mxGeometry y="358" width="270" height="222" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-11" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="1" source="qCKfydWW07gDqBEyt4T1-1" target="4cQQ3AmGW_2L6S3uU12_-1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-11" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" parent="1" source="qCKfydWW07gDqBEyt4T1-1" target="4cQQ3AmGW_2L6S3uU12_-1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-70" y="448" as="sourcePoint" />
             <mxPoint x="90" y="448" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-14" value="Global" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-14" value="Global" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="1120" y="468" width="220" height="540" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-15" value="- os: OS*&#xa;- musicPlayer: AudioStreamPlayer*&#xa;- _instance: static Global*&#xa;- musicVolume: float&#xa;- soundVolume: float&#xa;- musicPlaying: float&#xa;- soundPlaying: bool&#xa;- fullscreen: bool&#xa;- bestScore: int&#xa;- currentScore: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-14">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-15" value="- os: OS*&#xa;- musicPlayer: AudioStreamPlayer*&#xa;- _instance: static Global*&#xa;- musicVolume: float&#xa;- soundVolume: float&#xa;- musicPlaying: float&#xa;- soundPlaying: bool&#xa;- fullscreen: bool&#xa;- bestScore: int&#xa;- currentScore: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-14" vertex="1">
           <mxGeometry y="26" width="220" height="154" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-14">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-14" vertex="1">
           <mxGeometry y="180" width="220" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-17" value="+ Global&#xa;+ ~Global&#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void&#xa;+ _register_methods: static void&#xa;+ SetMusicPlaying(value: bool): void &#xa;+ GetMusicPlaying: bool &#xa;+ SetMusicVolume(value: float): void &#xa;+ GetMusicVolume: float&#xa;+ SetSoundPlaying(value: bool): void&#xa;+ GetSoundPlaying: bool&#xa;+ SetSoundVolume(value: float): void&#xa;+ GetSoundVolume: float &#xa;+ SetFullscreen(value: bool): void &#xa;+ GetFullscreen: bool &#xa;+ SetAllSettings: void &#xa;+ SetScore(value: int): void &#xa;+ GetBestScore: int &#xa;+ GetCurrentScore: int &#xa;+ SaveScore: void &#xa;+ SaveSettings: void &#xa;+ Load: void &#xa;+ get_singleton: static Global* &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-14">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-17" value="+ Global&#xa;+ ~Global&#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void&#xa;+ _register_methods: static void&#xa;+ SetMusicPlaying(value: bool): void &#xa;+ GetMusicPlaying: bool &#xa;+ SetMusicVolume(value: float): void &#xa;+ GetMusicVolume: float&#xa;+ SetSoundPlaying(value: bool): void&#xa;+ GetSoundPlaying: bool&#xa;+ SetSoundVolume(value: float): void&#xa;+ GetSoundVolume: float &#xa;+ SetFullscreen(value: bool): void &#xa;+ GetFullscreen: bool &#xa;+ SetAllSettings: void &#xa;+ SetScore(value: int): void &#xa;+ GetBestScore: int &#xa;+ GetCurrentScore: int &#xa;+ SaveScore: void &#xa;+ SaveSettings: void &#xa;+ Load: void &#xa;+ get_singleton: static Global* &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-14" vertex="1">
           <mxGeometry y="188" width="220" height="352" as="geometry" />
         </mxCell>
-        <mxCell id="s5ttbbWi41Jbaq0BsrGK-10" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="4cQQ3AmGW_2L6S3uU12_-5" target="4cQQ3AmGW_2L6S3uU12_-1">
+        <mxCell id="s5ttbbWi41Jbaq0BsrGK-10" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="4cQQ3AmGW_2L6S3uU12_-5" target="4cQQ3AmGW_2L6S3uU12_-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="590" y="648" as="sourcePoint" />
             <mxPoint x="750" y="648" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="s5ttbbWi41Jbaq0BsrGK-11" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="s5ttbbWi41Jbaq0BsrGK-10">
-          <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="-40" y="-4" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="s5ttbbWi41Jbaq0BsrGK-12" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="s5ttbbWi41Jbaq0BsrGK-10">
+        <mxCell id="s5ttbbWi41Jbaq0BsrGK-12" value="0..*" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="s5ttbbWi41Jbaq0BsrGK-10" connectable="0" vertex="1">
           <mxGeometry x="1" relative="1" as="geometry">
             <mxPoint x="31" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-1" value="&lt;&lt;enumeration&gt;&gt;&#xa;Message" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-1" value="&lt;&lt;enumeration&gt;&gt;&#xa;Message" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="330" y="40" width="140" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-2" value="SCORE_GAINED&#xa;GOLD_GAINED&#xa;DAMAGE_TAKEN&#xa;WAVE_STARTED&#xa;	WAVE_ENDED&#xa;	ENEMY_DAMAGED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="jlbOjR8EbVuu9zs50vGk-1">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-2" value="SCORE_GAINED&#xa;GOLD_GAINED&#xa;DAMAGE_TAKEN&#xa;WAVE_STARTED&#xa; WAVE_ENDED&#xa; ENEMY_DAMAGED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="jlbOjR8EbVuu9zs50vGk-1" vertex="1">
           <mxGeometry y="40" width="140" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jlbOjR8EbVuu9zs50vGk-1" target="4cQQ3AmGW_2L6S3uU12_-5">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="jlbOjR8EbVuu9zs50vGk-1" target="4cQQ3AmGW_2L6S3uU12_-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="515" y="120" as="sourcePoint" />
             <mxPoint x="675" y="120" as="targetPoint" />
@@ -107,7 +102,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-6" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="4cQQ3AmGW_2L6S3uU12_-1" target="jlbOjR8EbVuu9zs50vGk-1">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-6" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="4cQQ3AmGW_2L6S3uU12_-1" target="jlbOjR8EbVuu9zs50vGk-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="120" y="170" as="sourcePoint" />
             <mxPoint x="280" y="170" as="targetPoint" />
@@ -116,7 +111,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-10" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="4cQQ3AmGW_2L6S3uU12_-5">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-10" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="4cQQ3AmGW_2L6S3uU12_-5" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="820" y="302" as="sourcePoint" />
             <mxPoint x="980" y="302" as="targetPoint" />
@@ -125,13 +120,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-11" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-1" target="4cQQ3AmGW_2L6S3uU12_-5">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-11" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;" parent="1" source="oGQv3XwxBZN2V0PkKPTG-1" target="4cQQ3AmGW_2L6S3uU12_-5" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="560" y="270" as="sourcePoint" />
             <mxPoint x="720" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-13" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="oGQv3XwxBZN2V0PkKPTG-14">
+        <mxCell id="jlbOjR8EbVuu9zs50vGk-13" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="oGQv3XwxBZN2V0PkKPTG-14" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="540" y="988" as="sourcePoint" />
             <mxPoint x="700" y="988" as="targetPoint" />
@@ -141,229 +136,235 @@
     </mxGraphModel>
   </diagram>
   <diagram id="J0qoBGg9B1jh1cY9QHln" name="Spawn Tower">
-    <mxGraphModel dx="1232" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2031" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-0" />
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-1" parent="Ky8npWYbQMKd_BJdHoTF-0" />
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-0" value="SpawnTower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="Ky8npWYbQMKd_BJdHoTF-1">
-          <mxGeometry x="30" y="460" width="220" height="250" as="geometry" />
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-0" value="SpawnTower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="Ky8npWYbQMKd_BJdHoTF-1" vertex="1">
+          <mxGeometry x="30" y="495" width="220" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-1" value="- loader: ResourceLoader*&#xa;- texture: Ref&lt;Texture&gt;&#xa;- size: Vector2 &#xa;- prefab: Ref&lt;PackedScene&gt;&#xa;- iconSize: Vector2 &#xa;- levelManager: LevelManager*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-0">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-1" value="- loader: ResourceLoader*&#xa;- texture: Ref&lt;Texture&gt;&#xa;- size: Vector2 &#xa;- prefab: Ref&lt;PackedScene&gt;&#xa;- iconSize: Vector2 &#xa;- levelManager: LevelManager*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-0" vertex="1">
           <mxGeometry y="26" width="220" height="94" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-0">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-0" vertex="1">
           <mxGeometry y="120" width="220" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-3" value="+ _register_methods: static void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ OnButtonPressed: void &#xa;+ BuildTower: void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-0">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-3" value="+ _register_methods: static void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ OnButtonPressed: void &#xa;+ BuildTower: void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-0" vertex="1">
           <mxGeometry y="128" width="220" height="122" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-4" value="TargetingMethod" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="Ky8npWYbQMKd_BJdHoTF-1">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-4" value="TargetingMethod" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="Ky8npWYbQMKd_BJdHoTF-1" vertex="1">
           <mxGeometry x="820" y="20" width="260" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-5" value="# enemyArray: Array &#xa;# distanceToClosest: double &#xa;# towerPosition: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-4">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-5" value="# enemyArray: Array &#xa;# distanceToClosest: double &#xa;# towerPosition: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-4" vertex="1">
           <mxGeometry y="26" width="260" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-4">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-4" vertex="1">
           <mxGeometry y="80" width="260" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-7" value="+ TargetingMethod&#xa;+ ~TargetingMethod&#xa;+ SetEnemies(enemies: Array): virtual void&#xa;+ GetTarget: virtual PathFollow2D*&#xa;+ SetTowerPosition(pos: Vector2): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-4">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-7" value="+ TargetingMethod&#xa;+ ~TargetingMethod&#xa;+ SetEnemies(enemies: Array): virtual void&#xa;+ GetTarget: virtual PathFollow2D*&#xa;+ SetTowerPosition(pos: Vector2): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-4" vertex="1">
           <mxGeometry y="88" width="260" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-8" value="ClosestNoLock" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="Ky8npWYbQMKd_BJdHoTF-1">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-8" value="ClosestNoLock" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="Ky8npWYbQMKd_BJdHoTF-1" vertex="1">
           <mxGeometry x="820" y="280" width="260" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="kiCQcghWIDT9eHi6U-7P-11" value="+ ~ClosestNoLock&#xa;+ SetEnemies(enemies: Array): virtual void&#xa;+ SetTowerPosition(pos: Vector2): virtual void&#xa;+ GetTarget: virtual PathFollow2D*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="kiCQcghWIDT9eHi6U-7P-8">
+        <mxCell id="kiCQcghWIDT9eHi6U-7P-11" value="+ ~ClosestNoLock&#xa;+ SetEnemies(enemies: Array): virtual void&#xa;+ SetTowerPosition(pos: Vector2): virtual void&#xa;+ GetTarget: virtual PathFollow2D*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kiCQcghWIDT9eHi6U-7P-8" vertex="1">
           <mxGeometry y="26" width="260" height="94" as="geometry" />
         </mxCell>
-        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-0" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="Ky8npWYbQMKd_BJdHoTF-1" source="kiCQcghWIDT9eHi6U-7P-8" target="kiCQcghWIDT9eHi6U-7P-4">
+        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-0" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" parent="Ky8npWYbQMKd_BJdHoTF-1" source="kiCQcghWIDT9eHi6U-7P-8" target="kiCQcghWIDT9eHi6U-7P-4" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="630" y="290" as="sourcePoint" />
             <mxPoint x="790" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-1" value="TowerBuilder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="Ky8npWYbQMKd_BJdHoTF-1">
+        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-1" value="TowerBuilder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="Ky8npWYbQMKd_BJdHoTF-1" vertex="1">
           <mxGeometry x="450" y="330" width="310" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-2" value="- loader: ResourceLoader*&#xa;- tower: Area2D*&#xa;- towerPrefab: Ref&lt;PackedScene&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Q7mKakz5-gDfTAcLu7Hm-1">
+        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-2" value="- loader: ResourceLoader*&#xa;- tower: Area2D*&#xa;- towerPrefab: Ref&lt;PackedScene&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Q7mKakz5-gDfTAcLu7Hm-1" vertex="1">
           <mxGeometry y="26" width="310" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Q7mKakz5-gDfTAcLu7Hm-1">
+        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Q7mKakz5-gDfTAcLu7Hm-1" vertex="1">
           <mxGeometry y="80" width="310" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-4" value="+ TowerBuilder;&#xa;+ ~TowerBuilder;&#xa;+ SetGunSprite01: void &#xa;+ SetGunSprite02: void &#xa;+ SetGunSprite03: void &#xa;+ SetGunSprite04: void &#xa;+ SetGunSprite05: void &#xa;+ SetPlatformSprite01: void &#xa;+ SetPlatformSprite02: void &#xa;+ SetPlatformSprite03: void &#xa;+ SetPlatformSprite04: void &#xa;+ SetPlatformSprite05: void &#xa;+ SetAttackSpeedVeryLow: void &#xa;+ SetAttackSpeedLow: void &#xa;+ SetAttackSpeedNormal: void &#xa;+ SetAttackSpeedHigh: void &#xa;+ SetAttackSpeedVeryHigh: void &#xa;+ SetAmmoTypeProjectile01: void &#xa;+ SetAmmoTypeProjectile02: void &#xa;+ SetAmmoTypeProjectile03: void &#xa;+ SetAmmoTypeProjectile04: void &#xa;+ SetAmmoTypeProjectile05: void &#xa;+ SetShootingRangeShort: void &#xa;+ SetShootingRangeNormal: void &#xa;+ SetShootingRangeLong: void &#xa;+ SetShootingRangeVeryLong: void &#xa;+ SetTowerPlacementCost30: void &#xa;+ SetTowerPlacementCost50: void &#xa;+ SetTowerPlacementCost70: void &#xa;+ SetTowerPlacementCost120: void &#xa;+ SetTowerPlacementCost200: void &#xa;+ SetTargetingClosestNoLock: void &#xa;+ Build: Area2D*&#xa;+ Reset: void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Q7mKakz5-gDfTAcLu7Hm-1">
+        <mxCell id="Q7mKakz5-gDfTAcLu7Hm-4" value="+ TowerBuilder;&#xa;+ ~TowerBuilder;&#xa;+ SetGunSprite01: void &#xa;+ SetGunSprite02: void &#xa;+ SetGunSprite03: void &#xa;+ SetGunSprite04: void &#xa;+ SetGunSprite05: void &#xa;+ SetPlatformSprite01: void &#xa;+ SetPlatformSprite02: void &#xa;+ SetPlatformSprite03: void &#xa;+ SetPlatformSprite04: void &#xa;+ SetPlatformSprite05: void &#xa;+ SetAttackSpeedVeryLow: void &#xa;+ SetAttackSpeedLow: void &#xa;+ SetAttackSpeedNormal: void &#xa;+ SetAttackSpeedHigh: void &#xa;+ SetAttackSpeedVeryHigh: void &#xa;+ SetAmmoTypeProjectile01: void &#xa;+ SetAmmoTypeProjectile02: void &#xa;+ SetAmmoTypeProjectile03: void &#xa;+ SetAmmoTypeProjectile04: void &#xa;+ SetAmmoTypeProjectile05: void &#xa;+ SetShootingRangeShort: void &#xa;+ SetShootingRangeNormal: void &#xa;+ SetShootingRangeLong: void &#xa;+ SetShootingRangeVeryLong: void &#xa;+ SetTowerPlacementCost30: void &#xa;+ SetTowerPlacementCost50: void &#xa;+ SetTowerPlacementCost70: void &#xa;+ SetTowerPlacementCost120: void &#xa;+ SetTowerPlacementCost200: void &#xa;+ SetTargetingClosestNoLock: void &#xa;+ Build: Area2D*&#xa;+ Reset: void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Q7mKakz5-gDfTAcLu7Hm-1" vertex="1">
           <mxGeometry y="88" width="310" height="492" as="geometry" />
         </mxCell>
-        <mxCell id="_1J2j0mqziqEBVNtrnYV-0" value="Tower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="Ky8npWYbQMKd_BJdHoTF-1">
+        <mxCell id="_1J2j0mqziqEBVNtrnYV-0" value="Tower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="Ky8npWYbQMKd_BJdHoTF-1" vertex="1">
           <mxGeometry x="1210" y="190" width="330" height="850" as="geometry" />
         </mxCell>
-        <mxCell id="_1J2j0mqziqEBVNtrnYV-1" value="- hudVisible: bool &#xa;- isMouseHovered: bool &#xa;- isBuilding: bool &#xa;- canBuild: bool &#xa;- isColliding: bool &#xa;- tileMap: TileMap*&#xa;- input: Input* &#xa;- cellSize: Vector2 &#xa;- cellPosition: Vector2 &#xa;- cellId: int &#xa;- currentTile: String &#xa;- placementCost: int &#xa;- levelManager: LevelManager*&#xa;- attackSpeed: double &#xa;- cooldownTimePassed: float &#xa;- attackTimer: Timer*&#xa;- enemyArray: Array &#xa;- currentTarget: PathFollow2D* &#xa;- targetPosition: Vector2 &#xa;- loader: ResourceLoader*&#xa;- projectilePrefab: Ref&lt;PackedScene&gt;&#xa;- projectilePrefabPath: String &#xa;- projectile: Area2D* &#xa;- projectileSpawnPosition: Vector2 &#xa;- isAttacking: bool &#xa;- targeting: TargetingMethod*&#xa;- collisionShape: CollisionShape2D* &#xa;- circleShape: Ref&lt;CircleShape2D&gt; &#xa;- baseSpritePath: String &#xa;- base: Sprite* &#xa;- gunSpritePath: String &#xa;- gun: Sprite* &#xa;- attackRange: Sprite* " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_1J2j0mqziqEBVNtrnYV-0">
+        <mxCell id="_1J2j0mqziqEBVNtrnYV-1" value="- hudVisible: bool &#xa;- isMouseHovered: bool &#xa;- isBuilding: bool &#xa;- canBuild: bool &#xa;- isColliding: bool &#xa;- tileMap: TileMap*&#xa;- input: Input* &#xa;- cellSize: Vector2 &#xa;- cellPosition: Vector2 &#xa;- cellId: int &#xa;- currentTile: String &#xa;- placementCost: int &#xa;- levelManager: LevelManager*&#xa;- attackSpeed: double &#xa;- cooldownTimePassed: float &#xa;- attackTimer: Timer*&#xa;- enemyArray: Array &#xa;- currentTarget: PathFollow2D* &#xa;- targetPosition: Vector2 &#xa;- loader: ResourceLoader*&#xa;- projectilePrefab: Ref&lt;PackedScene&gt;&#xa;- projectilePrefabPath: String &#xa;- projectile: Area2D* &#xa;- projectileSpawnPosition: Vector2 &#xa;- isAttacking: bool &#xa;- targeting: TargetingMethod*&#xa;- collisionShape: CollisionShape2D* &#xa;- circleShape: Ref&lt;CircleShape2D&gt; &#xa;- baseSpritePath: String &#xa;- base: Sprite* &#xa;- gunSpritePath: String &#xa;- gun: Sprite* &#xa;- attackRange: Sprite* " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="_1J2j0mqziqEBVNtrnYV-0" vertex="1">
           <mxGeometry y="26" width="330" height="474" as="geometry" />
         </mxCell>
-        <mxCell id="_1J2j0mqziqEBVNtrnYV-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="_1J2j0mqziqEBVNtrnYV-0">
+        <mxCell id="_1J2j0mqziqEBVNtrnYV-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="_1J2j0mqziqEBVNtrnYV-0" vertex="1">
           <mxGeometry y="500" width="330" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="_1J2j0mqziqEBVNtrnYV-3" value="+ Tower&#xa;+ ~Tower&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready(): void &#xa;+ FollowMouse: void &#xa;+ DeleteTower: void &#xa;+ OnAttackSpeedTimerTimeout: void &#xa;+ OnAggroAreaEntered(_other_area: Area2D*): void &#xa;+ OnAggroAreaExited(_other_area: Area2D*): void &#xa;+ OnTowerAreaEntered(_other_area: Area2D*): void &#xa;+ OnTowerAreaExited(_other_area: Area2D*): void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ SetProjectilePrefab(projectile: Ref&lt;PackedScene&gt;): void &#xa;+ SetGunPath(imagePath: String): void &#xa;+ SetBasePath(imagePath: String): void &#xa;+ SetAttackSpeed(atkSpeed: double): void &#xa;+ SetTowerCost(cost: int): void &#xa;+ SetTargetingMethod(method: TargetingMethod*): void &#xa;+ SetCollisionShape(shape: Ref&lt;CircleShape2D&gt;): void &#xa;+ GetTowerPlacementCost: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_1J2j0mqziqEBVNtrnYV-0">
+        <mxCell id="_1J2j0mqziqEBVNtrnYV-3" value="+ Tower&#xa;+ ~Tower&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready(): void &#xa;+ FollowMouse: void &#xa;+ DeleteTower: void &#xa;+ OnAttackSpeedTimerTimeout: void &#xa;+ OnAggroAreaEntered(_other_area: Area2D*): void &#xa;+ OnAggroAreaExited(_other_area: Area2D*): void &#xa;+ OnTowerAreaEntered(_other_area: Area2D*): void &#xa;+ OnTowerAreaExited(_other_area: Area2D*): void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ SetProjectilePrefab(projectile: Ref&lt;PackedScene&gt;): void &#xa;+ SetGunPath(imagePath: String): void &#xa;+ SetBasePath(imagePath: String): void &#xa;+ SetAttackSpeed(atkSpeed: double): void &#xa;+ SetTowerCost(cost: int): void &#xa;+ SetTargetingMethod(method: TargetingMethod*): void &#xa;+ SetCollisionShape(shape: Ref&lt;CircleShape2D&gt;): void &#xa;+ GetTowerPlacementCost: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="_1J2j0mqziqEBVNtrnYV-0" vertex="1">
           <mxGeometry y="508" width="330" height="342" as="geometry" />
         </mxCell>
-        <mxCell id="5_z0jkHObF8iYPCNEaeq-0" value="Creates" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="Ky8npWYbQMKd_BJdHoTF-1" source="Q7mKakz5-gDfTAcLu7Hm-1" target="_1J2j0mqziqEBVNtrnYV-0">
+        <mxCell id="5_z0jkHObF8iYPCNEaeq-0" value="Creates" style="endArrow=open;endSize=12;dashed=1;html=1;" parent="Ky8npWYbQMKd_BJdHoTF-1" source="Q7mKakz5-gDfTAcLu7Hm-1" target="_1J2j0mqziqEBVNtrnYV-0" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="830" y="510" as="sourcePoint" />
             <mxPoint x="990" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zKtUUd1IqgCBR9yLocko-0" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="Ky8npWYbQMKd_BJdHoTF-1" source="kiCQcghWIDT9eHi6U-7P-0" target="Q7mKakz5-gDfTAcLu7Hm-1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="270" y="619.29" as="sourcePoint" />
+            <mxPoint x="430" y="619.29" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="JNNif7zrpmLhEzQgErth" name="Damaging Enemy">
-    <mxGraphModel dx="1232" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-0" />
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-1" parent="xldX4Cvg0qP5i-FT3kWv-0" />
-        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-0" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xldX4Cvg0qP5i-FT3kWv-1">
+        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-0" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="xldX4Cvg0qP5i-FT3kWv-1" vertex="1">
           <mxGeometry x="1370" y="30" width="250" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-1" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:Healthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WVJRoJLSNF8mMlJLwhQ_-0">
+        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-1" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:Healthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WVJRoJLSNF8mMlJLwhQ_-0" vertex="1">
           <mxGeometry y="26" width="250" height="124" as="geometry" />
         </mxCell>
-        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="WVJRoJLSNF8mMlJLwhQ_-0">
+        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="WVJRoJLSNF8mMlJLwhQ_-0" vertex="1">
           <mxGeometry y="150" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-3" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: int): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WVJRoJLSNF8mMlJLwhQ_-0">
+        <mxCell id="WVJRoJLSNF8mMlJLwhQ_-3" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: int): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WVJRoJLSNF8mMlJLwhQ_-0" vertex="1">
           <mxGeometry y="158" width="250" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="7YdlAp-IxPB3LQGEQbVy-0" value="Tower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xldX4Cvg0qP5i-FT3kWv-1">
+        <mxCell id="7YdlAp-IxPB3LQGEQbVy-0" value="Tower" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="xldX4Cvg0qP5i-FT3kWv-1" vertex="1">
           <mxGeometry x="30" y="30" width="330" height="850" as="geometry" />
         </mxCell>
-        <mxCell id="7YdlAp-IxPB3LQGEQbVy-1" value="- hudVisible: bool &#xa;- isMouseHovered: bool &#xa;- isBuilding: bool &#xa;- canBuild: bool &#xa;- isColliding: bool &#xa;- tileMap: TileMap*&#xa;- input: Input* &#xa;- cellSize: Vector2 &#xa;- cellPosition: Vector2 &#xa;- cellId: int &#xa;- currentTile: String &#xa;- placementCost: int &#xa;- levelManager: LevelManager*&#xa;- attackSpeed: double &#xa;- cooldownTimePassed: float &#xa;- attackTimer: Timer*&#xa;- enemyArray: Array &#xa;- currentTarget: PathFollow2D* &#xa;- targetPosition: Vector2 &#xa;- loader: ResourceLoader*&#xa;- projectilePrefab: Ref&lt;PackedScene&gt;&#xa;- projectilePrefabPath: String &#xa;- projectile: Area2D* &#xa;- projectileSpawnPosition: Vector2 &#xa;- isAttacking: bool &#xa;- targeting: TargetingMethod*&#xa;- collisionShape: CollisionShape2D* &#xa;- circleShape: Ref&lt;CircleShape2D&gt; &#xa;- baseSpritePath: String &#xa;- base: Sprite* &#xa;- gunSpritePath: String &#xa;- gun: Sprite* &#xa;- attackRange: Sprite* " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7YdlAp-IxPB3LQGEQbVy-0">
+        <mxCell id="7YdlAp-IxPB3LQGEQbVy-1" value="- hudVisible: bool &#xa;- isMouseHovered: bool &#xa;- isBuilding: bool &#xa;- canBuild: bool &#xa;- isColliding: bool &#xa;- tileMap: TileMap*&#xa;- input: Input* &#xa;- cellSize: Vector2 &#xa;- cellPosition: Vector2 &#xa;- cellId: int &#xa;- currentTile: String &#xa;- placementCost: int &#xa;- levelManager: LevelManager*&#xa;- attackSpeed: double &#xa;- cooldownTimePassed: float &#xa;- attackTimer: Timer*&#xa;- enemyArray: Array &#xa;- currentTarget: PathFollow2D* &#xa;- targetPosition: Vector2 &#xa;- loader: ResourceLoader*&#xa;- projectilePrefab: Ref&lt;PackedScene&gt;&#xa;- projectilePrefabPath: String &#xa;- projectile: Area2D* &#xa;- projectileSpawnPosition: Vector2 &#xa;- isAttacking: bool &#xa;- targeting: TargetingMethod*&#xa;- collisionShape: CollisionShape2D* &#xa;- circleShape: Ref&lt;CircleShape2D&gt; &#xa;- baseSpritePath: String &#xa;- base: Sprite* &#xa;- gunSpritePath: String &#xa;- gun: Sprite* &#xa;- attackRange: Sprite* " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="7YdlAp-IxPB3LQGEQbVy-0" vertex="1">
           <mxGeometry y="26" width="330" height="474" as="geometry" />
         </mxCell>
-        <mxCell id="7YdlAp-IxPB3LQGEQbVy-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="7YdlAp-IxPB3LQGEQbVy-0">
+        <mxCell id="7YdlAp-IxPB3LQGEQbVy-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="7YdlAp-IxPB3LQGEQbVy-0" vertex="1">
           <mxGeometry y="500" width="330" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="7YdlAp-IxPB3LQGEQbVy-3" value="+ Tower&#xa;+ ~Tower&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready(): void &#xa;+ FollowMouse: void &#xa;+ DeleteTower: void &#xa;+ OnAttackSpeedTimerTimeout: void &#xa;+ OnAggroAreaEntered(_other_area: Area2D*): void &#xa;+ OnAggroAreaExited(_other_area: Area2D*): void &#xa;+ OnTowerAreaEntered(_other_area: Area2D*): void &#xa;+ OnTowerAreaExited(_other_area: Area2D*): void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ SetProjectilePrefab(projectile: Ref&lt;PackedScene&gt;): void &#xa;+ SetGunPath(imagePath: String): void &#xa;+ SetBasePath(imagePath: String): void &#xa;+ SetAttackSpeed(atkSpeed: double): void &#xa;+ SetTowerCost(cost: int): void &#xa;+ SetTargetingMethod(method: TargetingMethod*): void &#xa;+ SetCollisionShape(shape: Ref&lt;CircleShape2D&gt;): void &#xa;+ GetTowerPlacementCost: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7YdlAp-IxPB3LQGEQbVy-0">
+        <mxCell id="7YdlAp-IxPB3LQGEQbVy-3" value="+ Tower&#xa;+ ~Tower&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready(): void &#xa;+ FollowMouse: void &#xa;+ DeleteTower: void &#xa;+ OnAttackSpeedTimerTimeout: void &#xa;+ OnAggroAreaEntered(_other_area: Area2D*): void &#xa;+ OnAggroAreaExited(_other_area: Area2D*): void &#xa;+ OnTowerAreaEntered(_other_area: Area2D*): void &#xa;+ OnTowerAreaExited(_other_area: Area2D*): void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ SetProjectilePrefab(projectile: Ref&lt;PackedScene&gt;): void &#xa;+ SetGunPath(imagePath: String): void &#xa;+ SetBasePath(imagePath: String): void &#xa;+ SetAttackSpeed(atkSpeed: double): void &#xa;+ SetTowerCost(cost: int): void &#xa;+ SetTargetingMethod(method: TargetingMethod*): void &#xa;+ SetCollisionShape(shape: Ref&lt;CircleShape2D&gt;): void &#xa;+ GetTowerPlacementCost: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="7YdlAp-IxPB3LQGEQbVy-0" vertex="1">
           <mxGeometry y="508" width="330" height="342" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-0" value="Projectile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xldX4Cvg0qP5i-FT3kWv-1">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-0" value="Projectile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="xldX4Cvg0qP5i-FT3kWv-1" vertex="1">
           <mxGeometry x="670" y="80" width="290" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-1" value="- hasTarget: bool &#xa;- speed: int &#xa;- damage: int &#xa;- loader: ResourceLoader*&#xa;- targetPath: NodePath &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-0">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-1" value="- hasTarget: bool &#xa;- speed: int &#xa;- damage: int &#xa;- loader: ResourceLoader*&#xa;- targetPath: NodePath &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-0" vertex="1">
           <mxGeometry y="26" width="290" height="164" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-0">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-0" vertex="1">
           <mxGeometry y="190" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-3" value="+ Projectile&#xa;+ ~Projectile&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-0">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-3" value="+ Projectile&#xa;+ ~Projectile&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-0" vertex="1">
           <mxGeometry y="198" width="290" height="142" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-4" value="PiercingProjectile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xldX4Cvg0qP5i-FT3kWv-1">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-4" value="PiercingProjectile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="xldX4Cvg0qP5i-FT3kWv-1" vertex="1">
           <mxGeometry x="670" y="430" width="290" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-5" value="- speed: int &#xa;- damage: int &#xa;- loader: ResourceLoader*&#xa;- targetDirection: Vector2 &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-4">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-5" value="- speed: int &#xa;- damage: int &#xa;- loader: ResourceLoader*&#xa;- targetDirection: Vector2 &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-4" vertex="1">
           <mxGeometry y="26" width="290" height="144" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-4">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-4" vertex="1">
           <mxGeometry y="170" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-7" value="+ PiercingProjectile&#xa;+ ~PiercingProjectile&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-4">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-7" value="+ PiercingProjectile&#xa;+ ~PiercingProjectile&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="i7HfsuXRBZQUrQi0sDx4-4" vertex="1">
           <mxGeometry y="178" width="290" height="142" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-8" value="AreaDamage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="xldX4Cvg0qP5i-FT3kWv-1">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-8" value="AreaDamage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="xldX4Cvg0qP5i-FT3kWv-1" vertex="1">
           <mxGeometry x="670" y="760" width="290" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-9" value="- speed: int &#xa;- damage: int &#xa;- tickTime: double&#xa;- loader: ResourceLoader*&#xa;- targetDirection: Vector2 &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- selfDestructTime: double&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 &#xa;- canMove: bool&#xa;- cooldownTimePassed: double&#xa;- pi: const double&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-8">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-9" value="- speed: int &#xa;- damage: int &#xa;- tickTime: double&#xa;- loader: ResourceLoader*&#xa;- targetDirection: Vector2 &#xa;- target: PathFollow2D*&#xa;- selfDestruct: Timer*&#xa;- selfDestructTime: double&#xa;- refVFX: Ref&lt;PackedScene&gt; &#xa;- pathVFX: String &#xa;- VFX: Particles2D*&#xa;- velocity: Vector2 &#xa;- canMove: bool&#xa;- cooldownTimePassed: double&#xa;- pi: const double&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-8" vertex="1">
           <mxGeometry y="26" width="290" height="224" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-8">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="i7HfsuXRBZQUrQi0sDx4-8" vertex="1">
           <mxGeometry y="250" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="i7HfsuXRBZQUrQi0sDx4-11" value="+ AreaDamage&#xa;+ ~AreaDamage&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" vertex="1" parent="i7HfsuXRBZQUrQi0sDx4-8">
+        <mxCell id="i7HfsuXRBZQUrQi0sDx4-11" value="+ AreaDamage&#xa;+ ~AreaDamage&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="i7HfsuXRBZQUrQi0sDx4-8" vertex="1">
           <mxGeometry y="258" width="290" height="142" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Mfs5lWcupww7UcBfBbXq" name="Enemy Healthbar">
-    <mxGraphModel dx="1232" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="mlFiyTJ09u0ANM2-pjJx-0" />
         <mxCell id="mlFiyTJ09u0ANM2-pjJx-1" parent="mlFiyTJ09u0ANM2-pjJx-0" />
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-0" value="&lt;&lt;interface&gt;&gt;&#xa;IObserser" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-0" value="&lt;&lt;interface&gt;&gt;&#xa;IObserser" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="mlFiyTJ09u0ANM2-pjJx-1" vertex="1">
           <mxGeometry x="270" y="352" width="240" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-1" value="+ ~IObserver&#xa;+ IObserver&#xa;+ Update(Message&amp;, int&amp;): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-0">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-1" value="+ ~IObserver&#xa;+ IObserver&#xa;+ Update(Message&amp;, int&amp;): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-0" vertex="1">
           <mxGeometry y="40" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-2" value="&lt;&lt;interface&gt;&gt;&#xa;ISubect" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-2" value="&lt;&lt;interface&gt;&gt;&#xa;ISubect" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="mlFiyTJ09u0ANM2-pjJx-1" vertex="1">
           <mxGeometry x="660" y="320" width="250" height="164" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-3" value="- observers: vector&lt;IObserver*&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-3" value="- observers: vector&lt;IObserver*&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-2" vertex="1">
           <mxGeometry y="40" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-2" vertex="1">
           <mxGeometry y="66" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-5" value="+ ISubject&#xa;+ ~ISubject&#xa;+ AttachObserver: void&#xa;+ DetachObserver: void&#xa;+ Notify(msg: Message, param: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-5" value="+ ISubject&#xa;+ ~ISubject&#xa;+ AttachObserver: void&#xa;+ DetachObserver: void&#xa;+ Notify(msg: Message, param: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-2" vertex="1">
           <mxGeometry y="74" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-6" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-6" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="mlFiyTJ09u0ANM2-pjJx-1" vertex="1">
           <mxGeometry x="660" y="563" width="250" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-7" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-7" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-6" vertex="1">
           <mxGeometry y="26" width="250" height="124" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-6" vertex="1">
           <mxGeometry y="150" width="250" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-9" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-9" value="+ Enemy&#xa;+ ~Enemy&#xa;+ _register_methods: static void &#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void &#xa;+ OnMouseHovered: void &#xa;+ OnMouseLeft: void &#xa;+ ScaleStats(value: float): void &#xa;+ TakeDamage(damage: int):void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-6" vertex="1">
           <mxGeometry y="158" width="250" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-10" value="EnemyHealthbar" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-10" value="EnemyHealthbar" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="mlFiyTJ09u0ANM2-pjJx-1" vertex="1">
           <mxGeometry x="245" y="550" width="290" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-11" value="- maxHealth: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-10">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-11" value="- maxHealth: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-10" vertex="1">
           <mxGeometry y="26" width="290" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-10">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-10" vertex="1">
           <mxGeometry y="52" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-13" value="+ EnemyHealthbar&#xa;+ ~EnemyHealthbar&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ UpdateHealth(health: int): void &#xa;+ SetMaxHealth(value: int): void &#xa;+ Update(msg: Message&amp;, param: int&amp;): virtual void&#xa;+ _register_methods: static void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-10">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-13" value="+ EnemyHealthbar&#xa;+ ~EnemyHealthbar&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ UpdateHealth(health: int): void &#xa;+ SetMaxHealth(value: int): void &#xa;+ Update(msg: Message&amp;, param: int&amp;): virtual void&#xa;+ _register_methods: static void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qy_0e1KS69q0UYPoxw_k-10" vertex="1">
           <mxGeometry y="60" width="290" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="bZRlDc5nMoD8sh0h13_V-0" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-10" target="qy_0e1KS69q0UYPoxw_k-0">
+        <mxCell id="bZRlDc5nMoD8sh0h13_V-0" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-10" target="qy_0e1KS69q0UYPoxw_k-0" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="520" y="640" as="sourcePoint" />
             <mxPoint x="680" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bZRlDc5nMoD8sh0h13_V-1" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-6" target="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="bZRlDc5nMoD8sh0h13_V-1" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-6" target="qy_0e1KS69q0UYPoxw_k-2" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="520" y="640" as="sourcePoint" />
             <mxPoint x="680" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dzUY4cpN5mIm7MsumTPm-0" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-2" target="qy_0e1KS69q0UYPoxw_k-0">
+        <mxCell id="dzUY4cpN5mIm7MsumTPm-0" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-2" target="qy_0e1KS69q0UYPoxw_k-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="520" y="570" as="sourcePoint" />
             <mxPoint x="680" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dzUY4cpN5mIm7MsumTPm-1" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="dzUY4cpN5mIm7MsumTPm-0">
+        <mxCell id="dzUY4cpN5mIm7MsumTPm-1" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="dzUY4cpN5mIm7MsumTPm-0" connectable="0" vertex="1">
           <mxGeometry x="-1" relative="1" as="geometry">
             <mxPoint x="-40" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dzUY4cpN5mIm7MsumTPm-2" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="dzUY4cpN5mIm7MsumTPm-0">
+        <mxCell id="dzUY4cpN5mIm7MsumTPm-2" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="dzUY4cpN5mIm7MsumTPm-0" connectable="0" vertex="1">
           <mxGeometry x="1" relative="1" as="geometry">
             <mxPoint x="30" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="g4I6qJR5UOYepG3ZdaIP-0" value="&lt;&lt;enumeration&gt;&gt;&#xa;Message" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
+        <mxCell id="g4I6qJR5UOYepG3ZdaIP-0" value="&lt;&lt;enumeration&gt;&gt;&#xa;Message" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="mlFiyTJ09u0ANM2-pjJx-1" vertex="1">
           <mxGeometry x="520" y="60" width="140" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="g4I6qJR5UOYepG3ZdaIP-1" value="SCORE_GAINED&#xa;GOLD_GAINED&#xa;DAMAGE_TAKEN&#xa;WAVE_STARTED&#xa;	WAVE_ENDED&#xa;	ENEMY_DAMAGED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4I6qJR5UOYepG3ZdaIP-0">
+        <mxCell id="g4I6qJR5UOYepG3ZdaIP-1" value="SCORE_GAINED&#xa;GOLD_GAINED&#xa;DAMAGE_TAKEN&#xa;WAVE_STARTED&#xa; WAVE_ENDED&#xa; ENEMY_DAMAGED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="g4I6qJR5UOYepG3ZdaIP-0" vertex="1">
           <mxGeometry y="40" width="140" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="g4I6qJR5UOYepG3ZdaIP-4" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="g4I6qJR5UOYepG3ZdaIP-0" target="qy_0e1KS69q0UYPoxw_k-2">
+        <mxCell id="g4I6qJR5UOYepG3ZdaIP-4" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="mlFiyTJ09u0ANM2-pjJx-1" source="g4I6qJR5UOYepG3ZdaIP-0" target="qy_0e1KS69q0UYPoxw_k-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="530" y="220" as="sourcePoint" />
             <mxPoint x="690" y="220" as="targetPoint" />
@@ -372,7 +373,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="g4I6qJR5UOYepG3ZdaIP-7" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-0" target="g4I6qJR5UOYepG3ZdaIP-0">
+        <mxCell id="g4I6qJR5UOYepG3ZdaIP-7" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="mlFiyTJ09u0ANM2-pjJx-1" source="qy_0e1KS69q0UYPoxw_k-0" target="g4I6qJR5UOYepG3ZdaIP-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="310" y="170" as="sourcePoint" />
             <mxPoint x="470" y="170" as="targetPoint" />
