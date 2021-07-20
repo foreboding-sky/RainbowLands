@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T06:38:31.201Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="7Eg8936faa2Wzt3UZk1h" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T06:42:49.421Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="UzN1yle7SGYOunA1INld" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
     <mxGraphModel dx="953" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -234,7 +234,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JNNif7zrpmLhEzQgErth" name="Damaging Enemy">
-    <mxGraphModel dx="790" dy="437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1626" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-0" />
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-1" parent="xldX4Cvg0qP5i-FT3kWv-0" />
@@ -322,13 +322,13 @@
             <mxPoint x="1170" y="250" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-10" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-4">
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-10" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-4" target="WVJRoJLSNF8mMlJLwhQ_-0">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1010" y="400" as="sourcePoint" />
-            <mxPoint x="1280" y="280" as="targetPoint" />
+            <mxPoint x="1500" y="50" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-11" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-8">
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-11" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-8" target="WVJRoJLSNF8mMlJLwhQ_-0">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1010" y="760" as="sourcePoint" />
             <mxPoint x="1340" y="390" as="targetPoint" />
