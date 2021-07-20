@@ -150,9 +150,6 @@
     <ClCompile Include="ClosestNoLock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClosestWithLock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TowerBuilder.cpp">
       <Filter>Architecture-related\Sourse Files</Filter>
     </ClCompile>
@@ -267,9 +264,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ClosestNoLock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ClosestWithLock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IObserver.h">

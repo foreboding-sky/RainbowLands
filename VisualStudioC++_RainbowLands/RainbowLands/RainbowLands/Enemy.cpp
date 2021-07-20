@@ -94,7 +94,7 @@ void Enemy::_physics_process(float delta)
 	}
 	if (get_unit_offset() >= 1)
 	{
-		levelManager->MobGotThrough(damage);
+		levelManager->MobGotThrough(ceil(damage * ((float)health / (float)maxHealth)));
 			queue_free();
 	}
 }
