@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T06:23:08.598Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="S-R6NMZeMVAIdLkncfmL" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T06:29:56.907Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="1QwHNGkpdqAS40AIvDQm" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
-    <mxGraphModel dx="1382" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="953" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,7 +47,7 @@
           <mxGeometry y="158" width="250" height="152" as="geometry" />
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-6" value="LevelManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="780" y="448" width="270" height="580" as="geometry" />
+          <mxGeometry x="770" y="480" width="270" height="580" as="geometry" />
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-7" value="+ waveCounter: int &#xa;+ currency: int&#xa;- instance: static LevelManager*&#xa;- ui: UI*&#xa;- startButton: Button*&#xa;- random: RandomNumberGenerator*&#xa;- loader: ResourceLoader*&#xa;- global: Global*&#xa;- enemyRefs: vector&lt;Ref&lt;PackedScene&gt;&gt;&#xa;- enemy: PathFollow2D*&#xa;- enemyThreat: Dictionary&#xa;- threatPool: int&#xa;  - waveThreat: int&#xa;  - increment: int&#xa;- waveIsActive: bool&#xa;- spawnTimer: Timer*&#xa;- currencyScaler: float&#xa;- currencyScalerIncrement: float &#xa;- currentHealth: int &#xa;- maxHealth: int &#xa;- score: int &#xa;- waveStartCounter: int " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-6" vertex="1">
           <mxGeometry y="26" width="270" height="324" as="geometry" />
@@ -65,7 +65,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-14" value="Global" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="468" width="220" height="540" as="geometry" />
+          <mxGeometry x="1120" y="500" width="220" height="540" as="geometry" />
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-15" value="- os: OS*&#xa;- musicPlayer: AudioStreamPlayer*&#xa;- _instance: static Global*&#xa;- musicVolume: float&#xa;- soundVolume: float&#xa;- musicPlaying: float&#xa;- soundPlaying: bool&#xa;- fullscreen: bool&#xa;- bestScore: int&#xa;- currentScore: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-14" vertex="1">
           <mxGeometry y="26" width="220" height="154" as="geometry" />
@@ -75,17 +75,6 @@
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-17" value="+ Global&#xa;+ ~Global&#xa;+ _physics_process(delta: float): void &#xa;+ _init: void &#xa;+ _ready: void&#xa;+ _register_methods: static void&#xa;+ SetMusicPlaying(value: bool): void &#xa;+ GetMusicPlaying: bool &#xa;+ SetMusicVolume(value: float): void &#xa;+ GetMusicVolume: float&#xa;+ SetSoundPlaying(value: bool): void&#xa;+ GetSoundPlaying: bool&#xa;+ SetSoundVolume(value: float): void&#xa;+ GetSoundVolume: float &#xa;+ SetFullscreen(value: bool): void &#xa;+ GetFullscreen: bool &#xa;+ SetAllSettings: void &#xa;+ SetScore(value: int): void &#xa;+ GetBestScore: int &#xa;+ GetCurrentScore: int &#xa;+ SaveScore: void &#xa;+ SaveSettings: void &#xa;+ Load: void &#xa;+ get_singleton: static Global* &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="oGQv3XwxBZN2V0PkKPTG-14" vertex="1">
           <mxGeometry y="188" width="220" height="352" as="geometry" />
-        </mxCell>
-        <mxCell id="s5ttbbWi41Jbaq0BsrGK-10" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="4cQQ3AmGW_2L6S3uU12_-5" target="4cQQ3AmGW_2L6S3uU12_-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="648" as="sourcePoint" />
-            <mxPoint x="750" y="648" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="s5ttbbWi41Jbaq0BsrGK-12" value="0..*" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="s5ttbbWi41Jbaq0BsrGK-10" connectable="0" vertex="1">
-          <mxGeometry x="1" relative="1" as="geometry">
-            <mxPoint x="31" y="-4" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="jlbOjR8EbVuu9zs50vGk-1" value="&lt;&lt;enumeration&gt;&gt;&#xa;Message" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="330" y="40" width="140" height="140" as="geometry" />
@@ -126,10 +115,24 @@
             <mxPoint x="720" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jlbOjR8EbVuu9zs50vGk-13" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="oGQv3XwxBZN2V0PkKPTG-14" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540" y="988" as="sourcePoint" />
-            <mxPoint x="700" y="988" as="targetPoint" />
+        <mxCell id="QVX7nzVM0AsMndZYgvM8-1" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="4cQQ3AmGW_2L6S3uU12_-5" target="4cQQ3AmGW_2L6S3uU12_-1">
+          <mxGeometry x="-0.8667" y="-12" relative="1" as="geometry">
+            <mxPoint x="420" y="400" as="sourcePoint" />
+            <mxPoint x="580" y="400" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVX7nzVM0AsMndZYgvM8-2" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-1" target="oGQv3XwxBZN2V0PkKPTG-7">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="640" y="670" as="sourcePoint" />
+            <mxPoint x="800" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVX7nzVM0AsMndZYgvM8-3" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="oGQv3XwxBZN2V0PkKPTG-6" target="oGQv3XwxBZN2V0PkKPTG-14">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1000" y="500" as="sourcePoint" />
+            <mxPoint x="1070" y="670" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
