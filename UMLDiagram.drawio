@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T00:33:25.511Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="443MPj-zjH-S26jdUzXE" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T00:34:21.741Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="xDzx5gg3NbK2MkGksIO8" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
     <mxGraphModel dx="1449" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,7 +37,7 @@
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-1" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="470" y="513" width="250" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="oGQv3XwxBZN2V0PkKPTG-2" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:Healthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
+        <mxCell id="oGQv3XwxBZN2V0PkKPTG-2" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
           <mxGeometry y="26" width="250" height="124" as="geometry" />
         </mxCell>
         <mxCell id="oGQv3XwxBZN2V0PkKPTG-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="oGQv3XwxBZN2V0PkKPTG-1">
@@ -302,7 +302,7 @@
         <mxCell id="qy_0e1KS69q0UYPoxw_k-6" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="mlFiyTJ09u0ANM2-pjJx-1">
           <mxGeometry x="660" y="563" width="250" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="qy_0e1KS69q0UYPoxw_k-7" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:Healthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
+        <mxCell id="qy_0e1KS69q0UYPoxw_k-7" value="- levelManager: LevelManager*&#xa;- loader: ResourceLoader*&#xa;- healthbarRef: Ref&lt;PackedScene&gt;&#xa;- healthbar:EnemyHealthbar*&#xa;- speed: int &#xa;- health: int &#xa;- maxHealth: int &#xa;- damage: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
           <mxGeometry y="26" width="250" height="124" as="geometry" />
         </mxCell>
         <mxCell id="qy_0e1KS69q0UYPoxw_k-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="qy_0e1KS69q0UYPoxw_k-6">
