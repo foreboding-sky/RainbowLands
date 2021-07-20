@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-20T06:35:38.430Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="MY1E4OynTek3fDb75Lng" version="14.9.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-07-20T06:38:31.201Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.203" etag="7Eg8936faa2Wzt3UZk1h" version="14.9.0" type="github" pages="4">
   <diagram id="F5fDT9RWWXT5eyaNR9aA" name="UI">
     <mxGraphModel dx="953" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -139,7 +139,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="J0qoBGg9B1jh1cY9QHln" name="Spawn Tower">
-    <mxGraphModel dx="953" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1626" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-0" />
         <mxCell id="Ky8npWYbQMKd_BJdHoTF-1" parent="Ky8npWYbQMKd_BJdHoTF-0" />
@@ -234,7 +234,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JNNif7zrpmLhEzQgErth" name="Damaging Enemy">
-    <mxGraphModel dx="1382" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="790" dy="437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-0" />
         <mxCell id="xldX4Cvg0qP5i-FT3kWv-1" parent="xldX4Cvg0qP5i-FT3kWv-0" />
@@ -297,6 +297,42 @@
         </mxCell>
         <mxCell id="i7HfsuXRBZQUrQi0sDx4-11" value="+ AreaDamage&#xa;+ ~AreaDamage&#xa;+ _physics_process(delta: float): void&#xa;+ _init: void &#xa;+ _ready: void &#xa;+ _register_methods: static void&#xa;+ OnEnemyAreaEntered(otherArea: Area2D*): void &#xa;+ OnSelfDestructTimeout: void &#xa;+ SetTarget(target: PathFollow2D*): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="i7HfsuXRBZQUrQi0sDx4-8" vertex="1">
           <mxGeometry y="258" width="290" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-0" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="7YdlAp-IxPB3LQGEQbVy-0" target="i7HfsuXRBZQUrQi0sDx4-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="410" as="sourcePoint" />
+            <mxPoint x="530" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="7YdlAp-IxPB3LQGEQbVy-0" target="i7HfsuXRBZQUrQi0sDx4-0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="410" as="sourcePoint" />
+            <mxPoint x="530" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-6" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="7YdlAp-IxPB3LQGEQbVy-0" target="i7HfsuXRBZQUrQi0sDx4-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="480" as="sourcePoint" />
+            <mxPoint x="530" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-9" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-0" target="WVJRoJLSNF8mMlJLwhQ_-0">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1010" y="250" as="sourcePoint" />
+            <mxPoint x="1170" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-10" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1010" y="400" as="sourcePoint" />
+            <mxPoint x="1280" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ywMRJoSgFTXnw3Q1TkPA-11" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="xldX4Cvg0qP5i-FT3kWv-1" source="i7HfsuXRBZQUrQi0sDx4-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1010" y="760" as="sourcePoint" />
+            <mxPoint x="1340" y="390" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
