@@ -11,7 +11,7 @@ position = Vector2( 17, 370 )
 loop = false
 script = ExtResource( 2 )
 MaxHealth = 500
-Speed = 80
+Speed = 65
 Damage = 400
 
 [node name="Sprite" type="Sprite" parent="."]
