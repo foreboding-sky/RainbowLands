@@ -44,18 +44,12 @@ namespace godot
 		void MobGotThrough(int damage);
 		void LevelOver();
 
-		int waveStartCounter;
 		int waveCounter;
-		Timer* spawnTimer;
-		float currencyScaler;
-		float currencyScalerIncrement;
-		int currentHealth;
-		int maxHealth;
 		int currency;
-		int score;
+
 	private:
 		// singleton
-		static	LevelManager* _instance;
+		static	LevelManager* instance;
 
 		UI* ui;
 		Button* startButton;
@@ -69,11 +63,12 @@ namespace godot
 		int waveThreat;
 		int increment;
 		bool waveIsActive;
-		// wave of mobs management
-
-		// <- mob here (!)
-
-		// <- UI here (!)
-		
+		Timer* spawnTimer;
+		float currencyScaler;
+		float currencyScalerIncrement;
+		int currentHealth;
+		int maxHealth;
+		int score;
+		int waveStartCounter;
 	};
 }

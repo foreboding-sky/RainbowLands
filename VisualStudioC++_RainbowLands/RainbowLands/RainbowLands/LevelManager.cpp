@@ -2,12 +2,12 @@
 
 using namespace godot;
 
-LevelManager* LevelManager::_instance = nullptr;
+LevelManager* LevelManager::instance = nullptr;
 
 LevelManager* LevelManager::get_singleton()
 {
-	if (!_instance) _instance = new LevelManager();
-	return _instance;
+	if (!instance) instance = new LevelManager();
+	return instance;
 }
 
 LevelManager::LevelManager()
@@ -35,7 +35,7 @@ void LevelManager::_register_methods()
 
 void LevelManager::_init()
 {
-	_instance = this;
+	instance = this;
 }
 
 void LevelManager::_ready()

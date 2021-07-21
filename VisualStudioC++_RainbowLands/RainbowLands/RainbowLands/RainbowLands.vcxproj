@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{64e994c7-c2e9-4554-ad24-c84a5a713368}</ProjectGuid>
+    <RootNamespace>RainbowLands</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Godot_RainbowLands\</OutDir>
+    <IncludePath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\godot-headers;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\core;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Godot_RainbowLands\</OutDir>
+    <IncludePath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\godot-headers;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\core;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Godot_RainbowLands\</OutDir>
+    <IncludePath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\godot-headers;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\core;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\Godot_RainbowLands\</OutDir>
+    <IncludePath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\godot-headers;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\gen;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include\core;D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Godot\GodotProjects\RainbowLands\Godot_Bindings\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libgodot-cpp.windows.debug.64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libgodot-cpp.windows.release.64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AreaDamage.cpp" />
+    <ClCompile Include="Arrow.cpp" />
+    <ClCompile Include="ClosestNoLock.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyHealthbar.cpp" />
+    <ClCompile Include="Exit.cpp" />
+    <ClCompile Include="Fullscreen.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="GodotLibrary.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="PiercingProjectile.cpp" />
+    <ClCompile Include="MusicPlaying.cpp" />
+    <ClCompile Include="MusicVolume.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
+    <ClCompile Include="PauseOptions.cpp" />
+    <ClCompile Include="Play.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Resume.cpp" />
+    <ClCompile Include="Return.cpp" />
+    <ClCompile Include="ReturnP.cpp" />
+    <ClCompile Include="Root.cpp" />
+    <ClCompile Include="SoundPlaying.cpp" />
+    <ClCompile Include="SoundVolume.cpp" />
+    <ClCompile Include="SpawnTower1.cpp" />
+    <ClCompile Include="SpawnTower2.cpp" />
+    <ClCompile Include="SpawnTower3.cpp" />
+    <ClCompile Include="SpawnTower4.cpp" />
+    <ClCompile Include="SpawnTower5.cpp" />
+    <ClCompile Include="ToMain.cpp" />
+    <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="TowerBuilder.cpp" />
+    <ClCompile Include="TowerShop.cpp" />
+    <ClCompile Include="UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AreaDamage.h" />
+    <ClInclude Include="Arrow.h" />
+    <ClInclude Include="ClosestNoLock.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyHealthbar.h" />
+    <ClInclude Include="Exit.h" />
+    <ClInclude Include="Fullscreen.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="ISubject.h" />
+    <ClInclude Include="IObserver.h" />
+    <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="PiercingProjectile.h" />
+    <ClInclude Include="MusicPlaying.h" />
+    <ClInclude Include="MusicVolume.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="PauseMenu.h" />
+    <ClInclude Include="PauseOptions.h" />
+    <ClInclude Include="Play.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Resume.h" />
+    <ClInclude Include="Return.h" />
+    <ClInclude Include="ReturnP.h" />
+    <ClInclude Include="Root.h" />
+    <ClInclude Include="SoundPlaying.h" />
+    <ClInclude Include="SoundVolume.h" />
+    <ClInclude Include="SpawnTower1.h" />
+    <ClInclude Include="SpawnTower2.h" />
+    <ClInclude Include="SpawnTower3.h" />
+    <ClInclude Include="SpawnTower4.h" />
+    <ClInclude Include="SpawnTower5.h" />
+    <ClInclude Include="TagretingMethod.h" />
+    <ClInclude Include="ToMain.h" />
+    <ClInclude Include="Tower.h" />
+    <ClInclude Include="TowerBuilder.h" />
+    <ClInclude Include="TowerShop.h" />
+    <ClInclude Include="UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DefeatingEnemiesDiagram.cd" />
+    <None Include="EnemyHealthbar.cd" />
+    <None Include="SpawnTowerDiagram.cd" />
+    <None Include="UIDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

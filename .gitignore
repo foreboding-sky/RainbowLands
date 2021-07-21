@@ -349,7 +349,6 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-VisualStudioC++_RainbowLands/RainbowLands/RainbowLands/RainbowLands.vcxproj
 Godot_Bindings/lib
 Godot_RainbowLands/RainbowLands.exe
 Godot_RainbowLands/RainbowLands.pck
